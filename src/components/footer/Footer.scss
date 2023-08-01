@@ -1,0 +1,9 @@
+@use "../../colors" as *;
+
+footer{
+  margin-top: auto;
+  p{
+    color: $color-white;
+  }
+}
+
