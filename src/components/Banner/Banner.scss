@@ -1,9 +1,9 @@
 .banner__wrapper {
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: sticky;
+  margin-top: -125px;
   z-index: -10;
+  display: fl;
 
   img {
     width: 100%;
