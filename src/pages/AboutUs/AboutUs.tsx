@@ -6,6 +6,7 @@ export default function AboutUs() {
   const [y, setY] = useState();
 
   useEffect(() => {
+    //@ts-ignore
     const update = (e) => {
       setX(e.x);
       setY(e.y);
