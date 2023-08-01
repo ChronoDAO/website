@@ -1,24 +1,28 @@
 import React from "react";
-import "./Home.scss"
+import Banner from "../../components/Banner/Banner";
+import "./Home.scss";
 
 export default function Home() {
   return (
-    <main>
-     <section className="home__wrapper">
-      <h2>DAO</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis quam illo, suscipit culpa repellendus quia voluptate animi dolorem sapiente, voluptates delectus! Nihil unde voluptate earum repudiandae aspernatur vitae magni culpa!
-      Nam eveniet est, sed unde obcaecati similique magnam ab minus illo at laudantium quidem corrupti a perspiciatis exercitationem. Suscipit, ab doloribus? Aliquam necessitatibus magnam, impedit placeat ipsam deserunt tempora fugit!</p>
-     </section>
-     <section className="row-2">
-     <h2>DAO</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis quam illo, suscipit culpa repellendus quia voluptate animi dolorem sapiente, voluptates delectus! Nihil unde voluptate earum repudiandae aspernatur vitae magni culpa!
-      Nam eveniet est, sed unde obcaecati similique magnam ab minus illo at laudantium quidem corrupti a perspiciatis exercitationem. Suscipit, ab doloribus? Aliquam necessitatibus magnam, impedit placeat ipsam deserunt tempora fugit!</p>
-     </section>
-     <section className="row-3">
-     <h2>DAO</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis quam illo, suscipit culpa repellendus quia voluptate animi dolorem sapiente, voluptates delectus! Nihil unde voluptate earum repudiandae aspernatur vitae magni culpa!
-      Nam eveniet est, sed unde obcaecati similique magnam ab minus illo at laudantium quidem corrupti a perspiciatis exercitationem. Suscipit, ab doloribus? Aliquam necessitatibus magnam, impedit placeat ipsam deserunt tempora fugit!</p>
-     </section>
-    </main>
+    <>
+        <Banner />
+      <main>
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero numquam veniam laudantium adipisci placeat enim mollitia recusandae, quae ratione soluta eum quis eius laboriosam qui delectus optio laborum veritatis corporis?
+        </section>
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero numquam veniam laudantium adipisci placeat enim mollitia recusandae, quae ratione soluta eum quis eius laboriosam qui delectus optio laborum veritatis corporis?
+        </section>
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero numquam veniam laudantium adipisci placeat enim mollitia recusandae, quae ratione soluta eum quis eius laboriosam qui delectus optio laborum veritatis corporis?
+        </section>
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero numquam veniam laudantium adipisci placeat enim mollitia recusandae, quae ratione soluta eum quis eius laboriosam qui delectus optio laborum veritatis corporis?
+        </section>
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero numquam veniam laudantium adipisci placeat enim mollitia recusandae, quae ratione soluta eum quis eius laboriosam qui delectus optio laborum veritatis corporis?
+        </section>
+      </main>
+    </>
   );
 }
