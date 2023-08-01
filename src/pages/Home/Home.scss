@@ -2,11 +2,6 @@ $couleurTexte: #ffffff;
 $couleurTest: blue;
 $paddingSection: 20px;
 
-main {
-  margin-top: 20px;
-  display: grid;
-  grid-template-rows: 1fr auto 1fr;
-  gap: 20px;
 
   section {
     padding: $paddingSection;
@@ -37,4 +32,4 @@ main {
   .row-3 {
     grid-row: 3; 
   }
-}
+
