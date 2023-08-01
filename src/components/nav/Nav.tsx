@@ -1,4 +1,3 @@
-import Home from "../../pages/Home/Home";
 import { Link } from "react-router-dom";
 import CTAButton from "../Buttons/CTA-Button/CTAButton";
 import "./Nav.scss";
