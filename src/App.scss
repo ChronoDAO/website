@@ -2,10 +2,7 @@
 
 body {
   background-color: #0E1014;
-}
-
-*{
-  outline: 1px solid red;
+  color: $color-white;
 }
 
 .container{
@@ -16,7 +13,4 @@ body {
 
 main{
   padding: 0 68px;
-}
-section{
-  max-width: 30vw;
 }
