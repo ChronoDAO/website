@@ -4,9 +4,9 @@ body {
   background-color: #0E1014;
 }
 
-*{
-  outline: 1px solid red;
-}
+// *{
+//   outline: 1px solid red;
+// }
 
 .container{
   display: flex;
@@ -17,6 +17,7 @@ body {
 main{
   padding: 0 68px;
 }
+
 section{
   max-width: 30vw;
 }
