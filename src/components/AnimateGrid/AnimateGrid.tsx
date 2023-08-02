@@ -34,31 +34,33 @@ export default function AnimateGrid() {
           i++;
         });
       });
-
-      return () => {
-        const homeSection = document.querySelector(".home-section__wrapper");
-
-        homeSection &&
-          homeSection.addEventListener("mouseleave", () => {
-            setTimeout(() => {
-              document
-                .querySelectorAll(".images-grid > img")
-                .forEach((image) => {
-                  const imgElement = image as HTMLImageElement;
-                  if (imgElement) {
-                    imgElement.style.transform = `translate(0,0)`;
-                  }
-                });
-            }, 500);
-          });
-      };
     }
   }, [setX, setY]);
+
+  useEffect(() => {
+    const homeSection = document.querySelector(".home-section__wrapper");
+    homeSection &&
+      homeSection.addEventListener("mouseleave", () => {
+        setTimeout(() => {
+          document.querySelectorAll(".images-grid > img").forEach((image) => {
+            const imgElement = image as HTMLImageElement;
+            console.log(imgElement);
+            if (imgElement) {
+              imgElement.style.transform = `translate(0,0)`;
+            }
+          });
+        }, 500);
+      });
+  }, []);
 
   return (
     <div className="images-grid">
       {images.map((_image, i) => (
-        <img key={i} src={`/images/assets/mecha/mecha_perso-0${i+1}.jpg`} className={`div${i}`} />
+        <img
+          key={i}
+          src={`/images/assets/mecha/mecha_perso-0${i + 1}.jpg`}
+          className={`div${i}`}
+        />
       ))}
     </div>
   );
