@@ -26,8 +26,8 @@ export default function AnimateGrid() {
         i++;
         image &&
           //@ts-ignore
-          (image.style.transform = `translate(${(axeX * i) / 0.5}px, ${
-            (axeY * i) / 0.5
+          (image.style.transform = `translate(${(axeX *( i * 0.5)) / 0.5}px, ${
+            (axeY * (i * 0.5)) / 0.5
           }px )`);
       });
     });
