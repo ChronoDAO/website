@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import AboutDao from "./pages/AboutDao/AboutDao";
 import Footer from "./components/footer/Footer.tsx";
+import SocialMedia from "./components/SocialMedia/SocialMedia";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about_us" element={<AboutUs />} />
         <Route path="/about_dao" element={<AboutDao />} />
       </Routes>
+      <SocialMedia/>
       <Footer/>
     </div>
   );

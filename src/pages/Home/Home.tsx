@@ -2,6 +2,7 @@ import AnimateGrid from "../../components/AnimateGrid/AnimateGrid";
 // import Banner from "../../components/Banner/Banner";
 import "./Home.scss";
 
+
 export default function Home() {
   return (
     <>
