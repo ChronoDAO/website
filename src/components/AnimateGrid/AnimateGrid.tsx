@@ -13,7 +13,7 @@ export default function AnimateGrid() {
     const update = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       setX(e.clientX);
       setY(e.clientY);
-    };
+    };  
 
     const sectionElement = document.querySelector("section") as HTMLDivElement;
     if (sectionElement) {
@@ -57,8 +57,8 @@ export default function AnimateGrid() {
 
   return (
     <div className="images-grid">
-      {images.map((image, i) => (
-        <img key={i} src={image} className={`div${i}`} />
+      {images.map((_image, i) => (
+        <img key={i} src={`./images/assets/mecha/mecha_perso-0${i + 1}.jpg`} className={`div${i}`} />
       ))}
     </div>
   );
