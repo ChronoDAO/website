@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutDao.scss';
+import Roadmap from '../../components/roadmap/Roadmap';
 
 export default function AboutDao() {
   return (
@@ -30,8 +31,8 @@ export default function AboutDao() {
       
       <section id='containerMap'>
         <div className="content2">
-          <h2>Road Map</h2>
-          <p></p>
+          
+         <Roadmap/>
         </div>
       </section>
     </main>

@@ -15,7 +15,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about_us" element={<AboutUs />} />
         <Route path="/about_dao" element={<AboutDao />} />
-        <Route path="/map" element={<Roadmap />} />
       </Routes>
       <SocialMedia/>
       <Footer/>
