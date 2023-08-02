@@ -1,9 +1,27 @@
-section {
-  display: grid;
-  place-items: center;
-  align-content: center;
-  min-height: 75vh;
-/* Assuming the elements with class 'hidden' have the following base styles */
+#mainRoad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  
+section {
+  margin: 3rem 0;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.section-content h2 {
+
+  margin-right: 2rem;
+}
+
+.section-image {
+
+  width: 15vw;
+  height: auto;
 }
