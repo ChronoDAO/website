@@ -5,7 +5,7 @@ export default function AnimateGrid() {
   const [, setX] = useState<number | undefined>();
   const [, setY] = useState<number | undefined>();
 
-  const data = import.meta.glob("/images/assets/mecha/*");
+  const data = import.meta.glob("/public/images/assets/mecha/*");
   const images: string[] = [];
   Object.entries(data).forEach(([key]) => images.push(key));
 
@@ -58,7 +58,7 @@ export default function AnimateGrid() {
   return (
     <div className="images-grid">
       {images.map((_image, i) => (
-        <img key={i} src={`./images/assets/mecha/mecha_perso-0${i+1}.jpg`} className={`div${i}`} />
+        <img key={i} src={`/images/assets/mecha/mecha_perso-0${i+1}.jpg`} className={`div${i}`} />
       ))}
     </div>
   );
