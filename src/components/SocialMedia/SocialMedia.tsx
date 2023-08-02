@@ -1,4 +1,3 @@
-import React from 'react'
 import "./SocialMedia.scss"
 import { TbBrandTwitterFilled, TbBrandDiscordFilled, TbBrandTwitch } from "react-icons/tb";
 
