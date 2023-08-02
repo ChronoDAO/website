@@ -1,4 +1,3 @@
-import React from 'react';
 import './AboutDao.scss';
 
 export default function AboutDao() {

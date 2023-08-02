@@ -1,5 +1,10 @@
 import "./CTAButton.scss";
-//@ts-ignore
-export default function CTAButton({ text }) {
-  return <div className="cta-button__wrapper">{text}</div>;
+
+interface CTAButtonProps {
+  text: string;
 }
+const CTAButton: React.FC<CTAButtonProps> = ({ text }) => {
+  return <div className="cta-button__wrapper">{text}</div>;
+};
+
+export default CTAButton;

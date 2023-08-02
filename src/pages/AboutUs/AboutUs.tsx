@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import "./AboutUs.scss";
 
 export default function AboutUs() {
-  const [x, setX] = useState();
-  const [y, setY] = useState();
+  const [, setX] = useState<number | undefined>();
+  const [, setY] = useState<number | undefined>();
 
   useEffect(() => {
-    //@ts-ignore
-    const update = (e) => {
+    const update = (e: MouseEvent) => {
       setX(e.x);
       setY(e.y);
     };
