@@ -8,7 +8,7 @@
   font-size: clamp(0.6rem, 2vw, 1.5rem);
   padding-bottom: 1rem;
 
-.containerDAO {
+#containerDAO {
   display: flex;
   justify-content: center;
   max-width: 125rem;
@@ -24,7 +24,7 @@
   font-size: clamp(0.6rem, 2vw, 1.5rem);
 }
 
-.sidebar {
+#sidebar {
   padding: 1rem;
   max-height: 35rem;
   max-width: 35rem;
@@ -42,7 +42,7 @@
 
 }
 
-.containerMap {
+#containerMap {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
