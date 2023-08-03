@@ -1,11 +1,12 @@
 // src/hooks/useParallaxAnimation.ts
 import { useState, useEffect, RefObject } from "react";
 
+
 function useParallaxAnimation(
   power: number,
   containerRef: RefObject<HTMLDivElement>,
-  opacity?: boolean,
-  transition?: boolean,
+  opacityStyle?: boolean,
+  transitionStyle?: boolean,
 ) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isMouseInside, setIsMouseInside] = useState(true);
@@ -43,8 +44,8 @@ function useParallaxAnimation(
     transform: isMouseInside
       ? `translate(${position.x * power}px, ${position.y * power}px)`
       : "none",
-    filter: isMouseInside ? opacity&& "brightness(1)" : opacity&& "brightness(0.8)",
-    transition: !isMouseInside && transition && "ease .5s"
+    filter: isMouseInside ? opacityStyle&& "brightness(1)" : opacityStyle&& "brightness(0.8)",
+    transition: !isMouseInside && transitionStyle && "ease .5s"
   };
 
   return animatedStyle;

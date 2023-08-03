@@ -1,11 +1,26 @@
 import { useRef } from "react";
+import { CSSProperties } from "react";
 import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
 import "./AboutUs.scss";
 
 export default function AboutUs() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const image1Style = useParallaxAnimation(20, containerRef, false, true);
-  const image2Style = useParallaxAnimation(30, containerRef, false, true);
+  const containerRef = useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  const image1Style: CSSProperties = useParallaxAnimation(
+    20,
+    containerRef,
+    false,
+    true
+  );
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  const image2Style: CSSProperties = useParallaxAnimation(
+    30,
+    containerRef,
+    false,
+    true
+  );
   return (
     <main>
       <section className="about-section__wrapper">
@@ -22,8 +37,14 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="image__wrapper" ref={containerRef}>
-          <img src="./images/assets/perso_dino.jpg" style={{...image1Style}} />
-          <img src="./images/assets/logo_bigtime.svg" style={{...image2Style}} />
+          <img
+            src="./images/assets/perso_dino.jpg"
+            style={{ ...image1Style }}
+          />
+          <img
+            src="./images/assets/logo_bigtime.svg"
+            style={{ ...image2Style }}
+          />
         </div>
       </section>
     </main>
