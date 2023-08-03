@@ -1,11 +1,12 @@
 import AnimateGrid from "../../components/AnimateGrid/AnimateGrid";
-// import Banner from "../../components/Banner/Banner";
+import Banner from "../../components/Banner/Banner";
 import "./Home.scss";
 
 
 export default function Home() {
   return (
     <>
+    <Banner/>
       <main>
         <section className="home-section__wrapper">
           <div className="content__wrapper">

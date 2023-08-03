@@ -44,7 +44,6 @@ export default function AnimateGrid() {
         setTimeout(() => {
           document.querySelectorAll(".images-grid > img").forEach((image) => {
             const imgElement = image as HTMLImageElement;
-            console.log(imgElement);
             if (imgElement) {
               imgElement.style.transform = `translate(0,0)`;
             }

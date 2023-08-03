@@ -1,26 +1,11 @@
-import { useEffect, useState } from "react";
+import { useRef } from "react";
+import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
 import "./AboutUs.scss";
 
 export default function AboutUs() {
-  const [, setX] = useState<number | undefined>();
-  const [, setY] = useState<number | undefined>();
-
-  useEffect(() => {
-    const update = (e: MouseEvent) => {
-      setX(e.x);
-      setY(e.y);
-    };
-    const img = document.getElementById("test_img");
-    const logo = document.getElementById("logo_bigtime");
-    window.addEventListener("mousemove", (e) => {
-      update(e);
-      img && (img.style.transform = `translate(${e.x / 50}px, ${e.y / 50}px )`)
-      logo && (logo.style.transform = `translate(${- e.x / 50}px, ${- e.y / 50}px)`)
-    });
-    return () => {
-      window.removeEventListener("mousemove", update);
-    };
-  }, [setX, setY]);
+  const containerRef = useRef<HTMLDivElement>(null)
+  const image1Style = useParallaxAnimation(20, containerRef, false, true);
+  const image2Style = useParallaxAnimation(30, containerRef, false, true);
   return (
     <main>
       <section className="about-section__wrapper">
@@ -36,13 +21,11 @@ export default function AboutUs() {
             </p>
           </div>
         </div>
-        <div className="image__wrapper">
-          <img src="./images/assets/perso_dino.jpg" id="test_img" alt="" />
-          <img src="./images/assets/logo_bigtime.svg" id="logo_bigtime" alt="" />
+        <div className="image__wrapper" ref={containerRef}>
+          <img src="./images/assets/perso_dino.jpg" style={{...image1Style}} />
+          <img src="./images/assets/logo_bigtime.svg" style={{...image2Style}} />
         </div>
       </section>
-
-
     </main>
   );
 }
