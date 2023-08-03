@@ -8,7 +8,7 @@ export default function AboutUs() {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   const image1Style: CSSProperties = useParallaxAnimation(
-    20,
+    10,
     containerRef,
     false,
     true
@@ -16,14 +16,14 @@ export default function AboutUs() {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   const image2Style: CSSProperties = useParallaxAnimation(
-    30,
+    50,
     containerRef,
     false,
     true
   );
   return (
     <main>
-      <section className="about-section__wrapper">
+      <section className="about-section__wrapper" ref={containerRef}>
         <div className="content__wrapper">
           <div className="text__wrapper">
             <h3>
@@ -36,7 +36,7 @@ export default function AboutUs() {
             </p>
           </div>
         </div>
-        <div className="image__wrapper" ref={containerRef}>
+        <div className="image__wrapper" >
           <img
             src="./images/assets/perso_dino.jpg"
             style={{ ...image1Style }}
