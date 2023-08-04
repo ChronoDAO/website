@@ -1,6 +1,5 @@
-import React from 'react';
-import "./SocialMedia.scss";
-import { TbBrandTwitterFilled, TbBrandDiscordFilled, TbBrandTwitch, TbBrandYoutube } from "react-icons/tb";
+import "./SocialMedia.scss"
+import { TbBrandTwitterFilled, TbBrandDiscordFilled, TbBrandTwitch,TbBrandYoutube } from "react-icons/tb";
 
 function SocialMedia() {
   return (

@@ -1,4 +1,8 @@
-@import "../../colors";
+@use "../../colors" as *;
+
+footer{
+  margin-top: auto;
+}
 
 .footer {
   padding: 32px 68px;
