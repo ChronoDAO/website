@@ -1,6 +1,14 @@
+
+#main__home{
+  :nth-child(even){
+    flex-direction: row-reverse;
+  }
+}
 .home-section__wrapper {
   display: flex;
   justify-content: space-between;
+
+  
 
   .content__wrapper {
     display: flex;
@@ -13,8 +21,8 @@
     .text__wrapper {
       display: flex;
       justify-content: center;
+      align-items: center;
       flex-direction: column;
-      max-width: 40%;
       gap: 2rem;
 
       h3 {
@@ -24,13 +32,19 @@
       p {
         letter-spacing: .1rem;
         font-size: clamp(.8rem, 1vw, 1rem);
-
+        max-width: 60%;
       }
     }
   }
   .image__wrapper{
-    display: flex;
     max-width: 100%;
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 100%;
+      height: auto;
+    }
   }
 }
