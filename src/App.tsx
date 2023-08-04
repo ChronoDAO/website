@@ -9,7 +9,9 @@ import SocialMedia from "./components/SocialMedia/SocialMedia";
 
 function App() {
   return (
-    <div className="container">
+    <div className="container" style={{ 
+      backgroundImage: `url("./images/bg_dragon.svg"), url("./images/12.png")` 
+    }}>
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,16 +1,22 @@
 @use 'colors.scss' as *;
 
 body {
-  background-color: #0E1014;
+  background-color: $color-black;
   color: $color-white;
 }
 
-.container{
+.container {
   display: flex;
- flex-direction: column;
- min-height: 100dvh;
+  flex-direction: column;
+  min-height: 100dvh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 80%, 120%;
+  background-position-y: 10dvh, 0;
+  backdrop-filter: brightness(.5);
 }
 
-main{
+main {
   padding: 0 68px;
 }
