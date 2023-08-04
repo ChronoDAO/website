@@ -42,7 +42,7 @@ export default function Home() {
           <div className="image__wrapper">
           <img
             className="NFT__image"
-            src="../../../public/images/assets/NFT.png"
+            src="/images/assets/NFT.png"
             alt="img_NFT"
           />
           </div>
@@ -67,7 +67,7 @@ export default function Home() {
           <div className="image__wrapper">
           <img
             className="NFT__image"
-            src="../../../public/images/assets/tokken.png"
+            src="/images/assets/tokken.png"
             alt="img_NFT"
           />
           </div>
@@ -89,7 +89,7 @@ export default function Home() {
           <div className="image__wrapper">
           <img
             className="NFT__image"
-            src="../../../public/images/assets/blockchain.png"
+            src="/images/assets/blockchain.png"
             alt="img_NFT"
           />
           </div>
