@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <Banner />
       <main id="main__home">
+        <AnimateGrid/>
         <section className="section__02">
           <div className="content__wrapper">
           <h2>Révolutionner le Jeu Vidéo :</h2>
