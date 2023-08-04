@@ -1,4 +1,3 @@
-import React from 'react';
 import './AboutDao.scss';
 import Roadmap from '../../components/roadmap/Roadmap';
 

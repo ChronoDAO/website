@@ -1,60 +1,93 @@
+
+#DAOtitle{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
 #mainDAO {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #FF7E03;
   font-size: clamp(0.6rem, 2vw, 1.5rem);
   padding-bottom: 1rem;
 
-#containerDAO {
-  display: flex;
-  justify-content: center;
-  max-width: 125rem;
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 1rem;
+    h3 {
+      font-size: clamp(1.5rem, 3vw, 3rem);
+    }
+
+    p {
+      letter-spacing: .1rem;
+      font-size: clamp(.8rem, 1vw, 1rem);
+      margin: 1rem;
+
+    }
+
+  #containerDAO {
+    display: flex;
+    justify-content: center;
+    max-width: 125rem;
+    margin: 0 auto;
+    padding: 1rem;
+      p{
+        max-width: 75rem;
+      }
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
+    max-width: 135rem;
+    p{
+     width: 12rem;
+    }
   }
 
   .content {
   flex: 2;
   font-size: clamp(0.6rem, 2vw, 1.5rem);
-}
-
-#sidebar {
-  padding: 1rem;
-  max-height: 35rem;
-  max-width: 35rem;
-
-  img {
-    max-width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    max-width: 100%;
-    margin-top: 1rem;
-  }
-}
-
-
-}
-
-#containerMap {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 125rem;
-  margin: 0 auto;
-  padding: 3rem;
-  padding-top: 1rem;
+  margin: 2rem;
   
-  .content2 {
-    flex: 1;
-    font-size: clamp(0.8rem, 2vw, 1.5rem);
+  }
+
+  #sidebar {
+    max-height: 40rem;
+    max-width: 35rem;
+    flex: 2;
+    text-align: end;
+   
+
+    img {
+      margin: 75px;
+      width: auto;
+      max-width: auto;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      margin-top: 1rem;
+    }
   }
 }
+
+  #containerMap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 125rem;
+    margin: 0 auto;
+    padding: 3rem;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+    
+    .content2 {
+      flex: 1;
+      font-size: clamp(0.8rem, 2vw, 1.5rem);
+    }
+  }
 
 
 }
