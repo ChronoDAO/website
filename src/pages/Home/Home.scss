@@ -1,0 +1,39 @@
+// *{
+//   outline: solid 1px red;
+// }
+
+#main__home{
+  margin-top: 45px;
+  display: flex;
+flex-direction: column;
+ :nth-child(odd){
+flex-direction: row-reverse;
+ }
+  section{
+    display: flex;
+    gap: 5vw;
+    .content__wrapper, .image__wrapper{
+      flex: 1;
+      display: flex;
+    }
+    .image__wrapper {
+      img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+    .content__wrapper{
+      flex-direction: column;
+    }
+  }
+
+
+  h2{
+    font-size: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  p {
+    letter-spacing: .1rem;
+    font-size: clamp(.8rem, 1vw, 1rem);
+  }
+}
