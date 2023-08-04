@@ -2,11 +2,13 @@
 
 @font-face {
   font-family: REM;
-  src: url('./fonts/REM-VariableFont_wght.ttf');
+  src: url('/fonts/REM-VariableFont_wght.ttf');
 }
-:root{
+
+:root {
   font-family: REM;
 }
+
 * {
   margin: 0;
   padding: 0;
