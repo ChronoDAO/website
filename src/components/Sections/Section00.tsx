@@ -29,7 +29,7 @@ export default function Section00() {
         </div>
       </div>
       <div className="image__wrapper">
-        <AnimateGrid folder_path={"logo_divided"} />
+        <AnimateGrid/>
       </div>
     </section>
   );
