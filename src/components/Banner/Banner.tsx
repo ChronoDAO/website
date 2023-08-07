@@ -2,6 +2,7 @@ import "./Banner.scss";
 import { CSSProperties } from "react";
 import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
 import { useRef } from "react";
+import TextScroll from "../TextScroll/TextScroll";
 
 function Banner() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -14,14 +15,17 @@ function Banner() {
   );
 
   return (
+    <div className="banner">
+    <TextScroll/>
     <div className="image__container" ref={containerRef}>
       <img src="./images/assets/bg/bg.png" alt="Image 1" />
       <img
         src="./images/assets/bg/letter.png"
         alt="Image 2"
         style={{ ...imageStyle }}
-      />
+        />
     </div>
+        </div>
   );
 }
 

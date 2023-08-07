@@ -44,7 +44,7 @@ function useParallaxAnimation(
     transform: isMouseInside
       ? `translate(${position.x * power}px, ${position.y * power}px)`
       : "none",
-    filter: isMouseInside ? opacityStyle&& "brightness(1)" : opacityStyle&& "brightness(0.8)",
+    filter: isMouseInside ? opacityStyle&& "brightness(.6)" : opacityStyle&& "brightness(0.4)",
     transition: !isMouseInside && transitionStyle && "ease .5s"
   };
 
