@@ -1,5 +1,6 @@
+
 #main__home{
-  :nth-child(even){
+  .home-section__wrapper:nth-of-type(odd){
     flex-direction: row-reverse;
   }
 }

@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import AnimateGrid from "../AnimateGrid/AnimateGrid";
 import "./Sections.scss";
+import CTAButton from "../Buttons/CTA-Button/CTAButton";
 
 export default function Section00() {
   return (
@@ -7,14 +9,24 @@ export default function Section00() {
       <div className="content__wrapper">
         <div className="text__wrapper">
           <h3>
-            LA GENÈSE DE<br></br>
-            <span className="section__00--title">CHRONO DAO </span>
+            <span className="section__00--title">CHRONO DAO</span>
+            <br></br>
+            L'ETAPE ULTIME DU GAMING
           </h3>
           <p>
-            A collaborative credential infrastructure on which games, brands and
-            communities can build applications and engage with their players and
-            fans. Currently raising funds from our community.
+            Nous somme une communauté de joueurs / createurs, qui partage la
+            vision commune que le jeux video est a l’aube de prendre un nouveau
+            virage !
           </p>
+          <p>
+            Fini les pay2win, les battle pass, les studios de jeux que n’ecoute
+            pas assez leur communauté.
+          </p>
+          <p>
+            En tant partenaire Open Loot, nous pouvons t’obtenir un accès
+            gratuit pour Big Time
+          </p>
+          <CTAButton text="Explore ce nouveau monde avec nous." />
         </div>
       </div>
       <div className="image__wrapper">
