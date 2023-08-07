@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import "./TextScroll.scss";
 
 export default function TextScroll() {
