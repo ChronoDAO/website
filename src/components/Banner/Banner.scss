@@ -1,7 +1,7 @@
 @use '../../colors' as *;
 .banner{
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   .image__container{
     position: sticky;
     width: 100%;

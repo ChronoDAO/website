@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import AnimateGrid from "../AnimateGrid/AnimateGrid";
 import "./Sections.scss";
 import CTAButton from "../Buttons/CTA-Button/CTAButton";
@@ -30,7 +29,7 @@ export default function Section00() {
         </div>
       </div>
       <div className="image__wrapper">
-        <AnimateGrid />
+        <AnimateGrid folder_path={"logo_divided"} />
       </div>
     </section>
   );
