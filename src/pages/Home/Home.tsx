@@ -8,7 +8,7 @@ import "./Home.scss";
 export default function Home() {
   return (
     <>
-      <Banner />
+    <Banner/>
       <main id="main__home">
         <Section00 />
         <Section01 />
