@@ -1,0 +1,57 @@
+@use '../../colors' as *;
+
+.home-section__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90vw;
+  margin: auto auto;
+
+  .content__wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .text__wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 1000px;
+      
+      .section__00--title{
+        color: $color-orange; 
+      }
+      
+      h3 {
+        font-size: clamp(1.5rem, 3vw, 3rem);
+        margin-bottom: 2rem;
+        span{
+          font-size: larger;
+        }
+      }
+
+      p {
+        letter-spacing: .1rem;
+        font-size: clamp(.8rem, 2vw, 1.2rem);
+        padding-bottom: 1rem;
+      }
+      p:last-of-type{
+        margin-bottom: 2rem;
+      }
+      
+    }
+  }
+  .image__wrapper{
+    max-width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

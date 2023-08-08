@@ -1,17 +1,21 @@
 @use '../../colors' as *;
-.image__container{
-  position: sticky;
-  width: 100%;
-  aspect-ratio: 16/5;
-  img{
+.banner{
+  position: relative;
+  overflow: hidden;
+  .image__container{
+    position: sticky;
     width: 100%;
-    position: absolute;
-    scale: 1.05;
-  }
-  :nth-child(1){
-    filter: brightness(.8);
-  }
-  :nth-child(2){
-    transition: filter ease-in 0.2s;
+    aspect-ratio: 16/5;
+    img{
+      width: 100%;
+      position: absolute;
+      scale: 1.05;
+    }
+    :nth-child(1){
+      filter: brightness(.4);
+    }
+    :nth-child(2){
+      transition: filter ease-in 0.2s;
+    }
   }
 }
