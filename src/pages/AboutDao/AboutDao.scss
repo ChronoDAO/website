@@ -1,93 +1,49 @@
-
-#DAOtitle{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-}
 #mainDAO {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: #FF7E03;
   font-size: clamp(0.6rem, 2vw, 1.5rem);
   padding-bottom: 1rem;
+  text-align: center;
+  gap: 1em;
+  
 
-  margin: 1rem;
-    h3 {
-      font-size: clamp(1.5rem, 3vw, 3rem);
-    }
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  p {
+    letter-spacing: .1rem;
+    font-size: clamp(.8rem, 1vw, 1rem);
+    margin: 1rem;
+  }
+
+  > #containerDAO {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid;
+
+    flex-basis: 500px;
+    flex: 1;
 
     p {
-      letter-spacing: .1rem;
-      font-size: clamp(.8rem, 1vw, 1rem);
-      margin: 1rem;
-
-    }
-
-  #containerDAO {
-    display: flex;
-    justify-content: center;
-    max-width: 125rem;
-    margin: 0 auto;
-    padding: 1rem;
-      p{
-        max-width: 75rem;
-      }
-
-  @media (max-width: 768px) {
-    flex-direction: column-reverse;
-    max-width: 135rem;
-    p{
-     width: 12rem;
+      max-width: 75rem;
     }
   }
 
   .content {
-  flex: 2;
-  font-size: clamp(0.6rem, 2vw, 1.5rem);
-  margin: 2rem;
-  
+    flex: 900;
+    flex-basis: 500px;
   }
 
   #sidebar {
-    max-height: 40rem;
-    max-width: 35rem;
-    flex: 2;
-    text-align: end;
-   
+    flex: 200;
+    flex-basis: 400px;
 
-    img {
-      margin: 75px;
-      width: auto;
-      max-width: auto;
-    }
-
-    @media (max-width: 768px) {
-      max-width: 100%;
-      margin-top: 1rem;
-    }
+  img{
+    max-width: 100%;
+    height: auto;
   }
 }
-
-  #containerMap {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 125rem;
-    margin: 0 auto;
-    padding: 3rem;
-    padding-top: 7rem;
-    padding-bottom: 3rem;
-    
-    .content2 {
-      flex: 1;
-      font-size: clamp(0.8rem, 2vw, 1.5rem);
-    }
-  }
-
-
 }
