@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 6rem; /* Prevent overflow issues */
+  padding-top: 6rem; 
 }
 
 .timeline {
@@ -20,9 +20,9 @@
   transform: translateX(-50%);
   width: 8px;
   top: 0;
-  height: 0; /* Initial height set to 0 */
+  height: 0; 
   background-color: #fdf8f8;
-  transition: transform 0.3s ease, height 10s linear; /* Both transform and height transitions */
+  transition: transform 0.3s ease, height 10s linear; 
   animation: moveline 6s linear forwards;
 }
 
@@ -42,7 +42,7 @@
       }
 
   .section-image {
-    width: 100%; /* Adjust the width to fit the container */
+    width: 100%; 
     max-width: 15rem;
     height: auto;
   }
