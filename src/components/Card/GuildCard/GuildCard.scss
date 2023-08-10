@@ -1,0 +1,87 @@
+@use '../../../colors' as *;
+
+.guild-card__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    width: 100%;
+    background-color: $color-light-black;
+    aspect-ratio: 100/139;
+    border-radius: .5em;
+    .card__header,.card__body,.card__footer{
+      display: flex;
+    }
+    .card__header{
+      background-color: $color-very-light-black;
+      align-items: center;
+      justify-content: space-between;
+      padding: .2rem 1rem;
+      margin: .5em;
+      border-radius: inherit;
+      flex: 1;
+    }
+    .card__body{
+      justify-content: center;
+      align-items: center;
+      flex: 5;
+      .image__wrapper{
+        img{
+          aspect-ratio: 4/2;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    .card__footer{
+      margin: .5em;
+      flex-direction: column;
+      flex: 4;
+      border-radius: inherit;
+      padding: .2rem 1rem;
+      gap: .5em;
+      max-height: 180px;
+      ul{
+        border-radius: inherit;
+        display: flex;
+        justify-content: space-between;
+        
+        background-color: $color-very-light-black;
+        gap: .5em;
+        button{
+          background-color: transparent;
+          border: none;
+          color: inherit;
+          font-family: inherit;
+          cursor: pointer;
+          padding: .5rem .5em;
+          width: 100%;
+        }
+        .active{
+          background-color: $color-very-very-light-black;
+          border-radius: inherit;
+        }
+      }
+      .content{
+        height: 100%;
+        border-radius: inherit;
+        padding: .2rem 1rem;
+        background-color: $color-very-light-black;
+        overflow-y: scroll;
+      }
+      .content::-webkit-scrollbar{
+        width: 5px !important;
+      }
+      .content::-webkit-scrollbar-track, .content::-scr {
+        background: transparent !important
+      }
+      .content::-webkit-scrollbar-thumb {
+        background-color: $color-black !important;
+        border-radius: 500px !important
+      }
+    }
+  }
+}
