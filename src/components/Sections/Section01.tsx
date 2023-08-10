@@ -5,15 +5,21 @@ import useIntersectionAnimation from "../../customHooks/useIntersectionAnimation
 export default function Section01() {
   const firstDivRef = useIntersectionAnimation(0.5, handleFirstDivAnimation);
 
-  function handleFirstDivAnimation(inView) {
+  function handleFirstDivAnimation(inView: unknown) {
     const firstDiv = document.querySelector(".first-div--content");
     if (firstDiv) {
       const transition = inView
         ? "cubic-bezier(0.075, 0.82, 0.165, 1) 1s"
         : "ease .2s";
-
+        
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
       firstDiv.style.top = inView ? "0" : "-50%";
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
       firstDiv.style.opacity = inView ? "1" : "0";
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
       firstDiv.style.transition = transition;
     }
   }

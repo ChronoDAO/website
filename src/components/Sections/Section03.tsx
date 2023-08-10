@@ -10,12 +10,24 @@ export default function Section03() {
   useEffect(() => {
     if (fourthDiv !== null) {
       if (inView) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
         fourthDiv.style.top = "0";
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
         fourthDiv.style.opacity = "1";
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
         fourthDiv.style.transition = "ease 2s";
       } else if (inView === false) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
         fourthDiv.style.top = "-50%";
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
         fourthDiv.style.opacity = "0";
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
         fourthDiv.style.transition = "ease .2s";
       }
     }

@@ -45,13 +45,13 @@ export default function GuildCard({ data }: { data: CardData }) {
         </div>
         <div className="card__body">
           <div className="image__wrapper">
-          <img src={data.imageSrc} alt={`Image of ${data.playerName}`} />
+            <img src={data.imageSrc} alt={`Image of ${data.playerName}`} />
           </div>
         </div>
         <div className="card__footer">
           <ul>
             <button
-              tabIndex={0}
+
               className={`info ${
                 activeTabs[data.id] === "info" ? "active" : ""
               }`}
@@ -61,7 +61,7 @@ export default function GuildCard({ data }: { data: CardData }) {
               INFO
             </button>
             <button
-              tabIndex={1}
+
               className={`bigTime ${
                 activeTabs[data.id] === "bigTime" ? "active" : ""
               }`}
@@ -71,7 +71,7 @@ export default function GuildCard({ data }: { data: CardData }) {
               BIGTIME
             </button>
             <button
-              tabIndex={2}
+
               className={`game ${
                 activeTabs[data.id] === "game" ? "active" : ""
               }`}
@@ -81,7 +81,7 @@ export default function GuildCard({ data }: { data: CardData }) {
               JEUX
             </button>
             <button
-              tabIndex={3}
+
               className={`passion ${
                 activeTabs[data.id] === "passion" ? "active" : ""
               }`}
