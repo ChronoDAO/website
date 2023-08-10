@@ -39,6 +39,11 @@ h1{
 #mainDAO .content {
   flex: 999;
   flex-basis: 500px;
+  
+  img {
+  max-width: 100%;
+  height: auto;
+}
 }
 
 #mainDAO #sidebar {
@@ -46,7 +51,9 @@ h1{
   flex-basis: 400px;
 }
 
-#mainDAO img {
-  max-width: 100%;
-  height: auto;
-}
+
+
+#containerMap{
+  display: flex;
+  flex-direction: column;
+  }

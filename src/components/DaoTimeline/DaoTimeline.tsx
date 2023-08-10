@@ -56,11 +56,11 @@ const DaoTimeline = () => {
       start: "top 80%",
       onEnter: () => {
         gsap.to(section1, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img1, { rotation: 360, duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)"   });
+        gsap.to(img1, { duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)"   });
       },
       onLeaveBack: () => {
         gsap.to(section1, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
-        gsap.to(img1, { rotation: 360, duration: 3, opacity: 0, visibility: "hidden", transform: "translateY(-30px)" });
+        gsap.to(img1, { duration: 3, opacity: 0, visibility: "hidden", transform: "translateY(-30px)" });
 
       },
     });
@@ -70,7 +70,7 @@ const DaoTimeline = () => {
       start: "top 80%",
       onEnter: () => {
         gsap.to(section2, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img2, { rotation: 360, duration: 3 });
+        gsap.to(img2, { duration: 3 });
       },
       onLeaveBack: () => {
         gsap.to(section2, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
@@ -82,7 +82,7 @@ const DaoTimeline = () => {
       start: "top 80%",
       onEnter: () => {
         gsap.to(section3, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img3, { rotation: 360, duration: 3 });
+        gsap.to(img3, { duration: 3 });
       },
       onLeaveBack: () => {
         gsap.to(section3, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
@@ -94,7 +94,7 @@ const DaoTimeline = () => {
       start: "top 80%",
       onEnter: () => {
         gsap.to(section4, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img4, { rotation: 360, duration: 3 });
+        gsap.to(img4, { duration: 3 });
       },
       onLeaveBack: () => {
         gsap.to(section4, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
@@ -105,7 +105,7 @@ const DaoTimeline = () => {
       start: "top 80%",
       onEnter: () => {
         gsap.to(section5, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img5, { rotation: 360, duration: 3 });
+        gsap.to(img5, {  duration: 3 });
       },
       onLeaveBack: () => {
         gsap.to(section5, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
@@ -118,75 +118,68 @@ const DaoTimeline = () => {
       <div className="timeline">
         <div className="line" ref={lineRef}></div>
         <div className="event left-event">
-        <img src="https://placehold.co/600x400" alt="Image 2" className="section-image left-event " id="timeline_image" ref={imgRef1}/>
-
+          <img src="https://placehold.co/600x400" alt="Image 2" className="section-image left-event " id="timeline_image" ref={imgRef1}/>
           <div className="event-content ">
-          <div className="card time_card" ref={section1Ref}>
-          <h2 id="DAOTimelineH2">1</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquid saepe sunt cumque perspiciatis, consequatur quidem deleniti velit quaerat aliquam sint animi pariatur quasi? Quisquam, repellat aut. Illo, aperiam?
-          Ipsum error ullam unde tenetur maxime? Porro voluptates qui ad unde expedita debitis consequatur maxime dolorum itaque doloribus voluptas distinctio voluptatum, explicabo, beatae eligendi accusantium nesciunt repellendus aut iste tempore.
-          A placeat consectetur amet incidunt, reiciendis ipsum asperiores repudiandae velit enim beatae dolorum dicta soluta adipisci, esse eveniet. Laboriosam ipsum, eum quasi doloremque tenetur dicta blanditiis voluptas. Odio, eum quibusdam!
-          Aut laboriosam ratione, voluptatem eos pariatur ad veritatis et, dolor voluptate qui voluptas. Debitis velit modi itaque quae ut eveniet error dolorem, quibusdam et maiores nam animi odit. Nam, perspiciatis.</p>
+           <div className="card time_card" ref={section1Ref}>
+              <h2 id="DAOTimelineH2">1</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquid saepe sunt cumque perspiciatis, consequatur quidem deleniti velit quaerat aliquam sint animi pariatur quasi? Quisquam, repellat aut. Illo, aperiam?
+              Ipsum error ullam unde tenetur maxime? Porro voluptates qui ad unde expedita debitis consequatur maxime dolorum itaque doloribus voluptas distinctio voluptatum, explicabo, beatae eligendi accusantium nesciunt repellendus aut iste tempore.
+              A placeat consectetur amet incidunt, reiciendis ipsum asperiores repudiandae velit enim beatae dolorum dicta soluta adipisci, esse eveniet. Laboriosam ipsum, eum quasi doloremque tenetur dicta blanditiis voluptas. Odio, eum quibusdam!
+              Aut laboriosam ratione, voluptatem eos pariatur ad veritatis et, dolor voluptate qui voluptas. Debitis velit modi itaque quae ut eveniet error dolorem, quibusdam et maiores nam animi odit. Nam, perspiciatis.</p>
+            </div>
           </div>
+        </div>
+        <div className="event right-event">
+          <div className="event-content ">
+           <div className="card time_card" ref={section2Ref}>
+              <h2 id="DAOTimelineH2">2</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquid saepe sunt cumque perspiciatis, consequatur quidem deleniti velit quaerat aliquam sint animi pariatur quasi? Quisquam, repellat aut. Illo, aperiam?
+              Ipsum error ullam unde tenetur maxime? Porro voluptates qui ad unde expedita debitis consequatur maxime dolorum itaque doloribus voluptas distinctio voluptatum, explicabo, beatae eligendi accusantium nesciunt repellendus aut iste tempore.
+              A placeat consectetur amet incidunt, reiciendis ipsum asperiores repudiandae velit enim beatae dolorum dicta soluta adipisci, esse eveniet. Laboriosam ipsum, eum quasi doloremque tenetur dicta blanditiis voluptas. Odio, eum quibusdam!
+              Aut laboriosam ratione, voluptatem eos pariatur ad veritatis et, dolor voluptate qui voluptas. Debitis velit modi itaque quae ut eveniet error dolorem, quibusdam et maiores nam animi odit. Nam, perspiciatis.</p>  
+            </div>
+         </div>         
+          <img src="https://placehold.co/600x400" alt="Image 2" className=" left-event" id="timeline_image" ref={imgRef2}/>
+       </div>
+
+        <div className="event left-event">
+         <img src="https://placehold.co/600x400" alt="Image 2" className=" left-event" id="timeline_image" ref={imgRef3}/>
+          <div className="event-content ">
+            <div className="card time_card" ref={section3Ref}>
+              <h2 id="DAOTimelineH2"> 3</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquid saepe sunt cumque perspiciatis, consequatur quidem deleniti velit quaerat aliquam sint animi pariatur quasi? Quisquam, repellat aut. Illo, aperiam?
+              Ipsum error ullam unde tenetur maxime? Porro voluptates qui ad unde expedita debitis consequatur maxime dolorum itaque doloribus voluptas distinctio voluptatum, explicabo, beatae eligendi accusantium nesciunt repellendus aut iste tempore.
+              A placeat consectetur amet incidunt, reiciendis ipsum asperiores repudiandae velit enim beatae dolorum dicta soluta adipisci, esse eveniet. Laboriosam ipsum, eum quasi doloremque tenetur dicta blanditiis voluptas. Odio, eum quibusdam!
+              Aut laboriosam ratione, voluptatem eos pariatur ad veritatis et, dolor voluptate qui voluptas. Debitis velit modi itaque quae ut eveniet error dolorem, quibusdam et maiores nam animi odit. Nam, perspiciatis.</p>
+            </div>
           </div>
         </div>
 
         <div className="event right-event">
           <div className="event-content ">
-          <div className="card time_card" ref={section2Ref}>
-          <h2 id="DAOTimelineH2">2</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquid saepe sunt cumque perspiciatis, consequatur quidem deleniti velit quaerat aliquam sint animi pariatur quasi? Quisquam, repellat aut. Illo, aperiam?
-          Ipsum error ullam unde tenetur maxime? Porro voluptates qui ad unde expedita debitis consequatur maxime dolorum itaque doloribus voluptas distinctio voluptatum, explicabo, beatae eligendi accusantium nesciunt repellendus aut iste tempore.
-          A placeat consectetur amet incidunt, reiciendis ipsum asperiores repudiandae velit enim beatae dolorum dicta soluta adipisci, esse eveniet. Laboriosam ipsum, eum quasi doloremque tenetur dicta blanditiis voluptas. Odio, eum quibusdam!
-          Aut laboriosam ratione, voluptatem eos pariatur ad veritatis et, dolor voluptate qui voluptas. Debitis velit modi itaque quae ut eveniet error dolorem, quibusdam et maiores nam animi odit. Nam, perspiciatis.</p>
-          
-          </div>
-          </div>         
-           <img src="https://placehold.co/600x400" alt="Image 2" className=" left-event" id="timeline_image" ref={imgRef2}/>
-
-        </div>
-
-        <div className="event left-event">
-        <img src="https://placehold.co/600x400" alt="Image 2" className=" left-event" id="timeline_image" ref={imgRef3}/>
-
-          <div className="event-content ">
-          <div className="card time_card" ref={section3Ref}>
-          <h2 id="DAOTimelineH2"> 3</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquid saepe sunt cumque perspiciatis, consequatur quidem deleniti velit quaerat aliquam sint animi pariatur quasi? Quisquam, repellat aut. Illo, aperiam?
-          Ipsum error ullam unde tenetur maxime? Porro voluptates qui ad unde expedita debitis consequatur maxime dolorum itaque doloribus voluptas distinctio voluptatum, explicabo, beatae eligendi accusantium nesciunt repellendus aut iste tempore.
-          A placeat consectetur amet incidunt, reiciendis ipsum asperiores repudiandae velit enim beatae dolorum dicta soluta adipisci, esse eveniet. Laboriosam ipsum, eum quasi doloremque tenetur dicta blanditiis voluptas. Odio, eum quibusdam!
-          Aut laboriosam ratione, voluptatem eos pariatur ad veritatis et, dolor voluptate qui voluptas. Debitis velit modi itaque quae ut eveniet error dolorem, quibusdam et maiores nam animi odit. Nam, perspiciatis.</p>
-         </div>
-          </div>
-
-        </div>
-
-         <div className="event right-event">
-          <div className="event-content ">
-          <div className="card time_card" ref={section4Ref}>
-          <h2 id="DAOTimelineH2">4</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquid saepe sunt cumque perspiciatis, consequatur quidem deleniti velit quaerat aliquam sint animi pariatur quasi? Quisquam, repellat aut. Illo, aperiam?
-          Ipsum error ullam unde tenetur maxime? Porro voluptates qui ad unde expedita debitis consequatur maxime dolorum itaque doloribus voluptas distinctio voluptatum, explicabo, beatae eligendi accusantium nesciunt repellendus aut iste tempore.
-          A placeat consectetur amet incidunt, reiciendis ipsum asperiores repudiandae velit enim beatae dolorum dicta soluta adipisci, esse eveniet. Laboriosam ipsum, eum quasi doloremque tenetur dicta blanditiis voluptas. Odio, eum quibusdam!
-          Aut laboriosam ratione, voluptatem eos pariatur ad veritatis et, dolor voluptate qui voluptas. Debitis velit modi itaque quae ut eveniet error dolorem, quibusdam et maiores nam animi odit. Nam, perspiciatis.</p>
-          {/* <img src="/public/images/roadimage.png" alt="Image 2" className="section-image left-event" ref={imgRef3}/> */}
-          </div>
+            <div className="card time_card" ref={section4Ref}>
+              <h2 id="DAOTimelineH2">4</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquid saepe sunt cumque perspiciatis, consequatur quidem deleniti velit quaerat aliquam sint animi pariatur quasi? Quisquam, repellat aut. Illo, aperiam?
+              Ipsum error ullam unde tenetur maxime? Porro voluptates qui ad unde expedita debitis consequatur maxime dolorum itaque doloribus voluptas distinctio voluptatum, explicabo, beatae eligendi accusantium nesciunt repellendus aut iste tempore.
+              A placeat consectetur amet incidunt, reiciendis ipsum asperiores repudiandae velit enim beatae dolorum dicta soluta adipisci, esse eveniet. Laboriosam ipsum, eum quasi doloremque tenetur dicta blanditiis voluptas. Odio, eum quibusdam!
+              Aut laboriosam ratione, voluptatem eos pariatur ad veritatis et, dolor voluptate qui voluptas. Debitis velit modi itaque quae ut eveniet error dolorem, quibusdam et maiores nam animi odit. Nam, perspiciatis.</p>
+              {/* <img src="/public/images/roadimage.png" alt="Image 2" className="section-image left-event" ref={imgRef3}/> */}
+            </div>
           </div>
           <img src="https://placehold.co/600x400" alt="Image 2" className=" left-event" id="timeline_image"ref={imgRef4}/>
         </div>
         <div className="event left-event">
-        <img src="https://placehold.co/600x400" alt="Image 2" className=" left-event" id="timeline_image"ref={imgRef5}/>
-          <div className="event-content ">
-          <div className="card time_card" ref={section5Ref}>
-          <h2 id="DAOTimelineH2">5</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquid saepe sunt cumque perspiciatis, consequatur quidem deleniti velit quaerat aliquam sint animi pariatur quasi? Quisquam, repellat aut. Illo, aperiam?
-          Ipsum error ullam unde tenetur maxime? Porro voluptates qui ad unde expedita debitis consequatur maxime dolorum itaque doloribus voluptas distinctio voluptatum, explicabo, beatae eligendi accusantium nesciunt repellendus aut iste tempore.
-          A placeat consectetur amet incidunt, reiciendis ipsum asperiores repudiandae velit enim beatae dolorum dicta soluta adipisci, esse eveniet. Laboriosam ipsum, eum quasi doloremque tenetur dicta blanditiis voluptas. Odio, eum quibusdam!
-          Aut laboriosam ratione, voluptatem eos pariatur ad veritatis et, dolor voluptate qui voluptas. Debitis velit modi itaque quae ut eveniet error dolorem, quibusdam et maiores nam animi odit. Nam, perspiciatis.</p>
-          </div>
-          </div>
+          <img src="https://placehold.co/600x400" alt="Image 2" className=" left-event" id="timeline_image"ref={imgRef5}/>
+            <div className="event-content ">
+              <div className="card time_card" ref={section5Ref}>
+                <h2 id="DAOTimelineH2">5</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquid saepe sunt cumque perspiciatis, consequatur quidem deleniti velit quaerat aliquam sint animi pariatur quasi? Quisquam, repellat aut. Illo, aperiam?
+                Ipsum error ullam unde tenetur maxime? Porro voluptates qui ad unde expedita debitis consequatur maxime dolorum itaque doloribus voluptas distinctio voluptatum, explicabo, beatae eligendi accusantium nesciunt repellendus aut iste tempore.
+                A placeat consectetur amet incidunt, reiciendis ipsum asperiores repudiandae velit enim beatae dolorum dicta soluta adipisci, esse eveniet. Laboriosam ipsum, eum quasi doloremque tenetur dicta blanditiis voluptas. Odio, eum quibusdam!
+                Aut laboriosam ratione, voluptatem eos pariatur ad veritatis et, dolor voluptate qui voluptas. Debitis velit modi itaque quae ut eveniet error dolorem, quibusdam et maiores nam animi odit. Nam, perspiciatis.</p>
+              </div>
+            </div>
         </div>
-        
       </div>
     </div>
   );
