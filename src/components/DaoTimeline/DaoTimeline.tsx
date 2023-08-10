@@ -1,10 +1,10 @@
-import './TestTimeline.scss';
+import './DaoTimeline.scss';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
-const VerticalTimeline = () => {
+const DaoTimeline = () => {
 
   const lineRef = useRef(null);
 
@@ -192,4 +192,4 @@ const VerticalTimeline = () => {
   );
 };
 
-export default VerticalTimeline;
+export default DaoTimeline;

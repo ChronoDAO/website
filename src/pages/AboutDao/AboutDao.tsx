@@ -1,6 +1,6 @@
 import './AboutDao.scss';
-import Roadmap from '../../components/roadmap/Roadmap';
-import VerticalTimeline from '../../components/Timeline/TestTimeline';
+// import Roadmap from '../../components/roadmap/Roadmap';
+import DAOTimeline from '../../components/DaoTimeline/DaoTimeline';
 
 export default function AboutDao() {
   return (
@@ -34,7 +34,7 @@ export default function AboutDao() {
         <div className="content2">
           
          {/* <Roadmap/> */}
-         <VerticalTimeline/>
+         <DAOTimeline/>
         </div>
       </section>
     </main>
