@@ -1,49 +1,52 @@
 #mainDAO {
   color: #FF7E03;
   font-size: clamp(0.6rem, 2vw, 1.5rem);
-  padding-bottom: 1rem;
   text-align: center;
+  padding-bottom: 1rem;
+  float: none;
   gap: 1em;
-  
 
-  h3 {
-    font-size: clamp(1.5rem, 3vw, 3rem);
-  }
-
-  p {
-    letter-spacing: .1rem;
-    font-size: clamp(.8rem, 1vw, 1rem);
-    margin: 1rem;
-  }
-
-  > #containerDAO {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
-    gap: 1rem;
-    border: 2px solid;
-
-    flex-basis: 500px;
-    flex: 1;
-
-    p {
-      max-width: 75rem;
-    }
-  }
-
-  .content {
-    flex: 900;
-    flex-basis: 500px;
-  }
-
-  #sidebar {
-    flex: 200;
-    flex-basis: 400px;
-
-  img{
-    max-width: 100%;
-    height: auto;
-  }
+h1{
+  margin-bottom: 5rem;
 }
+ h3 {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+ p {
+  letter-spacing: 0.1rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  margin: 1rem;
+}
+}
+#mainDAO > #containerDAO {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  // border: 2px solid;
+  max-width: fit-content;
+  flex-basis: 500px;
+  flex: 1;
+  margin: 0 auto; /* Center the container */
+}
+
+#mainDAO > #containerDAO p {
+  max-width: 75rem;
+}
+
+#mainDAO .content {
+  flex: 999;
+  flex-basis: 500px;
+}
+
+#mainDAO #sidebar {
+  flex: 1;
+  flex-basis: 400px;
+}
+
+#mainDAO img {
+  max-width: 100%;
+  height: auto;
 }
