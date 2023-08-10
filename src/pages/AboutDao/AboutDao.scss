@@ -23,7 +23,7 @@ h1{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  text-align: start;
   gap: 1rem;
   // border: 2px solid;
   max-width: fit-content;
@@ -40,15 +40,16 @@ h1{
   flex: 999;
   flex-basis: 500px;
   
-  img {
-  max-width: 100%;
-  height: auto;
-}
+  
 }
 
-#mainDAO #sidebar {
+#mainDAO #sidebar { 
+  #img_sidebar {
+    margin-top: 3rem;
+  }
   flex: 1;
   flex-basis: 400px;
+   
 }
 
 

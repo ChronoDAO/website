@@ -26,7 +26,7 @@ export default function AboutDao() {
 
         <section id="sidebar">
           <h2>Trésorerie</h2>
-          <img src='https://placehold.co/600x400' alt='Trésorerie'></img>
+          <img src='https://placehold.co/600x400' id="img_sidebar" alt='Trésorerie'></img>
         </section>
       </section>
       
