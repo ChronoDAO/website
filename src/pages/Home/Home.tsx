@@ -33,8 +33,9 @@ export default function Home() {
         <div className="auto-grid">
           {cardDataList.map((data) => (
             <GuildCard data={data} key={data.id} />
-          ))}
+            ))}
         </div>
+      
       </main>
     </>
   );
