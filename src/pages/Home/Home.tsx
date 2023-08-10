@@ -6,6 +6,7 @@ import Section02 from "../../components/Sections/Section02";
 import Section03 from "../../components/Sections/Section03";
 import cardDataList from "../../cardDataList";
 import "./Home.scss";
+import BannerTest from "../../components/Test/BannerTest";
 
 interface cardDataList {
   id: number;
@@ -24,7 +25,7 @@ interface cardDataList {
 export default function Home() {
   return (
     <>
-      <Banner />
+      <BannerTest />
       <main id="main__home">
         <Section00 />
         <Section01 />

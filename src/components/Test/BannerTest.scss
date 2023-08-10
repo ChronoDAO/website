@@ -1,0 +1,30 @@
+.bannerTest {
+  width: 100%;
+  aspect-ratio: 16/8;
+
+  .bannerTest__wrapper {
+    position: relative;
+    height: 100%;
+
+    .text-scroll {
+      > div {
+
+        position: absolute;
+        left: 10% ;
+        top: 20%;
+        transform: translate(-25%, -100%);
+      }
+
+    }
+
+    img {
+      width: 100%;
+      scale: .8;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(0%,0%);
+      filter: brightness(.8);
+    }
+  }
+}
