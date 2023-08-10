@@ -70,10 +70,12 @@ const DaoTimeline = () => {
       start: "top 80%",
       onEnter: () => {
         gsap.to(section2, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img2, { duration: 3 });
+        gsap.to(img2, {duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)" });
       },
       onLeaveBack: () => {
         gsap.to(section2, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
+        gsap.to(img2, { duration: 3, opacity: 0, visibility: "hidden", transform: "translateY(-30px)" });
+
       },
     });
 
@@ -82,10 +84,12 @@ const DaoTimeline = () => {
       start: "top 80%",
       onEnter: () => {
         gsap.to(section3, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img3, { duration: 3 });
+        gsap.to(img3, {duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)" });
       },
       onLeaveBack: () => {
         gsap.to(section3, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
+        gsap.to(img3, { duration: 3, opacity: 0, visibility: "hidden", transform: "translateY(-30px)" });
+
       },
     });
 
@@ -94,10 +98,12 @@ const DaoTimeline = () => {
       start: "top 80%",
       onEnter: () => {
         gsap.to(section4, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img4, { duration: 3 });
+        gsap.to(img4, {duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)" });
       },
       onLeaveBack: () => {
         gsap.to(section4, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
+        gsap.to(img4, { duration: 3, opacity: 0, visibility: "hidden", transform: "translateY(-30px)" });
+
       },
     });
     ScrollTrigger.create({
@@ -105,10 +111,11 @@ const DaoTimeline = () => {
       start: "top 80%",
       onEnter: () => {
         gsap.to(section5, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img5, {  duration: 3 });
+        gsap.to(img5, {duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)" });
       },
       onLeaveBack: () => {
         gsap.to(section5, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
+        gsap.to(img5, { duration: 3, opacity: 0, visibility: "hidden", transform: "translateY(-30px)" });
       },
     });
   }, []);
