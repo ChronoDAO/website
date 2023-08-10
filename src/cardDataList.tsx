@@ -57,7 +57,7 @@ const cardDataList = [
     passionContent: "J'adore le CSS wow !",
   },
   {
-    id: 4,
+    id: 5,
     playerName: "Karine",
     discord:
       "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley",
@@ -71,7 +71,7 @@ const cardDataList = [
     passionContent: "Les chats et les chats",
   },
   {
-    id: 5,
+    id: 6,
     playerName: "",
     discord: "",
     twitch: "",
