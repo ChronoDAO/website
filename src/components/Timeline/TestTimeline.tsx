@@ -1,4 +1,3 @@
-import React from 'react';
 import './TestTimeline.scss';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

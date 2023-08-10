@@ -33,7 +33,7 @@ export default function AboutDao() {
       <section id='containerMap'>
         <div className="content2">
           
-         <Roadmap/>
+         {/* <Roadmap/> */}
          <VerticalTimeline/>
         </div>
       </section>
