@@ -3,8 +3,10 @@
 .home-section__wrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 90vw;
+  max-width: 85vw;
   margin: auto auto;
+  margin-bottom: 5%;
+
 
   .content__wrapper {
     display: flex;
@@ -19,39 +21,154 @@
       justify-content: center;
       flex-direction: column;
       max-width: 1000px;
-      
-      .section__00--title{
-        color: $color-orange; 
+
+      .span--orange {
+        color: $color-orange;
       }
-      
+
       h3 {
         font-size: clamp(1.5rem, 3vw, 3rem);
         margin-bottom: 2rem;
-        span{
+        position: relative;
+        width: fit-content;
+
+        span {
           font-size: larger;
         }
       }
 
-      p {
+      h3::after {
+        content: "";
+        height: 5px;
+        background-color: $color-orange;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.15s ease-out;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      h3:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      >p {
         letter-spacing: .1rem;
         font-size: clamp(.8rem, 2vw, 1.2rem);
         padding-bottom: 1rem;
       }
-      p:last-of-type{
+
+      >p:last-of-type {
         margin-bottom: 2rem;
       }
-      
+
+      ul {
+        margin-bottom: 2rem;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        letter-spacing: .1rem;
+        font-size: clamp(1rem, 5vw, 1.5rem);
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .cta-button__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(.8rem, 2vw, 1.2rem);
+
+        .logo-discord {
+          width: 32px;
+          height: 32px;
+          margin-right: 8px;
+        }
+
+        .logo-discord:hover {
+          scale: 1.1;
+          transition: cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
+        }
+      }
     }
   }
-  .image__wrapper{
+
+  .image-parallax__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+
+    img:nth-child(1) {
+      max-width: 700px;
+      width: 100%;
+      border-radius: .5em;
+    }
+
+    img:nth-child(2) {
+      max-width: 200px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 100px;
+    }
+  }
+
+  .image__wrapper {
     max-width: 100%;
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    img{
+
+    img {
       width: 100%;
       height: auto;
+    }
+
+    svg {
+      max-width: 500px;
+      width: 100%;
+    }
+
+  }
+}
+
+
+#sectionTwo, #sectionOne, #sectionThree {
+
+  .first-div__wrapper,
+  .second-div__wrapper,
+  .third-div__wrapper,
+  .fourth-div__wrapper {
+    background-color: blue;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 16/9;
+    flex: 1;
+    position: relative;
+
+    .first-div--content,
+    .second-div--content,
+    .third-div--content,
+    .fourth-div--content {
+      position: absolute;
+    }
+
+    .third-div--content {
+      transform: translate(50%, 0%);
+    }
+    .second-div--content {
+      transform: translateY(-50%);
     }
   }
 }

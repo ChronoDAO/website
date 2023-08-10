@@ -8,7 +8,7 @@ export default function Section00() {
       <div className="content__wrapper">
         <div className="text__wrapper">
           <h3>
-            <span className="section__00--title">CHRONO DAO</span>
+            <span className="span--orange">CHRONO DAO</span>
             <br></br>
             L'ETAPE ULTIME DU GAMING
           </h3>
@@ -25,7 +25,7 @@ export default function Section00() {
             En tant partenaire Open Loot, nous pouvons t’obtenir un accès
             gratuit pour Big Time
           </p>
-          <CTAButton text="Explore ce nouveau monde avec nous." />
+          <CTAButton text="Explore ce nouveau monde avec nous." image="logo_discord.svg" image_class="logo-discord" />
         </div>
       </div>
       <div className="image__wrapper">

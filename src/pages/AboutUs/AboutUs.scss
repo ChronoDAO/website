@@ -28,12 +28,12 @@
     }
   }
 
-  .image__wrapper {
-    display: flex;
+  .image--parallax__wrapper {
     position: relative;
+    flex: 1;
 
     img:nth-child(1) {
-      max-width: 70%;
+      width: 100%;
       border-radius: .5em;
     }
 

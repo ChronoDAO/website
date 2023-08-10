@@ -5,7 +5,7 @@ export default function AnimateGrid() {
   const [, setX] = useState<number | undefined>();
   const [, setY] = useState<number | undefined>();
 
-  const data = import.meta.glob("/public/images/assets/logo_divided/*");
+  const data = import.meta.glob("/public/images/assets/logo_divided9/*");
   const images: string[] = [];
   Object.entries(data).forEach(([key]) => images.push(key));
 
@@ -28,8 +28,8 @@ export default function AnimateGrid() {
           const imgElement = image as HTMLImageElement;
           if (imgElement) {
             imgElement.style.transform = `translate(${
-              (axeX * (i * 0.5)) / 0.5
-            }px, ${(axeY * (i * 0.5)) / 0.5}px )`;
+              (axeX * ((i * .5) * 0.5)) / 0.5
+            }px, ${(axeY * ((i *.5) * 0.5)) / 0.5}px )`;
           }
           i++;
         });
@@ -57,8 +57,8 @@ export default function AnimateGrid() {
       {images.map((_image, i) => (
         <img
           key={i}
-          src={`/images/assets/logo_divided/0${i + 1}.png`}
-          className={`div${i}`}
+          src={`/images/assets/logo_divided9/Logo_ChronoDAO-${i + 1}.png`}
+          className={`div${i+1}`}
         />
       ))}
     </div>

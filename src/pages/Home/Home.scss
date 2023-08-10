@@ -4,3 +4,14 @@
     flex-direction: row-reverse;
   }
 }
+
+.auto-grid {
+  --min-column-size: 25rem;
+  display: grid;
+  outline: 1px solid red;
+  gap: 5rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--min-column-size), 100%), 1fr)
+  );
+}

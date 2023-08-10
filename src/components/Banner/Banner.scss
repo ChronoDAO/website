@@ -13,9 +13,11 @@
     }
     :nth-child(1){
       filter: brightness(.4);
+
     }
     :nth-child(2){
       transition: filter ease-in 0.2s;
+      backdrop-filter: blur(2px);    
     }
   }
 }
