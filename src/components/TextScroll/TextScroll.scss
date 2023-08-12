@@ -1,6 +1,6 @@
 @use '../../colors' as *;
 .banner_test {
-  font-size: clamp(3rem, 4vw, 8rem);
+  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 800;
   display: flex;
   position: absolute;

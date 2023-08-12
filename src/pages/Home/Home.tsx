@@ -1,4 +1,3 @@
-import Banner from "../../components/Banner/Banner";
 import GuildCard from "../../components/Card/GuildCard/GuildCard";
 import Section00 from "../../components/Sections/Section00";
 import Section01 from "../../components/Sections/Section01";
@@ -6,6 +5,7 @@ import Section02 from "../../components/Sections/Section02";
 import Section03 from "../../components/Sections/Section03";
 import cardDataList from "../../cardDataList";
 import "./Home.scss";
+import BannerTest from "../../components/Test/BannerTest";
 
 interface cardDataList {
   id: number;
@@ -24,7 +24,7 @@ interface cardDataList {
 export default function Home() {
   return (
     <>
-      <Banner />
+      <BannerTest />
       <main id="main__home">
         <Section00 />
         <Section01 />
@@ -33,8 +33,9 @@ export default function Home() {
         <div className="auto-grid">
           {cardDataList.map((data) => (
             <GuildCard data={data} key={data.id} />
-          ))}
+            ))}
         </div>
+      
       </main>
     </>
   );
