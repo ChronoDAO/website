@@ -1,4 +1,3 @@
-import Banner from "../../components/Banner/Banner";
 import GuildCard from "../../components/Card/GuildCard/GuildCard";
 import Section00 from "../../components/Sections/Section00";
 import Section01 from "../../components/Sections/Section01";

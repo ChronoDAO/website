@@ -51,7 +51,6 @@ export default function GuildCard({ data }: { data: CardData }) {
         <div className="card__footer">
           <ul>
             <button
-
               className={`info ${
                 activeTabs[data.id] === "info" ? "active" : ""
               }`}
@@ -61,7 +60,6 @@ export default function GuildCard({ data }: { data: CardData }) {
               INFO
             </button>
             <button
-
               className={`bigTime ${
                 activeTabs[data.id] === "bigTime" ? "active" : ""
               }`}
@@ -71,7 +69,6 @@ export default function GuildCard({ data }: { data: CardData }) {
               BIGTIME
             </button>
             <button
-
               className={`game ${
                 activeTabs[data.id] === "game" ? "active" : ""
               }`}
