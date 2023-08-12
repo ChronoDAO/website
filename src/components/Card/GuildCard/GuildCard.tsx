@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { CSSProperties, useRef, useState } from "react";
+import useParallaxAnimation from "../../../customHooks/useParallaxAnimation";
 import SocialMediaGuild from "../../SocialMedia/SocialMediaCard/SocialMediaGuild";
 import "./GuildCard.scss";
 
@@ -21,6 +22,9 @@ interface CardData {
 }
 
 export default function GuildCard({ data }: { data: CardData }) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const image1Style: CSSProperties = useParallaxAnimation(10, containerRef,false,true, false)
+  const image2Style: CSSProperties = useParallaxAnimation(15, containerRef, false, true, true)
   const [activeTabs, setActiveTabs] = useState<ActiveTabs>({
     [data.id]: "info",
   });
@@ -33,8 +37,8 @@ export default function GuildCard({ data }: { data: CardData }) {
 
   return (
     <div className="guild-card__wrapper">
-      <div className="card__wrapper" key={data.id}>
-        <div className="card__header">
+      <div className="card__wrapper" ref={containerRef} key={data.id} style={{...image1Style}}>
+        <div className="card__header" >
           <div className="player-name">{data.playerName}</div>
           <SocialMediaGuild
             discord={data.discord}
@@ -43,9 +47,9 @@ export default function GuildCard({ data }: { data: CardData }) {
             bigtime={data.bigtime}
           />
         </div>
-        <div className="card__body">
+        <div className="card__body" style={{...image2Style}}>
           <div className="image__wrapper">
-            <img src={data.imageSrc} alt={`Image of ${data.playerName}`} />
+            <img src={data.imageSrc} alt={`Image of ${data.playerName}`}  />
           </div>
         </div>
         <div className="card__footer">
