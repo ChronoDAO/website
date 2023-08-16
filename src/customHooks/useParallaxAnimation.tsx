@@ -16,10 +16,10 @@ function useParallaxAnimation(
       if (containerRef.current) {
         const mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
         const mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
-      inverted ? setPosition({x: -mouseX, y:mouseY}) : (
+      inverted ? setPosition({x: -mouseX, y:-mouseY}) : (
         setPosition({ x: mouseX, y: mouseY })
         )
-    
+
       }
     };
 

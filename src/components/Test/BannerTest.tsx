@@ -6,12 +6,12 @@ export default function BannerTest() {
   const containerRef = useRef<HTMLDivElement>(null)
     //@ts-ignore
   const image1Style: CSSProperties = useParallaxAnimation(
-    15, containerRef,false, true 
+    5, containerRef,false, true 
   )
   //@ts-ignore
-  const image2Style: CSSProperties = useParallaxAnimation(20, containerRef, false,true, true)
+  const image2Style: CSSProperties = useParallaxAnimation(5, containerRef, false,true, true)
     //@ts-ignore
-  const image3Style: CSSProperties = useParallaxAnimation(15, containerRef, false,true)
+  const image3Style: CSSProperties = useParallaxAnimation(5, containerRef, false,true)
   return (
     <div className="bannerTest">
       <span className="detail" id="detail-1"></span>
