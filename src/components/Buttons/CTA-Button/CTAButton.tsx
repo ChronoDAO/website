@@ -4,13 +4,19 @@ interface CTAButtonProps {
   text: string;
   image?: string;
   image_class?: string;
+  link?: string;
 }
-const CTAButton: React.FC<CTAButtonProps> = ({ text, image, image_class }) => {
+const CTAButton: React.FC<CTAButtonProps> = ({
+  text,
+  image,
+  image_class,
+  link,
+}) => {
   return (
-    <div className="cta-button__wrapper">
+    <a href={`${link}`} className="cta-button__wrapper">
       {image ? <img className={image_class} src={`/images/${image}/`} /> : null}
       {text}
-    </div>
+    </a>
   );
 };
 

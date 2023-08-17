@@ -1,5 +1,6 @@
+@use '../../../colors' as *;
 .cta-button__wrapper{
-  background-color: #FF7E03;
+  background-color: $color-orange;
   padding: 16px;
   max-width: fit-content;
 }

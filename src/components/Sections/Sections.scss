@@ -5,8 +5,7 @@
   justify-content: space-between;
   max-width: 85vw;
   margin: auto auto;
-  margin-bottom: 5%;
-
+  margin-bottom: 10%;
 
   .content__wrapper {
     display: flex;
@@ -21,6 +20,9 @@
       justify-content: center;
       flex-direction: column;
       max-width: 1000px;
+      img{
+        width: 100%;
+      }
 
       .span--orange {
         color: $color-orange;
@@ -72,11 +74,16 @@
       li {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        max-width: 80%;
+        gap: 1em;
         letter-spacing: .1rem;
-        font-size: clamp(1rem, 5vw, 1.5rem);
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
         font-weight: 500;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem;  
+        img{
+          max-width: 60px;
+          width: 100%;
+        }
       }
 
       .cta-button__wrapper {
@@ -120,6 +127,21 @@
       right: 100px;
     }
   }
+  #back-card__wrapper {
+    justify-content: flex-start;
+    img {
+      max-width: 300px;
+      width: 100%;
+      filter: drop-shadow(-15px 10px 4px black);
+    }
+    :nth-child(1){
+      transform: rotate(-12deg);
+    }
+    :nth-child(2){
+      transform: rotate(12deg) translateX(-20px);
+    }
+    
+  }
 
   .image__wrapper {
     max-width: 100%;
@@ -133,6 +155,8 @@
       height: auto;
     }
 
+
+
     svg {
       max-width: 500px;
       width: 100%;
@@ -142,32 +166,35 @@
 }
 
 
-#sectionTwo, #sectionOne, #sectionThree {
+// #sectionTwo,
+// #sectionOne,
+// #sectionThree {
 
-  .first-div__wrapper,
-  .second-div__wrapper,
-  .third-div__wrapper,
-  .fourth-div__wrapper {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 16/9;
-    flex: 1;
-    position: relative;
+//   .first-div__wrapper,
+//   .second-div__wrapper,
+//   .third-div__wrapper,
+//   .fourth-div__wrapper {
+//     overflow: hidden;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     aspect-ratio: 16/9;
+//     flex: 1;
+//     position: relative;
 
-    .first-div--content,
-    .second-div--content,
-    .third-div--content,
-    .fourth-div--content {
-      position: absolute;
-    }
+//     .first-div--content,
+//     .second-div--content,
+//     .third-div--content,
+//     .fourth-div--content {
+//       position: absolute;
+//     }
 
-    .third-div--content {
-      transform: translate(50%, 0%);
-    }
-    .second-div--content {
-      transform: translateY(-50%);
-    }
-  }
-}
+//     .third-div--content {
+//       transform: translate(50%, 0%);
+//     }
+
+//     .second-div--content {
+//       transform: translateY(-50%);
+//     }
+//   }
+// }

@@ -13,20 +13,16 @@ export default function SocialMediaGuild({
   bigtime,
 }: {
   twitter: string;
-  discord: string;
   twitch: string;
   bigtime: string;
 }) {
   return (
     <div className="social-media-guild__wrapper">
       <Link to={twitter} target="_blank">
-        <TbBrandTwitterFilled size={25} />
-      </Link>
-      <Link to={discord} target="_blank">
-        <TbBrandDiscordFilled size={25} />
+        <TbBrandTwitterFilled size={36} />
       </Link>
       <Link to={twitch}>
-        <TbBrandTwitch size={25} />
+        <TbBrandTwitch size={36} />
       </Link>
       <Link to={bigtime}>
         <img src="/images/g-bigtime.svg" alt="Bigtime" />

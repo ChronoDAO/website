@@ -32,14 +32,14 @@ export default function Section01() {
           </h3>
           <ul>
             <li>
-              <img src="/images/diablo.svg" height={"64px"} alt="" />
+              <img src="/images/diablo.svg" alt="" />
               <p>
                 Toi aussi t'as galéré à battre Lilith dans
                 <span className="span--orange"> Diablo IV</span> ?
               </p>
             </li>
             <li>
-              <img src="/images/manette.svg" height={"64px"} alt="" />
+              <img src="/images/manette.svg" alt="" />
               <p>
                 Tu connais des joueurs qui se sont faits ban alors qu'ils
                 avaient investi des{" "}
@@ -47,7 +47,7 @@ export default function Section01() {
               </p>
             </li>
             <li>
-              <img src="/images/justice.svg" height={"64px"} alt="" />
+              <img src="/images/justice.svg" alt="" />
               <p>
                 Tu rêves d'un{" "}
                 <span className="span--orange">monde plus juste</span> pour les
@@ -55,7 +55,7 @@ export default function Section01() {
               </p>
             </li>
             <li>
-              <img src="/images/stonks.svg" height={"64px"} alt="" />
+              <img src="/images/stonks.svg" alt="" />
               <p>
                 Prends part à l'évolution du gaming, là où les joueurs sont les
                 véritables <span className="span--orange">maîtres du jeu </span>

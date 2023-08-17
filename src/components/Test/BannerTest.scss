@@ -2,36 +2,37 @@
 .bannerTest {
   width: 100%;
   position: relative;
-  aspect-ratio: 16/8;
-  .detail{
-    position: absolute;
-    aspect-ratio: 1/1;
-    /* From https://css.glass */
-/* From https://css.glass */
-background: rgba(255, 255, 255, 0.020);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-z-index: 10000;
-}
-#detail-1{
-  width: 100%;  
-    max-width: 300px;
-    top: 20%;
-    left: 10%;
-  }
-  #detail-2{
-    width: 100%;  
-    max-width: 200px;
-    top: 50%;
-    right: 50%;
-  }
-  #detail-3{
-    width: 100%;
-    max-width: 325px;
-    top: 25%;
-    right: 10%;
-  }
+  aspect-ratio: 16/7;
+//   .detail{
+//     position: absolute;
+//     aspect-ratio: 1/1;
+//     /* From https://css.glass */
+// /* From https://css.glass */
+// background: rgba(255, 255, 255, 0.020);
+// box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+// backdrop-filter: blur(10px);
+// -webkit-backdrop-filter: blur(10px);
+// z-index: 10000;
+// transform: rotate(45deg);
+// }
+// #detail-1{
+//   width: 100%;  
+//     max-width: 300px;
+//     top: 20%;
+//     left: 10%;
+//   }
+//   #detail-2{
+//     width: 100%;  
+//     max-width: 120px;
+//     top: 50%;
+//     right: 50%;
+//   }
+//   #detail-3{
+//     width: 100%;
+//     max-width: 275px;
+//     top: 25%;
+//     right: 10%;
+//   }
 
 
   .bannerTest__wrapper {
@@ -53,10 +54,10 @@ z-index: 10000;
       width: 100%;
       scale: .8;
       position: absolute;
-      top: 0;
+      top: -5%;
       left: 0;
       transform: translate(0%,0%);
-      filter: brightness(.7);
+      filter:brightness(.7);
     }
   }
 }
