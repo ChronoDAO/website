@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import "./SocialMediaGuild.scss";
 import {
-  TbBrandDiscordFilled,
   TbBrandTwitch,
   TbBrandTwitterFilled,
 } from "react-icons/tb";
 
 export default function SocialMediaGuild({
   twitter,
-  discord,
   twitch,
   bigtime,
 }: {

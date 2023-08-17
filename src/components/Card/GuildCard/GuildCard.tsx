@@ -2,10 +2,6 @@ import { useState } from "react";
 import SocialMediaGuild from "../../SocialMedia/SocialMediaCard/SocialMediaGuild";
 import "./GuildCard.scss";
 
-interface ActiveTabs {
-  [key: number]: string;
-}
-
 interface CardData {
   id: number;
   playerName: string;
@@ -17,9 +13,11 @@ interface CardData {
   bigTimeContent: string;
 }
 
+type TabType = "info" | "bigTime";
+
 export default function GuildCard({ data }: { data: CardData }) {
-  const [activeTab, setActiveTab] = useState<string>("info");
-  const handleTabChange = (tabName: string) => {
+  const [activeTab, setActiveTab] = useState<TabType>("info");
+  const handleTabChange = (tabName: TabType) => {
     setActiveTab(tabName);
   };
 
@@ -47,7 +45,7 @@ export default function GuildCard({ data }: { data: CardData }) {
                 <button
                   key={tab}
                   className={`${tab} ${activeTab === tab ? "active" : ""}`}
-                  onClick={() => handleTabChange(tab)}
+                  onClick={() => handleTabChange(tab as TabType)}
                   aria-selected={activeTab === tab}
                 >
                   {tab === "info" ? (
@@ -63,7 +61,7 @@ export default function GuildCard({ data }: { data: CardData }) {
               ))}
             </ul>
             <div className="content">
-              <p>{data[`${activeTab}Content`]}</p>
+              <p>{data[`${activeTab}Content` as keyof CardData]}</p>
             </div>
           </div>
         </div>
