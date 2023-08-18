@@ -72,7 +72,7 @@ export default function Section01() {
       </div>
       <div className="first-div__wrapper" ref={firstDivRef}>
         <div className="first-div--content">
-          <img src="/images/assets/singe.svg" height={"400px"} alt="" />
+          <img src="/images/assets/singe.svg" alt="" />
         </div>
       </div>
     </section>

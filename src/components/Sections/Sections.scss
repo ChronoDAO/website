@@ -74,7 +74,6 @@
       li {
         display: flex;
         align-items: center;
-        max-width: 80%;
         gap: 1em;
         letter-spacing: .1rem;
         font-size: clamp(0.8rem, 2vw, 1.2rem);
@@ -158,7 +157,7 @@
 
 
     svg {
-      max-width: 500px;
+      max-width: 400px;
       width: 100%;
     }
 
