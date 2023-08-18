@@ -26,7 +26,7 @@
   top: 0;
   height: 0;
   border-radius: 5px;
-  background-color: $color_orange; // Using the color variable
+  background-color: $color_orange;
   transition: transform 0.3s ease, height 10s linear;
   animation: moveline 6s linear forwards;
 }
@@ -48,9 +48,10 @@
 
     #timeline_image {
       margin-top: 2rem;
-      width: 80%;
+      width: 50%;
       height: auto;
       justify-content: center;
+      border-radius: 5%;
     }
   }
 
@@ -60,7 +61,6 @@
     padding-left: 1rem;
 
     .event-content {
-      margin-right: 5rem;
       flex-direction: column;
     }
   }
@@ -70,14 +70,17 @@
     justify-content: flex-end;
     padding-right: 1rem;
 
+
     .event-content {
-      margin-left: 5rem;
       flex-direction: column;
     }
   }
 
   #time_card {
-    text-align: start;
+    text-align: start;    
+    margin-left: 5rem;
+    width: 80%;
+
   }
 }
 
@@ -87,10 +90,10 @@
     position: absolute;
     left: 50%;
     justify-content: space-around;
-    transform: translateX(-50%);
+    transform: translateX(-75%);
     width: 8px;
     top: 0;
-    height: 0;
+    height: 100%;
     border-radius: 5px;
     background-color: $color_orange;
     transition: transform 0.3s ease, height 10s linear;
@@ -101,17 +104,27 @@
     display: flex;
     text-align: start;
     flex-direction: column;
-    margin-top: 2rem;
-    justify-content: flex-start;
-    margin-right: 2rem;
+    justify-content: center;
+    // margin-right: 2rem;
+    // margin-left: 2rem;
+    margin-top: 3rem;
 
     #time_card {
       background-color: $color-black;
       padding-bottom: 1rem;
-      width: 150%;
-      max-width: 200%;
-      justify-content: start;
-      text-align: start;
+      margin: 0;
+      width: 100%; 
+      max-width: 120%; 
+      height: auto; 
+      justify-content: center;
+      text-align: start;    
+      border-radius: 5%;
+
+
+      p{
+        width: fit-content;
+        margin: 1rem;
+      }
     }
     #timeline_image {
       display: none;

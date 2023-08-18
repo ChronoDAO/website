@@ -8,18 +8,18 @@
 
 #mainDAO h1 {
   margin-bottom: 5rem;
-}
-
-#mainDAO h3,h2 {
+  
+  h3,h2 {
   padding-left: 1rem;
   font-size: clamp(1.5rem, 3vw, 3rem);
-}
-
-#mainDAO p {
+  }
+  p{
   letter-spacing: 0.1rem;
   font-size: clamp(0.8rem, 1vw, 1rem);
-  margin: 1rem;
+  padding: 2rem;
+  }
 }
+
 
 #mainDAO > #containerDAO {
   display: flex;
@@ -64,12 +64,10 @@
   padding-right: 3rem;
   
   #img_sidebar {
-    width: 120%;
+    justify-content: center;
+    width: 110%;
+    border-radius: 5%;
+
   }
 
-}
-
-#containerMap {
-  // display: flex;
-  // flex-direction: column;
 }
