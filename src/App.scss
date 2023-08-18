@@ -1,5 +1,8 @@
 @use 'colors.scss' as *;
 
+html{
+  scroll-behavior: smooth;
+}
 body {
   background-color: $color-black;
   color: $color-white;
@@ -15,8 +18,4 @@ body {
   background-size: 80%, 120%;
   background-position-y: 10dvh, 0;
   backdrop-filter: brightness(.6);
-}
-
-main {
-  padding: 0 68px;
 }
