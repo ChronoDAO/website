@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 const DaoTimeline = () => {
 
-  const lineRef = useRef(null);
 
   const section1Ref = useRef(null);
   const imgRef1 = useRef(null);
@@ -24,7 +23,6 @@ const DaoTimeline = () => {
   const imgRef5 = useRef(null);
 
   useEffect(() => {
-    const line = lineRef.current;
     const section1 = section1Ref.current;
     const section2 = section2Ref.current;
     const section3 = section3Ref.current;
@@ -110,7 +108,7 @@ const DaoTimeline = () => {
     <div className="vertical-timeline">
     <h2>Timeline</h2>
     <div className="timeline">
-      <div className="line" ref={lineRef}></div>
+      <div className="line"></div>
       <div className="event">
         <div className="event-content right-event" ref={imgRef1}>
           <img src="https://placehold.co/600x400" alt="Image 2" className="section-image" id="timeline_image" />
