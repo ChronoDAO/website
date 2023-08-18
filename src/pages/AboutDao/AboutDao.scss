@@ -1,24 +1,34 @@
+@use '../../colors' as *;
+
+
 #mainDAO {
-  color: #FF7E03;
   font-size: clamp(0.6rem, 2vw, 1.5rem);
   text-align: center;
   padding-bottom: 1rem;
   gap: 1em;
-}
+  h2{
+    padding-left: 2rem; 
+    color: $color-orange;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+  }
 
-#mainDAO h1 {
+  h1 {
+  color: $color-orange;
   margin-bottom: 5rem;
   
-  h3,h2 {
-  padding-left: 1rem;
-  font-size: clamp(1.5rem, 3vw, 3rem);
+  h3{
+  color: $color-orange;
+  padding-left: 3rem;
+ 
   }
+  }  
   p{
   letter-spacing: 0.1rem;
   font-size: clamp(0.8rem, 1vw, 1rem);
   padding: 2rem;
+  } 
   }
-}
+
 
 
 #mainDAO > #containerDAO {

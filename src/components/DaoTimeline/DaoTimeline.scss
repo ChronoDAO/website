@@ -9,6 +9,11 @@
 
   h2 {
     margin-bottom: 3rem;
+    color: $color-orange;
+  }
+  h3 {
+    // margin-bottom: 3rem;
+    color: $color-orange;
   }
 }
 
@@ -36,6 +41,7 @@
   flex-wrap: wrap;
   align-items: center;
   position: relative;
+
 
   .event-content {
     width: 50%;
