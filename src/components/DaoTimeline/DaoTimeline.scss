@@ -26,7 +26,7 @@
   top: 0;
   height: 0;
   border-radius: 5px;
-  background-color: $color_orange;
+  background-color: $color_orange; // Using the color variable
   transition: transform 0.3s ease, height 10s linear;
   animation: moveline 6s linear forwards;
 }
@@ -41,45 +41,40 @@
     width: 50%;
     max-width: 50%;
     border-radius: 5%;
-  
-    
+
     #DAOTimelineH2 {
       padding-left: 1rem;
     }
-  
+
     #timeline_image {
       margin-top: 2rem;
-      width: 80%; 
-      height: auto; 
+      width: 80%;
+      height: auto;
       justify-content: center;
     }
-    
   }
 
   &.left-event {
     order: -1;
     justify-content: flex-start;
     padding-left: 1rem;
+
     .event-content {
       margin-right: 5rem;
       flex-direction: column;
     }
-    
   }
 
   &.right-event {
     order: 1;
     justify-content: flex-end;
     padding-right: 1rem;
+
     .event-content {
       margin-left: 5rem;
       flex-direction: column;
     }
-    
   }
-
-  
- 
 
   #time_card {
     text-align: start;
@@ -101,7 +96,7 @@
     transition: transform 0.3s ease, height 10s linear;
     animation: moveline 6s linear forwards;
   }
- 
+
   .event {
     display: flex;
     text-align: start;
@@ -109,12 +104,9 @@
     margin-top: 2rem;
     justify-content: flex-start;
     margin-right: 2rem;
-    
- 
-  
- 
+
     #time_card {
-      background-color: rgb(10, 17, 18);
+      background-color: $color-black;
       padding-bottom: 1rem;
       width: 150%;
       max-width: 200%;
@@ -124,8 +116,7 @@
     #timeline_image {
       display: none;
     }
-
-}
+  }
 }
 
 @keyframes moveline {
@@ -136,14 +127,3 @@
     height: 100%;
   }
 }
-
-// @keyframes movedown {
-//   0% {
-//     opacity: 1;
-//     transform: translateY(-30px);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: translateY(0px);
-//   }
-// }
