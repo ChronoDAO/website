@@ -38,7 +38,7 @@ export default function TextScroll() {
 
   return (
     <div className="banner_test">
-      <p>PROOF OF &nbsp;</p>
+      <h2>PROOF OF &nbsp;</h2>
       <div className="words__wrapper">
         <span className="word">COMPLETION</span>
         <span className="word">COLLECTION</span>
