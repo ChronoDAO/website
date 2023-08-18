@@ -7,17 +7,9 @@
   justify-content: center;
   padding-top: 6rem;
 
-  h2{
+  h2 {
     margin-bottom: 3rem;
   }
-
-  // .event-content,
-  // #timeline_image {
-  //   // opacity: 0;
-  //   // visibility: hidden;
-  //   // transition: opacity 0.3s ease, transform 0.3s ease;
-  //   // transform: translateY(-30px);
-  // }
 }
 
 .timeline {
@@ -44,64 +36,53 @@
   flex-wrap: wrap;
   align-items: center;
   position: relative;
-  margin: 10px 0;
-  animation: movedown 6s linear forwards;
-  opacity: 0;
+
+  .event-content {
+    width: 50%;
+    max-width: 50%;
+    border-radius: 5%;
+  
+    
+    #DAOTimelineH2 {
+      padding-left: 1rem;
+    }
+  
+    #timeline_image {
+      margin-top: 2rem;
+      width: 80%; 
+      height: auto; 
+      justify-content: center;
+    }
+    
+  }
 
   &.left-event {
     order: -1;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding-left: 1rem;
     .event-content {
       margin-right: 5rem;
-      display: flex;
       flex-direction: column;
-      align-items: flex-end;
     }
-    #timeline_image {
-      margin-left: 2rem;
-    }
+    
   }
 
   &.right-event {
     order: 1;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding-right: 1rem;
     .event-content {
       margin-left: 5rem;
-      display: flex;
       flex-direction: column;
-      align-items: flex-start;
     }
-    #timeline_image {
-      margin-right: 2rem;
-    }
+    
   }
 
-  .event-content {
-    width: 45%;
-    max-width: 50%;
-    padding: 1rem;
-    border-radius: 5%;
-    animation: movedown 6s linear forwards;
-    opacity: 0;
-    #DAOTimelineH2 {
-      padding-left: 1rem;
-    }
-  }
+  
+ 
 
-  #timeline_image {
-    width: 60%;
-    max-width: 33rem;
-
-    height: auto;
-    display: block;
-  }
-
-  .card {
-    max-width: 900px;
+  #time_card {
     text-align: start;
-    background-color: rgb(61, 108, 118);
   }
 }
 
@@ -109,43 +90,42 @@
   .line::after {
     content: "";
     position: absolute;
-    left: 0%;
+    left: 50%;
     justify-content: space-around;
     transform: translateX(-50%);
     width: 8px;
     top: 0;
     height: 0;
+    border-radius: 5px;
     background-color: $color_orange;
-    transition: transform 0.3s ease, height 160s linear;
+    transition: transform 0.3s ease, height 10s linear;
     animation: moveline 6s linear forwards;
   }
+ 
   .event {
+    display: flex;
+    text-align: start;
     flex-direction: column;
-    align-items: flex-start;
-    margin: 0;
-    #timeline_image {
-      display:none
-    }
-    .event-content {
-      margin: 1rem 0;
-      width: 90%;
-      #DAOTimelineH2 {
-        padding-left: 1rem;
-      }
-      
-    }
-    &.left-event,
-    &.right-event {
-      padding: 0;
-      justify-content: flex-start;
-      .event-content {
-        margin: 0;
-      }
-    }
+    margin-top: 2rem;
+    justify-content: flex-start;
+    margin-right: 2rem;
     
-  }
+ 
+  
+ 
+    #time_card {
+      background-color: rgb(10, 17, 18);
+      padding-bottom: 1rem;
+      width: 150%;
+      max-width: 200%;
+      justify-content: start;
+      text-align: start;
+    }
+    #timeline_image {
+      display: none;
+    }
 
-
+}
 }
 
 @keyframes moveline {
@@ -157,13 +137,13 @@
   }
 }
 
-@keyframes movedown {
-  0% {
-    opacity: 1;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
+// @keyframes movedown {
+//   0% {
+//     opacity: 1;
+//     transform: translateY(-30px);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0px);
+//   }
+// }
