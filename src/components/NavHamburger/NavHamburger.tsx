@@ -17,10 +17,13 @@ function NavHamburger() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about_dao"> DAO</Link>
+          <Link to="/about_dao"> About DAO</Link>
         </li>
         <li>
-          <Link to="/about_us">Us</Link>
+          <Link to="/about_us">About Us</Link>
+        </li>
+        <li>
+          <Link to="/games">Games</Link>
         </li>
       </ul>
     );
@@ -29,7 +32,9 @@ function NavHamburger() {
   return (
     <nav>
       <div className={`nav__wrapper ${isOpen ? 'open' : ''}`}>
-        <img src="./images/assets/dao.png" alt="" />
+        <a href="/">
+          <img src="./images/assets/dao.png" alt="Logo de la guilde ChronoDAO, représente un dragon stylisé bleu dans un cercle rappelant de manière très simplifiée une pocketwatch du jeu Bigtime" />
+        </a>
         <div id="nav-cta-button">
           <CTAButton text={"Team"} />
         </div>
@@ -57,3 +62,4 @@ function NavHamburger() {
 }
 
 export default NavHamburger
+
