@@ -127,9 +127,12 @@
     }
   }
   #back-card__wrapper {
+    margin: 0 auto;
+    flex: 1;
     justify-content: flex-start;
+    width: 100%;
     img {
-      max-width: 300px;
+      max-width: 250px;
       width: 100%;
       filter: drop-shadow(-15px 10px 4px black);
     }
@@ -163,6 +166,7 @@
 
   }
 }
+
 
 
 // #sectionTwo,
