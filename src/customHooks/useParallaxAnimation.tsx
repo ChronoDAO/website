@@ -7,6 +7,7 @@ function useParallaxAnimation(
   containerRef: RefObject<HTMLDivElement>,
   opacityStyle?: boolean,
   transitionStyle?: boolean,
+  inverted?:boolean
 ) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isMouseInside, setIsMouseInside] = useState(true);
@@ -15,9 +16,10 @@ function useParallaxAnimation(
       if (containerRef.current) {
         const mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
         const mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+      inverted ? setPosition({x: -mouseX, y:-mouseY}) : (
+        setPosition({ x: mouseX, y: mouseY })
+        )
 
-        setPosition({ x: mouseX, y: mouseY });
-    
       }
     };
 

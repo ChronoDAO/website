@@ -4,7 +4,7 @@ import CTAButton from "../Buttons/CTA-Button/CTAButton";
 
 export default function Section00() {
   return (
-    <section className="home-section__wrapper">
+    <section className="home-section__wrapper" id="sectionZero">
       <div className="content__wrapper">
         <div className="text__wrapper">
           <h3>

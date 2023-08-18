@@ -1,0 +1,63 @@
+@use '../../colors' as *;
+.bannerTest {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 16/7;
+//   .detail{
+//     position: absolute;
+//     aspect-ratio: 1/1;
+//     /* From https://css.glass */
+// /* From https://css.glass */
+// background: rgba(255, 255, 255, 0.020);
+// box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+// backdrop-filter: blur(10px);
+// -webkit-backdrop-filter: blur(10px);
+// z-index: 10000;
+// transform: rotate(45deg);
+// }
+// #detail-1{
+//   width: 100%;  
+//     max-width: 300px;
+//     top: 20%;
+//     left: 10%;
+//   }
+//   #detail-2{
+//     width: 100%;  
+//     max-width: 120px;
+//     top: 50%;
+//     right: 50%;
+//   }
+//   #detail-3{
+//     width: 100%;
+//     max-width: 275px;
+//     top: 25%;
+//     right: 10%;
+//   }
+
+
+  .bannerTest__wrapper {
+    position: relative;
+    height: 100%;
+
+    .text-scroll {
+      > div {
+
+        position: absolute;
+        left: 10% ;
+        top: 20%;
+        transform: translate(-25%, -100%);
+      }
+
+    }
+
+    img {
+      width: 100%;
+      scale: .8;
+      position: absolute;
+      top: -5%;
+      left: 0;
+      transform: translate(0%,0%);
+      filter:brightness(.7);
+    }
+  }
+}

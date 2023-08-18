@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./TextScroll.scss";
+import CTAButton from "../Buttons/CTA-Button/CTAButton";
 
 export default function TextScroll() {
   useEffect(() => {
@@ -37,7 +38,7 @@ export default function TextScroll() {
 
   return (
     <div className="banner_test">
-      <p>PROOF OF &nbsp;</p>
+      <h2>PROOF OF &nbsp;</h2>
       <div className="words__wrapper">
         <span className="word">COMPLETION</span>
         <span className="word">COLLECTION</span>
@@ -47,6 +48,13 @@ export default function TextScroll() {
         <span className="word">SKILLS</span>
         <span className="word">ADVENTURE</span>
         <span className="word">EXPLORATION</span>
+      </div>
+      <div className="caption">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio,
+          alias!
+        </p>
+        <CTAButton text="En savoir plus" link="#sectionZero" />
       </div>
     </div>
   );
