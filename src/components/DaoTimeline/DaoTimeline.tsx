@@ -37,20 +37,7 @@ const DaoTimeline = () => {
     const img3 = imgRef3.current;
     const img4 = imgRef4.current;
     const img5 = imgRef5.current;
-    ScrollTrigger.create({
-      trigger: line,
-      start: "top 80%",
-      onEnter: () => {
-        gsap.fromTo(line, { opacity: 0 }, { opacity: 1, });
-        // gsap.fromTo(img1, { rotation: 0 }, { rotation: 180, duration: 3 });
-      },
-      onLeaveBack: () => {
-        gsap.fromTo(line, { opacity: 1 }, { opacity: 1, duration: 1 });
-      },
-
-    });
-
-
+ 
     ScrollTrigger.create({
       trigger: section1,
       start: "top 80%",
