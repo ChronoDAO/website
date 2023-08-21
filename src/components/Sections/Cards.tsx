@@ -24,7 +24,7 @@ export default function Cards() {
       }, i * 200);
     });
   }
-  
+
   useEffect(() => {
     window.addEventListener("resize", () => {
       console.log(mediaQuerie);
