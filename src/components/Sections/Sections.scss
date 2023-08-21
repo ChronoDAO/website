@@ -129,9 +129,12 @@
   #back-card__wrapper {
     margin: 0 auto;
     flex: 1;
-    justify-content: flex-start;
+    justify-content: flex-end;
     width: 100%;
     img {
+      border: 3px solid $color-orange;
+      border-radius: .75em;      
+      background-color: $color-light-black;
       max-width: 250px;
       width: 100%;
       filter: drop-shadow(-15px 10px 4px black);
@@ -153,8 +156,8 @@
     justify-content: center;
 
     img {
+      max-width: 500px;
       width: 100%;
-      height: auto;
     }
 
 
@@ -163,41 +166,9 @@
       max-width: 400px;
       width: 100%;
     }
+    svg:hover{
+      fill: white;
+    }
 
   }
 }
-
-
-
-// #sectionTwo,
-// #sectionOne,
-// #sectionThree {
-
-//   .first-div__wrapper,
-//   .second-div__wrapper,
-//   .third-div__wrapper,
-//   .fourth-div__wrapper {
-//     overflow: hidden;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     aspect-ratio: 16/9;
-//     flex: 1;
-//     position: relative;
-
-//     .first-div--content,
-//     .second-div--content,
-//     .third-div--content,
-//     .fourth-div--content {
-//       position: absolute;
-//     }
-
-//     .third-div--content {
-//       transform: translate(50%, 0%);
-//     }
-
-//     .second-div--content {
-//       transform: translateY(-50%);
-//     }
-//   }
-// }

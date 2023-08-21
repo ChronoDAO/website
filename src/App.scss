@@ -4,18 +4,20 @@ html{
   scroll-behavior: smooth;
 }
 body {
+  background-image: url("./images/bg_dragon.svg");
   background-color: $color-black;
   color: $color-white;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-size: 80%, 120%;
   background-position-y: 10dvh, 0;
   backdrop-filter: brightness(.6);
+}
+
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }
