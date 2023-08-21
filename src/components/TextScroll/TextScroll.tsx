@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import "./TextScroll.scss";
-import CTAButton from "../Buttons/CTA-Button/CTAButton";
 
 export default function TextScroll() {
   useEffect(() => {
@@ -54,7 +53,6 @@ export default function TextScroll() {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio,
           alias!
         </p>
-        <CTAButton text="En savoir plus" link="#sectionZero" />
       </div>
     </div>
   );

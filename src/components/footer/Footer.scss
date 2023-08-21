@@ -17,6 +17,7 @@ footer{
     color: $color-gray; 
     font-size: 0.8rem;
     transition: 0.15s;
+    font-size: clamp(.5rem, 2vw, 1.2rem);
   }
 
   a:hover{

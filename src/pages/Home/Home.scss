@@ -4,9 +4,10 @@
   }
 }
 
+
 .auto-grid {
-  margin-top: 15vw;
-  --min-column-size: 30rem;
+  margin-top: 10vw;
+  --min-column-size: 25rem;
   display: grid;
   gap: 5rem;
   grid-template-columns: repeat(auto-fit,
@@ -18,14 +19,17 @@
     .home-section__wrapper:nth-of-type(odd) {
       flex-direction: column;
     }
+
     .home-section__wrapper:nth-of-type(even) {
       flex-direction: column;
     }
-    li{
+
+    li {
       max-width: 100%;
-      img{
+
+      img {
         max-width: 50px;
       }
     }
-}
+  }
 }
