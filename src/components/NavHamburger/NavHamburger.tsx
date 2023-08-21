@@ -1,25 +1,25 @@
-// import { useState } from "react";
-// import CTAButton from "../Buttons/CTA-Button/CTAButton";
+import { useState } from "react";
+import CTAButton from "../Buttons/CTA-Button/CTAButton";
 import "./NavHamburger.scss";
 
 function NavHamburger() {
-  // const [showLinks, setShowLinks] = useState(false); // State to track menu open/close
+  const [showLinks, setShowLinks] = useState(false); // State to track menu open/close
 
-  // const handleShowLinks = () => {
-  //   setShowLinks(!showLinks);
-  // };
+  const handleShowLinks = () => {
+    setShowLinks(!showLinks);
+  };
 
   return (
-    // <nav className={`Navbar ${showLinks ? "show-nav": "hide-nav"}`}>
-    <nav className="Navbar">
+    <nav className={`Navbar ${showLinks ? "show-nav": "hide-nav"}`}>
+    {/* // <nav className="Navbar"> */}
       {/* <div className="navbar__logo">
         <a href="/">
           <img src="./images/assets/dao.png" alt="Logo de la guilde ChronoDAO, représente un dragon stylisé bleu dans un cercle rappelant de manière très simplifiée une pocketwatch du jeu Bigtime" />
         </a>
       </div> */}
-      {/* <div id="nav-cta-button">
+      <div id="nav-cta-button">
         <CTAButton text={"Team"} />
-      </div> */}
+      </div>
 
       <ul className="navbar__links">
         <li className="navbar__item">
@@ -35,8 +35,8 @@ function NavHamburger() {
           <a href="/games" className="navbar__link">Games</a>
         </li>
       </ul>
-      {/* <button className="navbar__burger" onClick={handleShowLinks}> */}
-      <button className="navbar__burger">
+      <button className="navbar__burger" onClick={handleShowLinks}>
+      {/* <button className="navbar__burger"> */}
         <span className="burger-bar"></span>
       </button>
 
