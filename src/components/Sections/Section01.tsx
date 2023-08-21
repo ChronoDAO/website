@@ -1,30 +1,9 @@
 import CTAButton from "../Buttons/CTA-Button/CTAButton";
 import "./Sections.scss";
-import useIntersectionAnimation from "../../customHooks/useIntersectionAnimation";
 
 export default function Section01() {
-  const firstDivRef = useIntersectionAnimation(0.5, handleFirstDivAnimation);
-
-  function handleFirstDivAnimation(inView: unknown) {
-    const firstDiv = document.querySelector(".first-div--content");
-    if (firstDiv) {
-      const transition = inView
-        ? "cubic-bezier(0.075, 0.82, 0.165, 1) 1s"
-        : "ease .2s";
-        
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-ignore
-      firstDiv.style.top = inView ? "0" : "-50%";
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-ignore
-      firstDiv.style.opacity = inView ? "1" : "0";
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-ignore
-      firstDiv.style.transition = transition;
-    }
-  }
   return (
-    <section className="home-section__wrapper" id="sectionOne">
+    <section className="home-section__wrapper">
       <div className="content__wrapper">
         <div className="text__wrapper">
           <h3>
@@ -70,10 +49,8 @@ export default function Section01() {
           />
         </div>
       </div>
-      <div className="first-div__wrapper" ref={firstDivRef}>
-        <div className="first-div--content">
-          <img src="/images/assets/singe.svg" height={"400px"} alt="" />
-        </div>
+      <div className="image__wrapper">
+        <img src="/images/assets/perso_dino.jpg" alt="" />
       </div>
     </section>
   );

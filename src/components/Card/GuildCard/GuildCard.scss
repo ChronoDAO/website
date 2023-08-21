@@ -1,6 +1,6 @@
 @use '../../../colors' as *;
 
-.cards{
+.cards {
   margin-bottom: 5%;
 }
 
@@ -17,7 +17,7 @@
     width: 100%;
     background-color: $color-light-black;
     aspect-ratio: 100/139;
-    border-radius: .5em;
+    border-radius: .75em;
     border: 3px solid $color-orange;
     transform: rotateY(180deg);
 
@@ -59,13 +59,13 @@
           aspect-ratio: 4/2;
           height: 100%;
           width: 100%;
-          object-fit:scale-down;
+          object-fit: scale-down;
         }
       }
     }
 
     .card__footer {
-      font-size: (.8rem,2vw,1.2rem);
+      font-size: (.8rem, 2vw, 1.2rem);
       flex-direction: column;
       flex: 4;
       border-radius: inherit;
