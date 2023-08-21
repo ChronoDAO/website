@@ -56,27 +56,25 @@
   flex: 1;
   flex-basis: 400px;
   text-align: center; 
-   .img{
-    width: 450px;
-   }
+
 }
 
 #mainDAO #sidebar .image-container {
   margin-top: 3rem;
-  max-width: 100%; 
   display: flex;
   justify-content: center;
+  max-width: 100%
 }
 
 #mainDAO #sidebar  {
-  margin-left: 1rem;
   height: auto;
-  padding-right: 3rem;
+  
   
   #img_sidebar {
     justify-content: center;
-    // width: 110%;
     border-radius: 5%;
+    max-width: 100%;
+     height: auto;
 
   }
 
