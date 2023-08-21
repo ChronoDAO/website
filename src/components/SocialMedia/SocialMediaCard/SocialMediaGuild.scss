@@ -9,6 +9,7 @@
   top: 3%;
   gap: .5em;
   a{
+    filter: drop-shadow(-2px 3px 4px $color-black);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,5 +17,10 @@
     width: 44px;
     aspect-ratio: 1/1;
     background-color: $color-orange ;
+    scale: .9;
+    transition: .2s ease;
+  }
+  a:hover{
+    scale: 1;
   }
 }

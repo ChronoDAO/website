@@ -8,10 +8,7 @@ export default function Footer() {
           <li><a href="/">Terms of use</a></li>
           <li><a href="/">Public Deck</a></li>
           <li><a href="/">Launchpad</a></li>
-          <li><a href="/">XCS</a></li>
-          <li><a href="/">Prometheus NFT</a></li>
           <li><a href="/">About us</a></li>
-          <li><a href="/">FAQ</a></li>
         </ul>
       </div>
     </footer>
