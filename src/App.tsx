@@ -12,7 +12,8 @@ function App() {
     <>
       <SocialMedia />
       <div
-        className="container">
+        className="container"
+      >
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
