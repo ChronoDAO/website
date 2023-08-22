@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.matchMedia("(min-width: 600px)").matches);
+      setIsWideScreen(window.matchMedia("(min-width: 800px)").matches);
     };
 
     handleResize(); // Call it initially

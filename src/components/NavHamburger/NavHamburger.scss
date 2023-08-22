@@ -14,14 +14,13 @@
   color: $color-white
 }
 
-.nav-cta-button{
-  width: 50px;
+.nav-cta-button nav{
   display:flex;
 }
-.cta-button__wrapper{
-  width:100px;
-  display: flex;
-}
+// .cta-button__wrapper{
+//   width:100px;
+//   display: flex;
+// }
 
 .navbar__links{
   display: flex;
@@ -41,7 +40,7 @@
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .navbar__links{
     flex-direction: column;
     justify-content: center;
