@@ -1,11 +1,11 @@
 @use '../../colors' as *;
 
-.navbar{
+.navbar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  position:fixed;
+  // position:fixed;
   width: 100%;
   min-height: 75px;
   height: 75px;
@@ -14,7 +14,14 @@
   color: $color-white
 }
 
-.nav-cta-button nav{
+.navbar__logo img {
+  display: flex;
+  padding: 0;
+  max-width: 60px;
+  width: 100%;
+}
+
+.navbar__cta-button {
   display:flex;
 }
 // .cta-button__wrapper{
@@ -115,5 +122,9 @@
 
   .show-nav .burger-bar::after {
     transform: rotate(-45deg);
+  }
+
+  .show-nav .navbar__cta-button {
+    display: none;
   }
 }

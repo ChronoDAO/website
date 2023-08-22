@@ -35,12 +35,14 @@ function App() {
         // }}
       >
         {isWideScreen ? <Nav /> : <NavHamburger />}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about_us" element={<AboutUs />} />
-          <Route path="/about_dao" element={<AboutDao />} />
-        </Routes>
-        <Footer />
+        <div className="container-width">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about_us" element={<AboutUs />} />
+            <Route path="/about_dao" element={<AboutDao />} />
+          </Routes>
+          <Footer />
+        </div>
       </div>
     </>
   );

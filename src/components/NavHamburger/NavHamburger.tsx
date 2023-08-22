@@ -18,7 +18,7 @@ function NavHamburger() {
           <img src="./images/assets/dao.png" alt="Logo de la guilde ChronoDAO, représente un dragon stylisé bleu dans un cercle rappelant de manière très simplifiée une pocketwatch du jeu Bigtime" />
         </a>
       </div>
-      <div className="nav-cta-button">
+      <div className="navbar__cta-button">
         <CTAButton text={"Team"} />
       </div>
 
