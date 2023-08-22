@@ -9,9 +9,14 @@
   width: 100%;
   min-height: 75px;
   height: 75px;
-  padding: 1rem;
+  padding: 0rem;
   background-color: $color-black;
   color: $color-white
+}
+
+.navbar__logo {
+  padding: 1rem 1rem 0rem 1rem;
+  position: absolute;
 }
 
 .navbar__logo img {
@@ -23,6 +28,7 @@
 
 .navbar__cta-button {
   display:flex;
+  padding: 1rem 1rem 0rem 1rem;
 }
 // .cta-button__wrapper{
 //   width:100px;
@@ -55,9 +61,9 @@
     // position: fixed;
     // left: 0;
     // right: 0;
-    right: -100vw;
+    right: -100dvw;
     bottom: 0;
-    height: 100vh;
+    height: 100dvh;
     visibility: hidden;
     padding: 2rem;
     background-color: $color-black;
@@ -66,7 +72,7 @@
 
   .show-nav .navbar__links{
     right:0;
-    width: 100vw;
+    width: 100dvw;
     visibility: visible;
   }
 
