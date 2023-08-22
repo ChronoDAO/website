@@ -13,9 +13,6 @@ function App() {
       <SocialMedia />
       <div
         className="container"
-        // style={{
-        //   backgroundImage: `url("./images/bg_dragon.svg"), url("./images/12.png")`,
-        // }}
       >
         <Nav />
         <Routes>
