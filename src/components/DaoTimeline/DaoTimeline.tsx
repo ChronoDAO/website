@@ -40,8 +40,8 @@ const DaoTimeline = () => {
       trigger: section1,
       start: "top 80%",
       onEnter: () => {
-        gsap.to(section1, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img1, {duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)" });
+        gsap.to(section1, { opacity: 1, visibility: "visible", transform: "translateX(-50px)", duration: 3 });
+        gsap.to(img1, {duration: 3, opacity: 1, visibility: "visible", transform: "translateX(100px)" });
       },
       onLeaveBack: () => {
         gsap.to(section1, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
@@ -54,8 +54,8 @@ const DaoTimeline = () => {
       trigger: section2,
       start: "top 80%",
       onEnter: () => {
-        gsap.to(section2, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img2, {duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)" });
+        gsap.to(section2, { opacity: 1, visibility: "visible", transform: "translateX(50px)", duration: 3 });
+        gsap.to(img2, {duration: 3, opacity: 1, visibility: "visible", transform: "translateX(-100px)" });
       },
       onLeaveBack: () => {
         gsap.to(section2, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
@@ -68,8 +68,8 @@ const DaoTimeline = () => {
       trigger: section3,
       start: "top 80%",
       onEnter: () => {
-        gsap.to(section3, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img3, {duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)" });
+        gsap.to(section3, { opacity: 1, visibility: "visible", transform: "translateX(-50px)", duration: 3});
+        gsap.to(img3, {duration: 3, opacity: 1, visibility: "visible", transform: "translateX(100px)" });
       },
       onLeaveBack: () => {
         gsap.to(section3, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
@@ -82,8 +82,8 @@ const DaoTimeline = () => {
       trigger: section4,
       start: "top 80%",
       onEnter: () => {
-        gsap.to(section4, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
-        gsap.to(img4, { duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)" });
+        gsap.to(section4, { opacity: 1, visibility: "visible", transform: "translateX(50px)", duration: 3 });
+        gsap.to(img4, { duration: 3, opacity: 1, visibility: "visible", transform: "translateX(-100px)" });
       },
       onLeaveBack: () => {
         gsap.to(section4, { opacity: 0, visibility: "hidden", transform: "translateY(-30px)", duration: 1 });
@@ -95,7 +95,7 @@ const DaoTimeline = () => {
       trigger: section5,
       start: "top 80%",
       onEnter: () => {
-        gsap.to(section5, { opacity: 1, visibility: "visible", transform: "translateY(0px)", duration: 1 });
+        gsap.to(section5, { opacity: 1, visibility: "visible", transform: "translateX(-50px)", duration: 3 });
         gsap.to(img5, {duration: 3, opacity: 1, visibility: "visible", transform: "translateY(-30px)" });
       },
       onLeaveBack: () => {

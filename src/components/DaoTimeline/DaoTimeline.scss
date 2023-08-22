@@ -119,17 +119,14 @@
       background-color: $color-black;
       padding-bottom: 1rem;
       margin: 0;
-      width: 100%; 
-      max-width: 120%; 
+      width: fit-content; 
       height: auto; 
-      justify-content: center;
       text-align: start;    
       border-radius: 5%;
 
 
       p{
-        width: fit-content;
-        margin: 1rem;
+        padding:0.8rem;
       }
     }
     #timeline_image {
