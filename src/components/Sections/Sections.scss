@@ -1,10 +1,9 @@
 @use '../../colors' as *;
 
-.home-section__wrapper {
+.home-section__wrapper, .game-section__wrapper {
   display: flex;
   justify-content: space-between;
   max-width: 85vw;
-  margin: auto auto;
   margin-bottom: 10%;
 
   .content__wrapper {

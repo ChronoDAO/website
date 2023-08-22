@@ -11,6 +11,7 @@ export default function Nav() {
           <Link to="/">Home</Link>
           <Link to="/about_dao">About DAO</Link>
           <Link to="/about_us">About us</Link>
+          <Link to="/games">Games</Link>
         </ul>
         <CTAButton text={"Join the team"} />
       </div>

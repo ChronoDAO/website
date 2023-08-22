@@ -6,6 +6,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import AboutDao from "./pages/AboutDao/AboutDao";
 import Footer from "./components/footer/Footer.tsx";
 import SocialMedia from "./components/SocialMedia/SocialMedia";
+import Game from "./pages/Game/Game.tsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/games" element={<Game/>}/>
           <Route path="/about_dao" element={<AboutDao />} />
         </Routes>
         <Footer />

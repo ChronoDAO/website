@@ -1,0 +1,23 @@
+@use '../../../colors' as *;
+.game-nav__wrapper{
+    width: 100%;
+    background-color: $color-light-black;
+    height: 100px;
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li{
+            button{
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                img{
+                    max-width: 200px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+}
