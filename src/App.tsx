@@ -29,10 +29,7 @@ function App() {
   return (
     <>
       <SocialMedia />
-      <div
-        className="container"
-      >
-        <div className="container-width">
+      <div className="container">
         {isWideScreen ? <Nav /> : <NavHamburger />}
           <Routes>
             <Route path="/" element={<Home />} />
