@@ -1,4 +1,6 @@
 import './AboutDao.scss';
+// import Roadmap from '../../components/roadmap/Roadmap';
+import DAOTimeline from '../../components/DaoTimeline/DaoTimeline';
 
 export default function AboutDao() {
   return (
@@ -21,16 +23,18 @@ export default function AboutDao() {
             Ullam ex, ab a illo eligendi iure pariatur sint quisquam, saepe dolorem consequuntur aliquid voluptatem, quam aperiam. Qui a nulla repudiandae ipsum iure harum, vero, odit in minus odio unde?
             Libero unde nihil incidunt aut beatae odio facilis molestiae mollitia cumque officiis, delectus cum quia modi obcaecati, provident, nam cupiditate at laudantium commodi facere repudiandae blanditiis quos? Quo, delectus quae?</p>
         </div>
+
         <section id="sidebar">
           <h2>Trésorerie</h2>
-          <img src='https://placehold.co/600x400' alt='Trésorerie'></img>
+          <img src='https://placehold.co/600x400' id="img_sidebar" alt='Trésorerie'></img>
         </section>
       </section>
       
       <section id='containerMap'>
         <div className="content2">
-          <h2>Road Map</h2>
-          <p></p>
+          
+         {/* <Roadmap/> */}
+         <DAOTimeline/>
         </div>
       </section>
     </main>
