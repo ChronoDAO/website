@@ -32,8 +32,8 @@ function App() {
       <div
         className="container"
       >
-        {isWideScreen ? <Nav /> : <NavHamburger />}
         <div className="container-width">
+        {isWideScreen ? <Nav /> : <NavHamburger />}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about_us" element={<AboutUs />} />

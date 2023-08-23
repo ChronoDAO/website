@@ -11,7 +11,8 @@
   height: 75px;
   padding: 0rem;
   background-color: $color-black;
-  color: $color-white
+  color: $color-white;
+  z-index: 1000;
 }
 
 .navbar__logo {

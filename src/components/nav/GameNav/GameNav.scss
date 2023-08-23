@@ -2,11 +2,15 @@
 .game-nav__wrapper{
     height: 100px;
     position: relative;
+    border: 5px red solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     ul{
+        width: 100vw;
         background-color: $color-light-black;
         position: absolute;
         left: -10vw;
-        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: space-around;
