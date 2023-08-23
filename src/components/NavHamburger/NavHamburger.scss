@@ -5,7 +5,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  // position:fixed;
   width: 100%;
   min-height: 75px;
   height: 75px;
@@ -54,22 +53,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // position: fixed;
-    // left: 0;
-    // right: 0;
-    right: -100dvw;
     bottom: 0;
     height: 100dvh;
-    visibility: hidden;
+    width: 100dvw;
     padding: 2rem;
     background-color: $color-black;
-    // transition: all .8s ease-out;
+    transition: transform 1s ease-in-out; /* Add transition property */
+    transform: translateY(-100%); /* Initial state, off-screen */
   }
 
   .show-nav .navbar__links{
     right:0;
     width: 100dvw;
     visibility: visible;
+    transform: translateY(0);
   }
 
   .navbar__link{
