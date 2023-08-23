@@ -18,9 +18,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  max-width: 80vw;
+  margin: 0 auto;
 }
 
 .container-width {
-  max-width: 80vw;
-  margin: 0 auto;
 }
