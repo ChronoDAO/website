@@ -28,18 +28,14 @@ function App() {
   return (
     <>
       <SocialMedia />
-      <div
-        className="container"
-      >
+      <div className="container">
         {isWideScreen ? <Nav /> : <NavHamburger />}
-        <div className="container-width">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about_us" element={<AboutUs />} />
-            <Route path="/about_dao" element={<AboutDao />} />
-          </Routes>
-          <Footer />
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/about_dao" element={<AboutDao />} />
+        </Routes>
+        <Footer />
       </div>
     </>
   );

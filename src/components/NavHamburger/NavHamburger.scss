@@ -1,5 +1,14 @@
 @use '../../colors' as *;
 
+.nav__wrapper {
+  background-color: $color-black;
+  width: 100dvw;
+  position: fixed;
+  left: 0dvw;
+  z-index: 1000;
+
+}
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -10,13 +19,15 @@
   min-height: 75px;
   height: 75px;
   padding: 0rem;
-  background-color: $color-black;
-  color: $color-white
+  color: $color-white;
+  position: relative;
 }
 
 .navbar__logo {
-  padding: 1rem 1rem 0rem 1rem;
+  padding: 1rem 1rem .5rem 1rem;
   position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .navbar__logo img {
@@ -27,15 +38,15 @@
 }
 
 .navbar__cta-button {
-  display:flex;
-  margin:2rem;
+  display: flex;
+  margin: 2rem;
 }
 
-.navbar__links{
+.navbar__links {
   display: flex;
 }
 
-.navbar__link{
+.navbar__link {
   padding: 0 0.3rem;
   color: inherit;
 }
@@ -50,7 +61,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .navbar__links{
+  .navbar__links {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -66,31 +77,32 @@
     // transition: all .8s ease-out;
   }
 
-  .show-nav .navbar__links{
-    right:0;
+  .show-nav .navbar__links {
+    right: 0;
     width: 100dvw;
     visibility: visible;
   }
 
-  .navbar__link{
+  .navbar__link {
     display: block;
     padding: 1.5rem;
     font-size: 5vw;
   }
 
-  .navbar__burger{
+  .navbar__burger {
     display: block;
     position: fixed;
     top: 1rem;
     right: 1rem;
   }
 
-  .navbar__burger:hover{
+  .navbar__burger:hover {
     cursor: pointer;
   }
+
   .burger-bar,
   .burger-bar::before,
-  .burger-bar::after{
+  .burger-bar::after {
     display: block;
     width: 40px;
     height: 3px;
@@ -99,18 +111,19 @@
     background: $color-white;
     transition: all .5s ease-in-out;
   }
+
   .burger-bar::before,
-  .burger-bar::after{
+  .burger-bar::after {
     content: "";
     position: absolute;
     left: 0;
   }
 
-  .burger-bar::before{
+  .burger-bar::before {
     transform: translateY(-12px);
   }
 
-  .burger-bar::after{
+  .burger-bar::after {
     transform: translateY(12px);
   }
 
