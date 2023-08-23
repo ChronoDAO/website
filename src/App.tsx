@@ -28,8 +28,9 @@ function App() {
   return (
     <>
       <SocialMedia />
+      {!isWideScreen && <NavHamburger/>}
       <div className="container">
-        {isWideScreen ? <Nav /> : <NavHamburger />}
+        {isWideScreen && <Nav />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
