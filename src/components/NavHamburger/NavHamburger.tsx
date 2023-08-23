@@ -10,49 +10,39 @@ function NavHamburger() {
     setShowLinks(!showLinks);
   };
 
+  const handleCloseLinks = () => {
+    setShowLinks(false); // Close the navbar
+  };
+
+
   return (
     <nav className={`navbar ${showLinks ? "show-nav": "hide-nav"}`}>
-    {/* // <nav className="Navbar"> */}
       <div className="navbar__logo">
         <a href="/">
           <img src="./images/assets/dao.png" alt="Logo de la guilde ChronoDAO, représente un dragon stylisé bleu dans un cercle rappelant de manière très simplifiée une pocketwatch du jeu Bigtime" />
         </a>
       </div>
-      <div className="navbar__cta-button">
-        <CTAButton text={"Team"} />
-      </div>
 
       <ul className="navbar__links">
         <li className="navbar__item">
-          <Link to="/" className="navbar__link">Home</Link>
+          <Link to="/" className="navbar__link" onClick={handleCloseLinks}>Home</Link>
         </li>
         <li className="navbar__item">
-          <Link to="/about_dao" className="navbar__link">About DAO</Link>
+          <Link to="/about_dao" className="navbar__link" onClick={handleCloseLinks}>About DAO</Link>
         </li>
         <li className="navbar__item">
-          <Link to="/about_us" className="navbar__link">About us</Link>
+          <Link to="/about_us" className="navbar__link" onClick={handleCloseLinks}>About us</Link>
         </li>
         <li className="navbar__item">
-          <Link to="/games" className="navbar__link">Games</Link>
+          <Link to="/games" className="navbar__link" onClick={handleCloseLinks}>Games</Link>
+        </li>
+        <li className="navbar__cta-button">
+          <CTAButton text={"Join us"} />
         </li>
       </ul>
       <button className="navbar__burger" onClick={handleShowLinks}>
-      {/* <button className="navbar__burger"> */}
         <span className="burger-bar"></span>
       </button>
-
-      {/* <div
-        id="hamburger"
-        className={isActive ? 'active' : ''}
-        onClick={toggleMenu}
-      >
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </div>
-      {isActive && (
-          <div className="centered-links">{links()}</div>
-        )} */}
 
     </nav>
   );
