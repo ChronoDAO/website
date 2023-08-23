@@ -1,0 +1,59 @@
+/* Roadmap.scss */
+
+
+
+#mainRoad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    max-width: 56rem;
+    padding: 0 1rem; /* Add some padding to the paragraphs */
+  }
+}
+
+.mapSections {
+  padding-top: 15rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  .section-content {
+    display: flex;
+    flex-direction: column; /* Always stack content in a column */
+    align-items: center; /* Center the content horizontally */
+  }
+
+  .section-content h2 {
+    margin-bottom: 1rem; /* Add some space between heading and content */
+  }
+
+  .section-image {
+    width: 100%; /* Adjust the width to fit the container */
+    max-width: 15rem;
+    height: auto;
+  }
+}
+
+/* Responsive styles */
+
+@media screen and (min-width: 768px) {
+  .mapSections {
+    .section-content {
+      flex-direction: row; 
+      justify-content: space-between; 
+    }
+
+    .section-content h2 {
+      margin-right: 2rem; 
+    }
+  }
+}
