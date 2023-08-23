@@ -1,6 +1,6 @@
 import "./App.scss";
 import Nav from "./components/nav/Nav";
-import NavHamburger from "./components/NavHamburger/NavHamburger";
+import NavHamburger from "./components/NavHamburger/NavHamburger.tsx";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
