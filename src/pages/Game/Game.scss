@@ -7,14 +7,13 @@
     li{
         border: 1px solid $color-white;
         background-color: $color-light-black;
-        max-width: 400px;
+        max-width: 300px;
         min-height: 120px;
         padding-inline: 4rem;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
     img{
         width: 100%;
@@ -33,15 +32,13 @@
         max-width: 200px;
         border-radius: .5em;
         overflow: hidden;
-        img{
-            
+        img{ 
             height: 100%;
             width: 100%;
             object-fit: cover;
         }
-        
     }
-    }
+}
     .img__1 { grid-area: 1 / 1 / 2 / 2; }
     .img__2 { grid-area: 1 / 2 / 2 / 3; }
     .img__3 { grid-area: 2 / 1 / 3 / 2; }

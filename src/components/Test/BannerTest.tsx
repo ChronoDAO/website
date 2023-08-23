@@ -4,6 +4,7 @@ import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
 import "./BannerTest.scss";
 export default function BannerTest() {
   const containerRef = useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore$
   const image1Style: CSSProperties = useParallaxAnimation(
     3,
@@ -11,6 +12,7 @@ export default function BannerTest() {
     false,
     true
   );
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   const image2Style: CSSProperties = useParallaxAnimation(
     4,
@@ -19,6 +21,7 @@ export default function BannerTest() {
     true,
     true
   );
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   const image3Style: CSSProperties = useParallaxAnimation(
     3,

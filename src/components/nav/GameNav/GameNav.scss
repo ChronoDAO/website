@@ -1,19 +1,22 @@
 @use '../../../colors' as *;
 .game-nav__wrapper{
-    width: 100%;
-    background-color: $color-light-black;
     height: 100px;
+    position: relative;
     ul{
+        background-color: $color-light-black;
+        position: absolute;
+        left: -10vw;
+        width: 100vw;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         li{
             button{
                 border: none;
                 background-color: transparent;
                 cursor: pointer;
                 img{
-                    max-width: 200px;
+                    max-width: 130px;
                     width: 100%;
                 }
             }

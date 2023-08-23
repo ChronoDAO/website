@@ -45,7 +45,7 @@ export default function GameNav() {
             </li>
         </ul>
     </div>
-    <div>
+    <>
         {tab === 'bigtime' && <Bigtime/>}
         {tab === 'reign' && <Reign/>}
         {tab === 'desol' && <Desol/>}
@@ -53,7 +53,7 @@ export default function GameNav() {
         {tab === 'shatter' && <Shatter/>}
         {tab === 'boss' && <Boss/>}
 
-    </div>
+    </>
     </>
     )
 }
