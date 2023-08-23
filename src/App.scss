@@ -1,8 +1,9 @@
 @use 'colors.scss' as *;
 
-html{
+html {
   scroll-behavior: smooth;
 }
+
 body {
   background-image: url("./images/bg_dragon.svg");
   background-color: $color-black;
@@ -20,7 +21,4 @@ body {
   min-height: 100dvh;
   max-width: 80vw;
   margin: 0 auto;
-}
-
-.container-width {
 }
