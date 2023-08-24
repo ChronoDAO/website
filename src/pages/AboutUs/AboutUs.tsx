@@ -3,6 +3,7 @@ import { CSSProperties } from "react";
 import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
 import "./AboutUs.scss";
 
+
 export default function AboutUs() {
   const containerRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -22,6 +23,7 @@ export default function AboutUs() {
     true
   );
   return (
+    
     <main>
       <section className="about-section__wrapper" ref={containerRef}>
         <div className="content__wrapper">
@@ -37,14 +39,14 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="image__wrapper" >
-          <img
+          {/* <img
             src="./images/assets/perso_dino.jpg"
             style={{ ...image1Style }}
-          />
-          <img
+          /> */}
+          {/* <img
             src="./images/assets/logo_bigtime.svg"
             style={{ ...image2Style }}
-          />
+          /> */}
         </div>
       </section>
     </main>

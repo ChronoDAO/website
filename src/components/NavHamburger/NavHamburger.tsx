@@ -7,7 +7,7 @@ function NavHamburger() {
   const [showLinks, setShowLinks] = useState(false); // State to track menu open/close
 
   return (
-    <div className="nav__wrapper">
+    <div className="menu__wrapper">
       <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
         <div className="navbar__logo">
           <a href="/">
