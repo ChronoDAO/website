@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
 
-    ul {
+    .wideUl {
         width: 100vw;
         background-color: $color-light-black;
         position: absolute;
@@ -16,8 +16,13 @@
         align-items: center;
         justify-content: space-around;
 
+    }
+
+    .wideUl,
+    .smallUl {
+
         li {
-            button {
+            a {
                 border: none;
                 background-color: transparent;
                 cursor: pointer;
@@ -29,5 +34,41 @@
             }
         }
     }
+}
 
+
+.smallUl {
+    width: 100vw;
+    background-color: $color-light-black;
+    position: absolute;
+    left: -10vw;
+    --gap: 1rem;
+    display: grid;
+    gap: var(--gap);
+    grid-auto-flow: column;
+    grid-auto-columns: calc(50% - (var(--gap) / 2));
+    overflow-y: scroll;
+    scroll-snap-type: x mandatory;
+    -ms-scroll-snap-type: x;
+    scroll-padding: var(--gap);
+
+    :first-child {
+        padding-left: .5rem;
+    }
+
+    :last-child {
+        padding-right: .5rem;
+    }
+
+}
+
+.smallUl>* {
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active{
+    background-color: blue;
 }
