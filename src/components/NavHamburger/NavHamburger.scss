@@ -66,8 +66,7 @@
     width: 100dvw;
     padding: 2rem;
     background-color: $color-black;
-    animation-timing-function: cubic-bezier(0.47, 0.03, 1, -0.05);
-    animation-duration: 0.45s;
+    transition: transform cubic-bezier(0.47, 0.03, 1, -0.05) 0.45s;
     transform: translateY(-100%); /* Initial state, off-screen */
   }
 
