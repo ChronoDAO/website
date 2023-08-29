@@ -1,32 +1,59 @@
-import "./Banner.scss";
-import { CSSProperties } from "react";
-import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
-import { useRef } from "react";
 import TextScroll from "../TextScroll/TextScroll";
-
-function Banner() {
+import { CSSProperties, useRef } from "react";
+import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
+import "./Banner.scss";
+export default function BannerTest() {
   const containerRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  //@ts-ignore
-  const imageStyle: CSSProperties = useParallaxAnimation(
-    20,
+  //@ts-ignore$
+  const image1Style: CSSProperties = useParallaxAnimation(
+    3,
     containerRef,
+    false,
     true
   );
-
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  const image2Style: CSSProperties = useParallaxAnimation(
+    4,
+    containerRef,
+    false,
+    true,
+    true
+  );
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  const image3Style: CSSProperties = useParallaxAnimation(
+    3,
+    containerRef,
+    false,
+    true
+  );
   return (
     <div className="banner">
-    <TextScroll/>
-    <div className="image__container" ref={containerRef}>
-      <img src="./images/assets/bg/bg.png" alt="Image 1" />
-      <img
-        src="./images/assets/bg/letter.png"
-        alt="Image 2"
-        style={{ ...imageStyle }}
+      {/* <span className="detail" id="detail-1"></span>
+      <span className="detail" id="detail-2"></span>
+      <span className="detail" id="detail-3"></span> */}
+      <div className="banner__wrapper" ref={containerRef}>
+        <img
+          src="/images/assets/banner/home-1.png"
+          style={{ ...image1Style }}
+          alt=""
         />
-    </div>
+        <img
+          src="/images/assets/banner/home-2.png"
+          style={{ ...image2Style }}
+          alt=""
+        />
+        <img
+          src="/images/assets/banner/home-3.png"
+          style={{ ...image3Style }}
+          alt=""
+        />
+        <div className="text-scroll">
+          <TextScroll />
         </div>
+      </div>
+    </div>
   );
 }
-
-export default Banner;
