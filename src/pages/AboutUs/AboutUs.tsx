@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { CSSProperties } from "react";
 import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
 import "./AboutUs.scss";
+import OracleBanner from "../../components/OracleBanner/OracleBanner.tsx";
 
 
 export default function AboutUs() {
@@ -49,6 +50,7 @@ export default function AboutUs() {
           /> */}
         </div>
       </section>
+      <OracleBanner/>
     </main>
   );
 }
