@@ -10,7 +10,6 @@ import Boss from "./Tab/Boss";
 export default function GameNav() {
   const [tab, setTab] = useState("bigtime");
 
-
   const [isWideScreen, setIsWideScreen] = useState(false);
 
   useEffect(() => {
@@ -28,34 +27,34 @@ export default function GameNav() {
   return (
     <>
       <div className="game-nav__wrapper">
-        <ul className={isWideScreen ? `wideUl` : "smallUl"}>
+        <ul id="game-nav" className={isWideScreen ? `wideUl` : "smallUl"}>
           <li className="">
-            <a onClick={() => setTab("bigtime")} href="#bigtime">
+            <a onClick={() => setTab("bigtime")} href="#game-nav">
               <img src="/images/assets/gameLogo/BigT.png" alt="" />
             </a>
           </li>
           <li>
-            <a onClick={() => setTab("reign")} href="#reign">
+            <a onClick={() => setTab("reign")} href="#game-nav">
               <img src="/images/assets/gameLogo/ReignO.png" alt="" />
             </a>
           </li>
           <li>
-            <a onClick={() => setTab("desol")} href="#desol">
+            <a onClick={() => setTab("desol")} href="#game-nav">
               <img src="/images/assets/gameLogo/DesoL.png" alt="" />
             </a>
           </li>
           <li>
-            <a onClick={() => setTab("shatter")} href="#shatter">
+            <a onClick={() => setTab("shatter")} href="#game-nav">
               <img src="/images/assets/gameLogo/ShatterP.webp" alt="" />
             </a>
           </li>
           <li>
-            <a onClick={() => setTab("boss")} href="#boss">
+            <a onClick={() => setTab("boss")} href="#game-nav">
               <img src="/images/assets/gameLogo/BossF.png" alt="" />
             </a>
           </li>
           <li>
-            <a onClick={() => setTab("world")} href="#world">
+            <a onClick={() => setTab("world")} href="#game-nav">
               <img src="/images/assets/gameLogo/WorldS.png" alt="" />
             </a>
           </li>

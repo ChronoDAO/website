@@ -20,6 +20,7 @@
 
     .wideUl,
     .smallUl {
+        margin-bottom: 5vw;
 
         li {
             a {
@@ -69,6 +70,6 @@
     align-items: center;
 }
 
-.active{
+.active {
     background-color: blue;
 }

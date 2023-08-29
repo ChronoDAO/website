@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   max-width: 85vw;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 
   .content__wrapper {
     display: flex;
@@ -212,7 +212,7 @@
   scroll-padding: var(--gap);
   height: 600px;
 
-  .card__reel > * {
+  .card__reel>* {
     scroll-snap-align: start;
   }
 }
