@@ -8,6 +8,7 @@ import Cards from "../../components/Sections/Cards";
 export default function Home() {
   return (
     <>
+      <p>COUCOU</p>
       <Banner />
       <main id="main__home">
         <Section00 />
