@@ -4,7 +4,6 @@ import Section01 from "../../components/Sections/Section01";
 import BannerTest from "../../components/Test/BannerTest";
 import Section02 from "../../components/Sections/Section02";
 import Cards from "../../components/Sections/Cards";
-import StreamerCards from "../../components/Sections/StreamerCards";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
         <Section01 />
         <Section02 />
         <Cards />
-        <StreamerCards/>
       </main>
     </>
   );

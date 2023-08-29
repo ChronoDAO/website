@@ -35,19 +35,22 @@ export default function Bigtime() {
           <h3>Classes</h3>
           <ul>
             <li>
-              <img src="./images/bigtimeTab/Chronomancer_1.webp" alt="" />
+              <img
+                src="./images/assets/bigtimeTab/Chronomancer_1.webp"
+                alt=""
+              />
               <p>CHRONOMANCER</p>
             </li>
             <li>
-              <img src="./images/bigtimeTab/quantum_fixer.webp" alt="" />
+              <img src="./images/assets/bigtimeTab/quantum_fixer.webp" alt="" />
               <p>QUANTUM FIXER</p>
             </li>
             <li>
-              <img src="./images/bigtimeTab/shadowblade.webp" alt="" />
+              <img src="./images/assets/bigtimeTab/shadowblade.webp" alt="" />
               <p>SHADOWBLADE</p>
             </li>
             <li>
-              <img src="./images/bigtimeTab/time_warrior.webp" alt="" />
+              <img src="./images/assets/bigtimeTab/time_warrior.webp" alt="" />
               <p>TIME WARRIOR</p>
             </li>
           </ul>
@@ -55,7 +58,7 @@ export default function Bigtime() {
         <div className="cosmetic__wrapper">
           <h3>Cosmétique et utilitaires</h3>
           <div>
-            <img src="./images/bigtimeTab/Bot1.webp" alt="" />
+            <img src="./images/assets/bigtimeTab/Bot1.webp" alt="" />
             <p>
               Chez ChronoDAO, notre vision est aussi solide qu'un coffre-fort en
               titane, mais avec un clin d'œil malicieux : nul ne peut l'acheter
@@ -68,11 +71,11 @@ export default function Bigtime() {
               titane, mais avec un clin d'œil malicieux : nul ne peut l'acheter
               ! Ici, la valeur repose sur la passion
             </p>
-            <img src="./images/bigtimeTab/Bot2.webp" alt="" />
+            <img src="./images/assets/bigtimeTab/Bot2.webp" alt="" />
           </div>
           <h3>Espaces</h3>
           <div>
-            <img src="./images/bigtimeTab/Bot2.webp" alt="" />
+            <img src="./images/assets/bigtimeTab/Bot2.webp" alt="" />
             <p>
               Chez ChronoDAO, notre vision est aussi solide qu'un coffre-fort en
               titane, mais avec un clin d'œil malicieux : nul ne peut l'acheter

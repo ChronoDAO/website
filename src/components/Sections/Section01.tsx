@@ -11,14 +11,14 @@ export default function Section01() {
           </h3>
           <ul>
             <li>
-              <img src="/images/diablo.svg" alt="" />
+              <img src="/images/assets/icons/diablo.svg" alt="" />
               <p>
                 Toi aussi t'as galéré à battre Lilith dans
                 <span className="span--orange"> Diablo IV</span> ?
               </p>
             </li>
             <li>
-              <img src="/images/manette.svg" alt="" />
+              <img src="/images/assets/icons/manette.svg" alt="" />
               <p>
                 Tu connais des joueurs qui se sont faits ban alors qu'ils
                 avaient investi des{" "}
@@ -26,7 +26,7 @@ export default function Section01() {
               </p>
             </li>
             <li>
-              <img src="/images/justice.svg" alt="" />
+              <img src="/images/assets/icons/justice.svg" alt="" />
               <p>
                 Tu rêves d'un{" "}
                 <span className="span--orange">monde plus juste</span> pour les
@@ -34,7 +34,7 @@ export default function Section01() {
               </p>
             </li>
             <li>
-              <img src="/images/stonks.svg" alt="" />
+              <img src="/images/assets/icons/stonks.svg" alt="" />
               <p>
                 Prends part à l'évolution du gaming, là où les joueurs sont les
                 véritables <span className="span--orange">maîtres du jeu </span>
@@ -44,13 +44,13 @@ export default function Section01() {
           </ul>
           <CTAButton
             text="Explore ce nouveau monde avec nous."
-            image="logo_discord.svg"
+            image="/assets/icons/logo_discord.svg"
             image_class="logo-discord"
           />
         </div>
       </div>
       <div className="image__wrapper">
-        <img src="/images/assets/perso_dino.jpg" alt="" />
+        <img src="/images/assets/gameImg/perso_dino.jpg" alt="" />
       </div>
     </section>
   );

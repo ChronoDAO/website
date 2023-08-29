@@ -27,7 +27,6 @@ export default function Cards() {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      console.log(mediaQuerie);
       setMediaQuerie(window.innerWidth);
     });
     const container = document.querySelectorAll(".card__wrapper");
@@ -91,8 +90,8 @@ export default function Cards() {
           </div>
         </div>
         <div className="image__wrapper" id="back-card__wrapper">
-          <img src="/images/assets/back-card.png" alt="" />
-          <img src="/images/assets/back-card.png" alt="" />
+          <img src="/images/assets/cards/back-card.png" alt="" />
+          <img src="/images/assets/cards/back-card.png" alt="" />
         </div>
       </section>
       <div className="cards">
