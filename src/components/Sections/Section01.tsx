@@ -1,4 +1,4 @@
-import CTAButton from "../Buttons/CTA-Button/CTAButton";
+import CTAButton from "../common/Buttons/CTA-Button/CTAButton";
 import "./Sections.scss";
 
 export default function Section01() {

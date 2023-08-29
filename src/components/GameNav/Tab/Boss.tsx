@@ -1,4 +1,4 @@
-import "../../../Sections/Sections.scss";
+import "../../Sections/Sections.scss";
 
 export default function Boss() {
   return (

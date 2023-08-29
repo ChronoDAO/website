@@ -1,4 +1,4 @@
-import CTAButton from "../Buttons/CTA-Button/CTAButton";
+import CTAButton from "../common/Buttons/CTA-Button/CTAButton";
 
 export default function GameSection01() {
   return (

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import CTAButton from "../Buttons/CTA-Button/CTAButton";
+import CTAButton from "../../Buttons/CTA-Button/CTAButton";
 import "./NavHamburger.scss";
 
 function NavHamburger() {

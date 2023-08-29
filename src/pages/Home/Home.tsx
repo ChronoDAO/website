@@ -1,7 +1,7 @@
 import "./Home.scss";
 import Section00 from "../../components/Sections/Section00";
 import Section01 from "../../components/Sections/Section01";
-import Banner from "../../components/Banner/Banner";
+import Banner from "../../components/common/Banner/Banner";
 import Section02 from "../../components/Sections/Section02";
 import Cards from "../../components/Sections/Cards";
 

@@ -1,5 +1,6 @@
-@use '../../../colors' as *;
-.social-media-guild__wrapper{
+@use '../../../../colors' as *;
+
+.social-media-guild__wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -8,7 +9,8 @@
   right: -5%;
   top: 3%;
   gap: .5em;
-  a{
+
+  a {
     filter: drop-shadow(-2px 3px 4px $color-black);
     display: flex;
     align-items: center;
@@ -20,7 +22,8 @@
     scale: .9;
     transition: .2s ease;
   }
-  a:hover{
+
+  a:hover {
     scale: 1;
   }
 }

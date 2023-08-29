@@ -1,6 +1,6 @@
-import TextScroll from "../TextScroll/TextScroll";
+import TextScroll from "../../animatedComponents/TextScroll/TextScroll";
 import { CSSProperties, useRef } from "react";
-import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
+import useParallaxAnimation from "../../../customHooks/useParallaxAnimation";
 import "./Banner.scss";
 export default function BannerTest() {
   const containerRef = useRef<HTMLDivElement>(null);

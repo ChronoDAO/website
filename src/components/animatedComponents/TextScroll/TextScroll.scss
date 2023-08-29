@@ -1,4 +1,4 @@
-@use '../../colors' as *;
+@use '../../../colors' as *;
 
 .banner_test {
 
@@ -41,6 +41,7 @@
     gap: 1.5rem;
     width: 100%;
     font-size: clamp(0.5rem, 2vw, 1.2rem);
+
     p {
       width: fit-content;
       letter-spacing: 1px;
