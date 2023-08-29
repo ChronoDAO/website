@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Reign() {
   return (
     <section className="game-section__wrapper" id="reign">

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function World() {
   return (
     <section className="game-section__wrapper" id="world">

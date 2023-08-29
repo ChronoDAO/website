@@ -1,8 +1,6 @@
-import React from 'react'
-
 export default function Shatter() {
   return (
-    <section className="game-section__wrapper" id='shatter'>
+    <section className="game-section__wrapper" id="shatter">
       <div className="content__wrapper">
         <div className="text__wrapper">
           <h3>Shatter Point</h3>
@@ -17,5 +15,5 @@ export default function Shatter() {
         <img src="./images/assets/gameLogo/ShatterP.webp" alt="" />
       </div>
     </section>
-  )
+  );
 }

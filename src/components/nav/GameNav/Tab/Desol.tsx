@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Desol() {
   return (
     <section className="game-section__wrapper">
@@ -17,5 +15,5 @@ export default function Desol() {
         <img src="./images/assets/gameLogo/DesoL.png" alt="" />
       </div>
     </section>
-  )
+  );
 }
