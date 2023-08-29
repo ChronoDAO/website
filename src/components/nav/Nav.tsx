@@ -7,7 +7,10 @@ export default function Nav() {
     <nav>
       <div className="nav__wrapper">
         <a href="/">
-          <img src="./images/assets/dao.png" alt="Logo de la guilde ChronoDAO, représente un dragon stylisé bleu dans un cercle rappelant de manière très simplifiée une pocketwatch du jeu Bigtime" />
+          <img
+            src="./images/assets/icons/dao.png"
+            alt="Logo de la guilde ChronoDAO, représente un dragon stylisé bleu dans un cercle rappelant de manière très simplifiée une pocketwatch du jeu Bigtime"
+          />
         </a>
         <ul className="nav__ul">
           <Link to="/">Home</Link>

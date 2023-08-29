@@ -52,7 +52,7 @@ export default function GuildCard({ data }: { data: CardData }) {
                     "Présentation".toUpperCase()
                   ) : (
                     <img
-                      src="/images/assets/logo_bigtime.svg"
+                      src="/images/assets/icons/logo_bigtime.svg"
                       height={"25px"}
                       alt="logo bigtime"
                     />
@@ -66,7 +66,7 @@ export default function GuildCard({ data }: { data: CardData }) {
           </div>
         </div>
         <div className="back">
-          <img src="/images/assets/back-card.png" alt="" />
+          <img src="/images/assets/cards/back-card.png" alt="" />
         </div>
       </div>
     </div>
