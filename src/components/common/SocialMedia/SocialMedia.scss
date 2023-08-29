@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../../colors";
 
 .container__social-media {
   display: flex;
@@ -13,7 +13,7 @@
 .container__social-media a {
   position: relative;
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .container__social-media a:hover {
@@ -28,12 +28,12 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 4px;
-  background-color: $color-orange; 
-  color: #fff; 
+  background-color: $color-orange;
+  color: #fff;
   border-radius: 4px;
   font-size: 12px;
-  opacity: 0; 
-  pointer-events: none; 
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.2s ease-in-out;
   margin-top: 6px;
   margin-bottom: 10px;

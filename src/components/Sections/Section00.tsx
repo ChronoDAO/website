@@ -1,6 +1,6 @@
-import AnimateGrid from "../AnimateGrid/AnimateGrid";
+import AnimateGrid from "../animatedComponents/AnimateGrid/AnimateGrid";
 import "./Sections.scss";
-import CTAButton from "../Buttons/CTA-Button/CTAButton";
+import CTAButton from "../common/Buttons/CTA-Button/CTAButton";
 
 export default function Section00() {
   return (

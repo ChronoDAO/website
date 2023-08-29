@@ -1,7 +1,7 @@
-import TextScroll from "../TextScroll/TextScroll";
+import TextScroll from "../../animatedComponents/TextScroll/TextScroll";
 import { CSSProperties, useRef } from "react";
-import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
-import "./BannerTest.scss";
+import useParallaxAnimation from "../../../customHooks/useParallaxAnimation";
+import "./Banner.scss";
 export default function BannerTest() {
   const containerRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -30,11 +30,11 @@ export default function BannerTest() {
     true
   );
   return (
-    <div className="bannerTest">
+    <div className="banner">
       {/* <span className="detail" id="detail-1"></span>
       <span className="detail" id="detail-2"></span>
       <span className="detail" id="detail-3"></span> */}
-      <div className="bannerTest__wrapper" ref={containerRef}>
+      <div className="banner__wrapper" ref={containerRef}>
         <img
           src="/images/assets/banner/home-1.png"
           style={{ ...image1Style }}

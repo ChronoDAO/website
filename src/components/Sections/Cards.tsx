@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import useIntersectionAnimation from "../../customHooks/useIntersectionAnimation";
-import CTAButton from "../Buttons/CTA-Button/CTAButton";
+import CTAButton from "../common/Buttons/CTA-Button/CTAButton";
 import cardDataList from "../../cardDataList";
 import GuildCard from "../Card/GuildCard/GuildCard";
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./SocialMediaGuild.scss";
+import "./SocialMediaCard.scss";
 import { TbBrandTwitch, TbBrandTwitterFilled } from "react-icons/tb";
 
 export default function SocialMediaGuild({

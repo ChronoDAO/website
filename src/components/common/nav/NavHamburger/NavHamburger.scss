@@ -1,4 +1,4 @@
-@use '../../colors' as *;
+@use '../../../../colors' as *;
 
 .menu__wrapper {
   background-color: $color-black;
@@ -67,7 +67,8 @@
     padding: 2rem;
     background-color: $color-black;
     transition: transform cubic-bezier(0.47, 0.03, 1, -0.05) 0.45s;
-    transform: translateY(-100%); /* Initial state, off-screen */
+    transform: translateY(-100%);
+    /* Initial state, off-screen */
   }
 
   .show-nav .navbar__links {

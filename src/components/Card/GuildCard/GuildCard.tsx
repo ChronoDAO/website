@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SocialMediaGuild from "../../SocialMedia/SocialMediaCard/SocialMediaGuild";
+import SocialMediaGuild from "../../common/SocialMedia/SocialMediaCard/SocialMediaCard";
 import "./GuildCard.scss";
 
 interface CardData {
