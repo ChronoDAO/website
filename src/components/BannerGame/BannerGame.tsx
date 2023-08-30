@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./BannerGame.scss";
 
-function BannerGame() {
+function BannerGame({videoSource}) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
@@ -55,7 +55,7 @@ function BannerGame() {
       <div className="fullscreen-video-wrap">
         <video
           ref={videoRef}
-          src="./videos/OFFICIAL BIG TIME MARKETPLACE TEASER TRAILER.mp4"
+          src={videoSource}
           autoPlay
           muted
           loop
