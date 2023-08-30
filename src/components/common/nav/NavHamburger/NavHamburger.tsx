@@ -12,7 +12,7 @@ function NavHamburger() {
         <div className="navbar__logo">
           <a href="/">
             <img
-              src="./images/assets/icons/dao.png"
+              src={`${import.meta.env.CDN_URL}/images/assets/icons/dao.png`}
               alt="Logo de la guilde ChronoDAO, représente un dragon stylisé bleu dans un cercle rappelant de manière très simplifiée une pocketwatch du jeu Bigtime"
             />
           </a>

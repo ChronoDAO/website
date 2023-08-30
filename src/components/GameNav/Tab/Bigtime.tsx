@@ -27,7 +27,10 @@ export default function Bigtime() {
           </div>
         </div>
         <div className="image__wrapper">
-          <img src="./images/assets/gameLogo/BigT.png" alt="" />
+          <img
+            src={`${import.meta.env.CDN_URL}/images/assets/gameLogo/BigT.png`}
+            alt=""
+          />
         </div>
       </section>
       <section className="bigtime__section">
@@ -36,21 +39,38 @@ export default function Bigtime() {
           <ul>
             <li>
               <img
-                src="./images/assets/bigtimeTab/Chronomancer_1.webp"
+                src={`${
+                  import.meta.env.CDN_URL
+                }/images/assets/bigtimeTab/Chronomancer_1.webp`}
                 alt=""
               />
               <p>CHRONOMANCER</p>
             </li>
             <li>
-              <img src="./images/assets/bigtimeTab/quantum_fixer.webp" alt="" />
+              <img
+                src={`${
+                  import.meta.env.CDN_URL
+                }/images/assets/bigtimeTab/quantum_fixer.webp`}
+                alt=""
+              />
               <p>QUANTUM FIXER</p>
             </li>
             <li>
-              <img src="./images/assets/bigtimeTab/shadowblade.webp" alt="" />
+              <img
+                src={`${
+                  import.meta.env.CDN_URL
+                }/images/assets/bigtimeTab/shadowblade.webp`}
+                alt=""
+              />
               <p>SHADOWBLADE</p>
             </li>
             <li>
-              <img src="./images/assets/bigtimeTab/time_warrior.webp" alt="" />
+              <img
+                src={`${
+                  import.meta.env.CDN_URL
+                }/images/assets/bigtimeTab/time_warrior.webp`}
+                alt=""
+              />
               <p>TIME WARRIOR</p>
             </li>
           </ul>
@@ -58,7 +78,12 @@ export default function Bigtime() {
         <div className="cosmetic__wrapper">
           <h3>Cosmétique et utilitaires</h3>
           <div>
-            <img src="./images/assets/bigtimeTab/Bot1.webp" alt="" />
+            <img
+              src={`${
+                import.meta.env.CDN_URL
+              }/images/assets/bigtimeTab/Bot1.webp`}
+              alt=""
+            />
             <p>
               Chez ChronoDAO, notre vision est aussi solide qu'un coffre-fort en
               titane, mais avec un clin d'œil malicieux : nul ne peut l'acheter
@@ -71,11 +96,21 @@ export default function Bigtime() {
               titane, mais avec un clin d'œil malicieux : nul ne peut l'acheter
               ! Ici, la valeur repose sur la passion
             </p>
-            <img src="./images/assets/bigtimeTab/Bot2.webp" alt="" />
+            <img
+              src={`${
+                import.meta.env.CDN_URL
+              }/images/assets/bigtimeTab/Bot2.webp`}
+              alt=""
+            />
           </div>
           <h3>Espaces</h3>
           <div>
-            <img src="./images/assets/bigtimeTab/Bot2.webp" alt="" />
+            <img
+              src={`${
+                import.meta.env.CDN_URL
+              }/images/assets/bigtimeTab/Bot2.webp`}
+              alt=""
+            />
             <p>
               Chez ChronoDAO, notre vision est aussi solide qu'un coffre-fort en
               titane, mais avec un clin d'œil malicieux : nul ne peut l'acheter

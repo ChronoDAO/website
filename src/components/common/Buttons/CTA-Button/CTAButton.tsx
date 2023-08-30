@@ -12,9 +12,15 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   image_class,
   link,
 }) => {
+  console.log(image);
   return (
     <a href={`${link}`} className="cta-button__wrapper">
-      {image ? <img className={image_class} src={`/images/${image}/`} /> : null}
+      {image ? (
+        <img
+          className={image_class}
+          src={`${import.meta.env.CDN_URL}/images${image}`}
+        />
+      ) : null}
       {text}
     </a>
   );

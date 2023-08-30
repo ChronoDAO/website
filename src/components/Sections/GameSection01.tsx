@@ -6,16 +6,28 @@ export default function GameSection01() {
       <div className="image__wrapper">
         <div className="game__grid">
           <div>
-            <img className="img__1" src="./images/assets/gameImg/Mid1.png" />
+            <img
+              className="img__1"
+              src={`${import.meta.env.CDN_URL}/images/assets/gameImg/Mid1.png`}
+            />
           </div>
           <div>
-            <img className="img__2" src="./images/assets/gameImg/Mid2.png" />
+            <img
+              className="img__2"
+              src={`${import.meta.env.CDN_URL}/images/assets/gameImg/Mid2.png`}
+            />
           </div>
           <div>
-            <img className="img__3" src="./images/assets/gameImg/Mid3.png" />
+            <img
+              className="img__3"
+              src={`${import.meta.env.CDN_URL}/images/assets/gameImg/Mid3.png`}
+            />
           </div>
           <div>
-            <img className="img__4" src="./images/assets/gameImg/Mid4.png" />
+            <img
+              className="img__4"
+              src={`${import.meta.env.CDN_URL}/images/assets/gameImg/Mid4.png`}
+            />
           </div>
         </div>
       </div>
