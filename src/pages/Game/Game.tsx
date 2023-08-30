@@ -5,9 +5,10 @@ import GameNav from "../../components/GameNav/GameNav";
 import "./Game.scss";
 
 export default function Game() {
+  const videoGameSource = `${import.meta.env.CDN_URL}videos/gameBanner.mp4`;
   return (
     <>
-      <BannerGame />
+      <BannerGame videoSource={videoGameSource} />
       {/* <GameSection00 /> */}
       <GameSection01 />
       <GameNav />
