@@ -3,11 +3,11 @@ import { CSSProperties } from "react";
 import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
 import "./AboutUs.scss";
 
-
 export default function AboutUs() {
   const containerRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const image1Style: CSSProperties = useParallaxAnimation(
     10,
     containerRef,
@@ -16,6 +16,7 @@ export default function AboutUs() {
   );
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const image2Style: CSSProperties = useParallaxAnimation(
     50,
     containerRef,
@@ -23,7 +24,6 @@ export default function AboutUs() {
     true
   );
   return (
-    
     <main>
       <section className="about-section__wrapper" ref={containerRef}>
         <div className="content__wrapper">
@@ -38,7 +38,7 @@ export default function AboutUs() {
             </p>
           </div>
         </div>
-        <div className="image__wrapper" >
+        <div className="image__wrapper">
           {/* <img
             src="./images/assets/perso_dino.jpg"
             style={{ ...image1Style }}

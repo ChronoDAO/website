@@ -12,7 +12,12 @@ export default function Shatter() {
         </div>
       </div>
       <div className="image__wrapper">
-        <img src="./images/assets/gameLogo/ShatterP.webp" alt="" />
+        <img
+          src={`${
+            import.meta.env.CDN_URL
+          }/images/assets/gameLogo/ShatterP.webp`}
+          alt=""
+        />
       </div>
     </section>
   );

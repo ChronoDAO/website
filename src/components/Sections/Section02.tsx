@@ -31,7 +31,12 @@ export default function Section02() {
         </div>
       </div>
       <div className="image__wrapper">
-        <img src="/images/assets/gameImg/perso_dino.jpg" alt="" />
+        <img
+          src={`${
+            import.meta.env.CDN_URL
+          }/images/assets/gameImg/perso_dino.jpg`}
+          alt=""
+        />
       </div>
     </section>
   );

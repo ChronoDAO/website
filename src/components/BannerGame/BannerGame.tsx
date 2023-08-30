@@ -55,7 +55,9 @@ function BannerGame() {
       <div className="fullscreen-video-wrap">
         <video
           ref={videoRef}
-          src="./videos/OFFICIAL BIG TIME MARKETPLACE TEASER TRAILER.mp4"
+          src={`${
+            import.meta.env.CDN_URL
+          }/videos/OFFICIAL BIG TIME MARKETPLACE TEASER TRAILER.mp4`}
           autoPlay
           muted
           loop
