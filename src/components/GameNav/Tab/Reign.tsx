@@ -16,7 +16,10 @@ export default function Reign() {
         </div>
       </div>
       <div className="image__wrapper">
-        <img src="./images/assets/gameLogo/ReignO.png" alt="" />
+        <img
+          src={`${import.meta.env.CDN_URL}/images/assets/gameLogo/ReignO.png`}
+          alt=""
+        />
       </div>
     </section>
   );

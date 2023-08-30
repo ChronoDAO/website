@@ -36,17 +36,17 @@ export default function BannerTest() {
       <span className="detail" id="detail-3"></span> */}
       <div className="banner__wrapper" ref={containerRef}>
         <img
-          src="/images/assets/banner/home-1.png"
+          src={`${import.meta.env.CDN_URL}/images/assets/banner/home-1.png`}
           style={{ ...image1Style }}
           alt=""
         />
         <img
-          src="/images/assets/banner/home-2.png"
+          src={`${import.meta.env.CDN_URL}/images/assets/banner/home-2.png`}
           style={{ ...image2Style }}
           alt=""
         />
         <img
-          src="/images/assets/banner/home-3.png"
+          src={`${import.meta.env.CDN_URL}/images/assets/banner/home-3.png`}
           style={{ ...image3Style }}
           alt=""
         />

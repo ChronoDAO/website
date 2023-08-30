@@ -2,10 +2,10 @@ import { useState, useRef, useEffect } from "react";
 import "./BannerGame.scss";
 
 interface BannerGameProps {
-  videoSource: string; 
+  videoSource: string;
 }
 
-function BannerGame({videoSource} :BannerGameProps) {
+function BannerGame({ videoSource }: BannerGameProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
@@ -57,13 +57,7 @@ function BannerGame({videoSource} :BannerGameProps) {
   return (
     <header className={isWideScreen ? `v-header container` : "v-header"}>
       <div className="fullscreen-video-wrap">
-        <video
-          ref={videoRef}
-          src={videoSource}
-          autoPlay
-          muted
-          loop
-        />
+        <video ref={videoRef} src={videoSource} autoPlay muted loop />
         <div className="controls__wrapper">
           <button
             className={`control-button pause-button ${
