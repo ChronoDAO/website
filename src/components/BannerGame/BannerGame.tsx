@@ -1,7 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import "./BannerGame.scss";
 
-function BannerGame({videoSource}) {
+interface BannerGameProps {
+  videoSource: string; 
+}
+
+function BannerGame({videoSource} :BannerGameProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
