@@ -4,7 +4,7 @@ function AboutSection03() {
   return (
     <section className="home-section__wrapper">
         <div className="image__wrapper">
-  <img src="../../../public/images/assets/aboutSection/About03.png" alt="" />
+  <img src="/images/assets/aboutSection/About03.png" alt="" />
     </div>
     <div className="content__wrapper">
     <div className="text__wrapper">

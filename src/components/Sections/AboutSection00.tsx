@@ -22,7 +22,7 @@ function AboutSection00() {
       </div>
     </div>
     <div className="image__wrapper">
-<img src="../../../public/images/assets/aboutSection/About00.png" alt="" />
+<img src="/images/assets/aboutSection/About00.png" alt="" />
     </div>
   </section>
   )
