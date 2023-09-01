@@ -19,6 +19,7 @@ export default function AboutUs() {
       <AboutSection02 />
       <AboutSection03 />
       <div className="content__wrapper"></div>
+      <AnimateClockie/>
     </main>
   );
 }
