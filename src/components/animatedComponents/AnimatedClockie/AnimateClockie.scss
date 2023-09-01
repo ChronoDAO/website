@@ -1,8 +1,14 @@
 .animate-clockie-container {
   display: flex;
-  justify-content: flex-end;
   position: absolute;
   bottom: 0;
   height: 50px;
   width: 50px;
+  left: 0;
+  background: blue;
+  img{
+    transform: translateX(-50%);
+    width: 100%;
+    background: red;
+  }
 }

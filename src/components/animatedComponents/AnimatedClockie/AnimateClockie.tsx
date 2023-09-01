@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import './AnimateClockie.scss';
 import GifClockie from '/videos/Clockie.gif';
@@ -6,17 +6,24 @@ import GifClockie from '/videos/Clockie.gif';
 function AnimateClockie() {
   const imageRef = useRef(null);
 
-  useEffect(() => {
-    const imageElement = imageRef.current;
+const [windowWidth, setWindowWidth] = useState(0)
 
-    gsap.set(imageElement, { x: -155, transformOrigin: 'center center', scaleX: 1 });
+  useEffect(() => {
+    setWindowWidth(window.innerWidth - 25)
+    window.addEventListener("resize", () => {
+      setWindowWidth(window.innerWidth - 25)
+    })
+    const imageElement = imageRef.current;
+    
+    gsap.set(imageElement, { x: 25, transformOrigin: 'center center', scaleX: 1 });
 
     const tl = gsap.timeline({ repeat: -1 });
+console.log(windowWidth);
 
     //Gauche à droite
     tl.to(imageElement, {
       duration: 2,
-      x: 1320,
+      x: windowWidth,
       ease: 'power2.inOut',
       yoyo: true
     })
@@ -52,7 +59,7 @@ function AnimateClockie() {
       //Retour doite to gauche
       .to(imageElement, {
         duration: 2,
-        x: -155,
+        x: 25,
         ease: 'power2.inOut',
         yoyo: true
       })
@@ -69,7 +76,7 @@ function AnimateClockie() {
     return () => {
       tl.kill();
     };
-  }, []);
+  }, [windowWidth]);
 
   return (
     <div className="animate-clockie-container">
