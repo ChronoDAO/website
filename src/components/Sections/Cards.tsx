@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import useIntersectionAnimation from "../../customHooks/useIntersectionAnimation";
-import CTAButton from "../Buttons/CTA-Button/CTAButton";
+import CTAButton from "../common/Buttons/CTA-Button/CTAButton";
 import cardDataList from "../../cardDataList";
 import GuildCard from "../Card/GuildCard/GuildCard";
 
@@ -27,7 +27,6 @@ export default function Cards() {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      console.log(mediaQuerie);
       setMediaQuerie(window.innerWidth);
     });
     const container = document.querySelectorAll(".card__wrapper");
@@ -91,8 +90,14 @@ export default function Cards() {
           </div>
         </div>
         <div className="image__wrapper" id="back-card__wrapper">
-          <img src="/images/assets/back-card.png" alt="" />
-          <img src="/images/assets/back-card.png" alt="" />
+          <img
+            src={`${import.meta.env.CDN_URL}/images/assets/cards/back-card.png`}
+            alt=""
+          />
+          <img
+            src={`${import.meta.env.CDN_URL}/images/assets/cards/back-card.png`}
+            alt=""
+          />
         </div>
       </section>
       <div className="cards">

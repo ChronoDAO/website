@@ -13,13 +13,14 @@ export default function Section02() {
             ressources et de stratégies pour réussir ensemble.
           </p>
           <p>Notre strucure</p>
-          <ul >
+          <ul>
             <li>
-            • Favorise la transmission des connaissances et l'expérimentation
+              • Favorise la transmission des connaissances et l'expérimentation
               des technologies blockchain.
             </li>
             <li>
-            • Facilite l'entraide et le développement de projets de ses membres
+              • Facilite l'entraide et le développement de projets de ses
+              membres
             </li>
           </ul>
           <p>
@@ -30,7 +31,12 @@ export default function Section02() {
         </div>
       </div>
       <div className="image__wrapper">
-        <img src="/images/assets/perso_dino.jpg" alt="" />
+        <img
+          src={`${
+            import.meta.env.CDN_URL
+          }/images/assets/gameImg/perso_dino.jpg`}
+          alt=""
+        />
       </div>
     </section>
   );

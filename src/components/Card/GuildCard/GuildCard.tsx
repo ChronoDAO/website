@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SocialMediaGuild from "../../SocialMedia/SocialMediaCard/SocialMediaGuild";
+import SocialMediaGuild from "../../common/SocialMedia/SocialMediaCard/SocialMediaCard";
 import "./GuildCard.scss";
 
 interface CardData {
@@ -52,7 +52,9 @@ export default function GuildCard({ data }: { data: CardData }) {
                     "Présentation".toUpperCase()
                   ) : (
                     <img
-                      src="/images/assets/logo_bigtime.svg"
+                      src={`${
+                        import.meta.env.CDN_URL
+                      }/images/assets/icons/logo_bigtime.svg`}
                       height={"25px"}
                       alt="logo bigtime"
                     />
@@ -66,7 +68,10 @@ export default function GuildCard({ data }: { data: CardData }) {
           </div>
         </div>
         <div className="back">
-          <img src="/images/assets/back-card.png" alt="" />
+          <img
+            src={`${import.meta.env.CDN_URL}/images/assets/cards/back-card.png`}
+            alt=""
+          />
         </div>
       </div>
     </div>

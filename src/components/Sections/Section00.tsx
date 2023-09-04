@@ -1,6 +1,6 @@
-import AnimateGrid from "../AnimateGrid/AnimateGrid";
+import AnimateGrid from "../animatedComponents/AnimateGrid/AnimateGrid";
 import "./Sections.scss";
-import CTAButton from "../Buttons/CTA-Button/CTAButton";
+import CTAButton from "../common/Buttons/CTA-Button/CTAButton";
 
 export default function Section00() {
   return (
@@ -25,11 +25,15 @@ export default function Section00() {
             En tant partenaire Open Loot, nous pouvons t’obtenir un accès
             gratuit pour Big Time
           </p>
-          <CTAButton text="Explore ce nouveau monde avec nous." image="logo_discord.svg" image_class="logo-discord" />
+          <CTAButton
+            text="Explore ce nouveau monde avec nous."
+            image="/assets/icons/logo_discord.svg"
+            image_class="logo-discord"
+          />
         </div>
       </div>
       <div className="image__wrapper">
-        <AnimateGrid/>
+        <AnimateGrid />
       </div>
     </section>
   );

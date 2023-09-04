@@ -1,11 +1,11 @@
 @use '../../colors' as *;
 
-.home-section__wrapper {
+.home-section__wrapper,
+.game-section__wrapper {
   display: flex;
   justify-content: space-between;
   max-width: 85vw;
-  margin: auto auto;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 
   .content__wrapper {
     display: flex;
@@ -21,9 +21,10 @@
       flex-direction: column;
       max-width: 1000px;
 
-      a{
+      a {
         margin-bottom: 2rem;
       }
+
       img {
         width: 100%;
       }
@@ -110,6 +111,9 @@
     }
   }
 
+
+
+
   .image-parallax__wrapper {
     position: relative;
     display: flex;
@@ -184,10 +188,31 @@
 }
 
 @media screen and (max-width:800px) {
+  .game-section__wrapper {
+    flex-direction: column;
+  }
+
   #back-card__wrapper {
     img {
 
       margin-top: 2rem;
     }
+  }
+}
+
+.card__reel {
+  --gap: 1rem;
+  display: grid;
+  gap: var(--gap);
+  grid-auto-flow: column;
+  grid-auto-columns: calc(30% - (var(--gap) / 2));
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x;
+  scroll-padding: var(--gap);
+  height: 600px;
+
+  .card__reel>* {
+    scroll-snap-align: start;
   }
 }

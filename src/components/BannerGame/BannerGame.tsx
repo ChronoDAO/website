@@ -1,10 +1,29 @@
-import  { useState, useRef, useEffect } from 'react';
-import './BanneGame.scss';
+import { useState, useRef, useEffect } from "react";
+import "./BannerGame.scss";
 
-function BannerGame() {
+interface BannerGameProps {
+  videoSource: string;
+}
+
+function BannerGame({ videoSource }: BannerGameProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
+
+  const [isWideScreen, setIsWideScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWideScreen(window.matchMedia("(min-width: 800px)").matches);
+    };
+
+    handleResize(); // Call it initially
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -36,14 +55,31 @@ function BannerGame() {
   };
 
   return (
-    <header className="v-header container">
+    <header className={isWideScreen ? `v-header container` : "v-header"}>
       <div className="fullscreen-video-wrap">
-        <video ref={videoRef} src='/videos/OFFICIAL BIG TIME MARKETPLACE TEASER TRAILER.mp4' autoPlay loop controls />
-        <button className={`control-button pause-button ${isPlaying ? 'playing' : 'paused'}`} onClick={togglePlay}></button>
-        <button className="scroll-button" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
-          Scroll Down &#10227;
-        </button>
-        <button className={`control-button sound-button ${isMuted ? 'muted' : 'unmuted'}`} onClick={toggleMute}></button>
+        <video ref={videoRef} src={videoSource} autoPlay muted loop />
+        <div className="controls__wrapper">
+          <button
+            className={`control-button pause-button ${
+              isPlaying ? "playing" : "paused"
+            }`}
+            onClick={togglePlay}
+          ></button>
+          <button
+            className="control-button"
+            onClick={() =>
+              window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+            }
+          >
+            Scroll Down &#10227;
+          </button>
+          <button
+            className={`control-button sound-button ${
+              isMuted ? "muted" : "unmuted"
+            }`}
+            onClick={toggleMute}
+          ></button>
+        </div>
       </div>
     </header>
   );

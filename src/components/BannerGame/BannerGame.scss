@@ -1,0 +1,87 @@
+@use '../../colors' as *;
+
+.v-header {
+  .fullscreen-video-wrap {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    video {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .controls__wrapper {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      position: absolute;
+      bottom: 10%;
+    }
+
+    .control-button {
+
+      bottom: -50%;
+      background-color: $color-very-very-very-light-black;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(.8rem, 2vw, 1rem);
+      font-weight: bold;
+      color: $color-white;
+      padding: .5em 1em;
+      transition: color 0.15s;
+
+      &:hover {
+        color: $color-orange;
+      }
+
+
+
+      &.pause-button {
+        bottom: 20px;
+        left: 50px;
+      }
+
+      &.sound-button {
+        bottom: 20px;
+        right: 50px;
+      }
+    }
+
+    .playing::after {
+      content: 'Pause ⏸️';
+    }
+
+    .paused::after {
+      content: 'Play ▶️';
+    }
+
+    .unmuted::after {
+      content: 'Mute 🔇';
+    }
+
+    .muted::after {
+      content: 'Unmute 🔊';
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .v-header {
+    aspect-ratio: 16/20;
+
+    .fullscreen-video-wrap {
+      video {
+        aspect-ratio: 16/18;
+        height: 100%;
+      }
+    }
+  }
+
+}

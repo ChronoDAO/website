@@ -1,0 +1,45 @@
+@use '../../../colors' as *;
+
+.banner {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 16/7;
+
+  .banner__wrapper {
+    position: relative;
+    height: 100%;
+
+    .text-scroll {
+      >div {
+
+        position: absolute;
+        left: 10%;
+        top: 20%;
+        transform: translate(-25%, -100%);
+      }
+
+    }
+
+    img {
+      width: 100%;
+      scale: .8;
+      position: absolute;
+      top: -5%;
+      left: 0;
+      transform: translate(0%, 0%);
+      filter: brightness(.7);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .banner {
+    .banner__wrapper {
+      img {
+
+        scale: 1.2;
+      }
+    }
+  }
+
+}
