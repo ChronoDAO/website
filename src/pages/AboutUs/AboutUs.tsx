@@ -4,6 +4,7 @@ import AboutSection01 from "../../components/Sections/AboutSection01.tsx";
 import AboutSection02 from "../../components/Sections/AboutSection02.tsx";
 import AboutSection03 from "../../components/Sections/AboutSection03.tsx";
 import "./AboutUs.scss";
+import AnimateClockie from "../../components/animatedComponents/AnimatedClockie/AnimateClockie.tsx";
 
 export default function AboutUs() {
   const aboutUsVideoSource = `${
@@ -18,6 +19,7 @@ export default function AboutUs() {
       <AboutSection02 />
       <AboutSection03 />
       <div className="content__wrapper"></div>
+      <AnimateClockie/>
     </main>
   );
 }
