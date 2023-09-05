@@ -1,33 +1,24 @@
 @use '../../colors' as *;
 
+/* Styles par défaut pour les écrans de taille moyenne et supérieure */
 .Oracle-container {
   position: absolute;
   width: 100%;
-  left: 0; 
+  left: 0;
+  bottom: 80px;
   display: flex;
   align-items: center;
-  overflow: hidden;
+}
 
-  .ClockiePng{
-    height: 100px;
-    width: 100px;
-    margin-bottom: 198px;
-    align-self: flex-end;
-  }
-
-  .text {
-    white-space: nowrap;
-    font-size: 70px;
-    font-weight: 700;
-    animation: Scroll 25s linear infinite;
-    color: $color-orange;
-    text-transform: uppercase;
-  }
-
-  .text-1 {
-    margin-right: 20px;
-  }
-  
+.Oracle-container .text {
+  color: $color-orange;
+  white-space: nowrap;
+  letter-spacing: 0.2rem;
+  font-size: 70px;
+  font-weight: 700;
+  animation: Scroll 25s linear infinite;
+  text-transform: uppercase;
+}
 
 @keyframes Scroll {
   0% {
@@ -38,6 +29,20 @@
   }
 }
 
+
+@media screen and (max-width: 768px) {
+  .Oracle-container .text {
+    font-size: 50px;
+  }
 }
 
 
+@media screen and (max-width: 576px) {
+  .Oracle-container {
+    bottom: 120px;
+  }
+
+  .Oracle-container .text {
+    font-size: 40px;
+  }
+}
