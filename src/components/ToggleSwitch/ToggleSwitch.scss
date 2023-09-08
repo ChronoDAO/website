@@ -1,0 +1,102 @@
+.switch-button, .toggle__p {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: auto;
+  height: 55px;
+  top: 0;
+margin-bottom: 25px;
+
+  .switch-outer {
+    height: 100%;
+    background: #252532;
+    width: 115px;
+    border-radius: 165px;
+    box-shadow: inset 0px 5px 10px 0px #16151c, 0px 3px 6px -2px #403f4e;
+    border: 1px solid #32303e;
+    padding: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+    tap-highlight-color: transparent;
+
+    input[type="checkbox"] {
+      opacity: 0;
+      appearance: none;
+      position: absolute;
+    }
+
+    .button-toggle {
+      height: 42px;
+      width: 42px;
+      background: linear-gradient(#3b3a4e, #272733);
+      border-radius: 100%;
+      box-shadow: inset 0px 5px 4px 0px #424151, 0px 4px 15px 0px #0f0e17;
+      position: relative;
+      z-index: 2;
+      transition: left 0.3s ease-in;
+      left: 0;
+    }
+
+    input[type="checkbox"]:checked + .button .button-toggle {
+      left: 58%;
+    }
+
+    input[type="checkbox"]:checked + .button .button-indicator {
+      animation: indicator 1s forwards;
+    }
+
+    .button {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+
+      .button-indicator {
+        height: 25px;
+        width: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: 3px solid #ef565f;
+        box-sizing: border-box;
+        right: 10px;
+        position: relative;
+      }
+    }
+  }
+
+  &.checked {
+    .switch-outer {
+      .button-toggle {
+        left: 58%;
+      }
+
+      .button-indicator {
+        animation: indicator 1s forwards;
+      }
+    }
+  }
+}
+
+@keyframes indicator {
+  30% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    border: 3px solid #60d480;
+    left: -68%;
+  }
+}
+
+.toggle__p {
+  color: #727272;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+

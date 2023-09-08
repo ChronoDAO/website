@@ -2,22 +2,22 @@ import "./Sections.scss";
 
 function AboutSection00() {
   return (
-    <section className="home-section__wrapper" id="sectionZero">
+    <section className="home-section__wrapper" id="sectionAbout00">
     <div className="content__wrapper">
       <div className="text__wrapper">
         <h3>
-          <span className="span--orange">Notre Guilde</span>
+          <span className="span--orange">Éveille l'Avant-Gardiste en Toi : </span>
           <br></br>
-           Votre Porte d'Accès Privilégiée à Open Loot et au Monde du Jeu
+          L'Épopée Web3 de ChronoDAO !
         </h3>
         <p>
-        Plongez dans notre Guilde et devenez partenaire officiel d'Open Loot, le foyer des jeux sensationnels comme Big Time et Boss Fighters.
+        Bienvenue dans ChronoDAO, ici nous sommes tous comme toi : des geeks passionnés, autrefois en marge, qui ont trouvé ici un endroit où leur passion est non seulement acceptée mais célébrée. Viens découvrir les projets Web3 que nous choyons, Big Time et Boss Fighters. Tu penses connaître ces jeux ? Attends de voir ce que notre communauté a à offrir. 
         </p>
         <p>
-        Explorez une aventure au-delà du simple jeu, découvrant de nouvelles sensations ludiques et une culture geek qui transcende les limites.
+         Explore des univers en constante mutation, participe à des événements in-game qui changent la donne et tisse des liens forts avec des guildes alliées. (mondialement représentées)  
         </p>
         <p>
-        Événements in-game captivants, univers évolutifs, et collaborations avec d'autres Guildes enrichissent votre expérience de jeu unique.
+        Ici, le jeu devient plus qu'un simple passe-temps, il devient une aventure que tu partages.
         </p>
       </div>
     </div>

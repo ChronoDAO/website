@@ -9,18 +9,18 @@ function AboutSection01() {
     <div className="content__wrapper">
     <div className="text__wrapper">
         <h3>
-          <span className="span--orange">Une Plongée</span>
+          <span className="span--orange">Plonge</span>
           <br></br>
-          dans la Culture Geek avec Notre Guilde
+           Dans les Mondes Fantastiques avec ChronoDAO
         </h3>
         <p>
-        Ouvrez les portes d'un univers geek multiforme au sein de notre Guilde.
+        Ouvre la porte à un monde geek aux mille facettes chez ChronoDAO. As-tu aimé Zelda? Pokémon? Sonic? Mario?Imagine un lieu où ces univers coexistent et où chacun a sa place.
         </p>
         <p>
-        Plus qu'un simple groupe de joueurs, nous encourageons la passion pour les jeux vidéo, les films, la littérature et bien plus encore. 
+        Dans notre guilde, le geek n'est pas qu'un joueur; il peut être un passioné de littérature fantastique, un cinéphile incongru, un collectionneur d'expériences uniques. Si tu as déjà rêvé de discuter des dernières quêtes de Zelda tout en échangeant sur la philosophie de Matrix, tu es au bon endroit.
         </p>
         <p>
-        Plongez dans une immersion totale de cette culture unique, partagez vos intérêts avec des camarades partageant les mêmes idées, et célébrez ensemble la diversité et les expériences geek enrichissantes.
+        Grâce à ChronoDAO, découvre des mondes fantastiques qui t'attendent derrière chaque connexion. Discute avec des membres qui comprennent tes références, célèbre tes exploits et partage la pop culture avec nous. Alors, prêt à explorer ?
         </p>
       </div>
     </div>
