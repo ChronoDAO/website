@@ -1,6 +1,22 @@
-import "./OracleBanner.scss";
+import { useEffect } from "react";
+import gsap from "gsap";
+import "./OracleBanner.scss"; 
 
 function OracleBanner() {
+  useEffect(() => {
+    const textElements = document.querySelectorAll(".Oracle-container .text");
+
+    const tl = gsap.timeline({ repeat: -1 });
+
+    tl.to(textElements, {
+      xPercent: -100,
+      duration: 25,
+      ease: "linear",
+      stagger: 0.2, 
+      repeatRefresh: true, 
+    });
+  }, []);
+
   return (
     <div className="wrapp__container">
       <div className="Oracle-container">
