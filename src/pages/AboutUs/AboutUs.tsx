@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import{ useState } from "react";
 import BannerGame from "../../components/BannerGame/BannerGame.tsx";
 import AboutSection00 from "../../components/Sections/AboutSection00.tsx";
 import AboutSection01 from "../../components/Sections/AboutSection01.tsx";
