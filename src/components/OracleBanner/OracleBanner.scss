@@ -7,13 +7,14 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+bottom: 80px;
 
-  .ClockiePng{
-    height: 100px;
-    width: 100px;
-    margin-bottom: 198px;
-    align-self: flex-end;
-  }
+  // .ClockiePng{
+  //   height: 100px;
+  //   width: 100px;
+  //   margin-bottom: 198px;
+  //   align-self: flex-end;
+  // }
 
   .text {
     white-space: nowrap;
