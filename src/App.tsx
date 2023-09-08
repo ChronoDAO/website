@@ -9,6 +9,7 @@ import AboutDao from "./pages/AboutDao/AboutDao";
 import Footer from "./components/common/footer/Footer.tsx";
 import SocialMedia from "./components/common/SocialMedia/SocialMedia.tsx";
 import Game from "./pages/Game/Game.tsx";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.tsx";
 
 function App() {
   const [isWideScreen, setIsWideScreen] = useState(false);
@@ -30,6 +31,7 @@ function App() {
     <>
       <SocialMedia />
       {!isWideScreen && <NavHamburger />}
+      <ScrollToTop/>
       <div className="container">
         {isWideScreen && <Nav />}
         <Routes>
