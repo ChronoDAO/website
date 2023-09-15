@@ -24,10 +24,10 @@ export default function GameNav() {
     };
   }, []);
 
-  const handleTabClick = (newTab) => {
+  const handleTabClick = (newTab: string) => {
     setTab(newTab);
   };
-
+  
   return (
     <>
       <div className="game-nav__wrapper">
