@@ -1,3 +1,5 @@
+import "../../Sections/Sections.scss";
+
 export default function Bigtime() {
   return (
     <>

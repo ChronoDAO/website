@@ -9,7 +9,6 @@ import Boss from "./Tab/Boss";
 
 export default function GameNav() {
   const [tab, setTab] = useState("bigtime");
-
   const [isWideScreen, setIsWideScreen] = useState(false);
 
   useEffect(() => {
@@ -24,31 +23,34 @@ export default function GameNav() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleTabClick = (newTab) => {
+    setTab(newTab);
+  };
+
   return (
     <>
       <div className="game-nav__wrapper">
-        <ul id="game-nav" className={isWideScreen ? `wideUl` : "smallUl"}>
-          <li className="">
-            <a onClick={() => setTab("bigtime")} href="#game-nav">
+        <ul id="game-nav" className={`game-tabs ${isWideScreen ? "wideUl" : "smallUl"}`}>
+          <li className={tab === "bigtime" ? "active-link" : ""}>
+            <a onClick={() => handleTabClick("bigtime")} href="#game-nav">
               <img
-                src={`${
-                  import.meta.env.CDN_URL
-                }/images/assets/gameLogo/BigT.png`}
+                src={`${import.meta.env.CDN_URL}/images/assets/gameLogo/BigT.png`}
                 alt=""
               />
+               <span className="underline"></span>
             </a>
           </li>
-          <li>
-            <a onClick={() => setTab("reign")} href="#game-nav">
+          <li className={tab === "reign" ? "active-link" : ""}>
+            <a onClick={() => handleTabClick("reign")} href="#game-nav">
               <img
-                src={`${
-                  import.meta.env.CDN_URL
-                }/images/assets/gameLogo/ReignO.png`}
+                src={`${import.meta.env.CDN_URL}/images/assets/gameLogo/ReignO.png`}
                 alt=""
               />
+                <span className="underline"></span>
             </a>
           </li>
-          <li>
+          <li className={tab === "desol" ? "active-link" : ""}>
             <a onClick={() => setTab("desol")} href="#game-nav">
               <img
                 src={`${
@@ -56,9 +58,10 @@ export default function GameNav() {
                 }/images/assets/gameLogo/DesoL.png`}
                 alt=""
               />
+                <span className="underline"></span>
             </a>
           </li>
-          <li>
+          <li className={tab === "shatter" ? "active-link" : ""}>
             <a onClick={() => setTab("shatter")} href="#game-nav">
               <img
                 src={`${
@@ -66,9 +69,10 @@ export default function GameNav() {
                 }/images/assets/gameLogo/ShatterP.webp`}
                 alt=""
               />
+               <span className="underline"></span>
             </a>
           </li>
-          <li>
+          <li className={tab === "boss" ? "active-link" : ""}>
             <a onClick={() => setTab("boss")} href="#game-nav">
               <img
                 src={`${
@@ -76,9 +80,10 @@ export default function GameNav() {
                 }/images/assets/gameLogo/BossF.png`}
                 alt=""
               />
+                <span className="underline"></span>
             </a>
           </li>
-          <li>
+          <li className={tab === "world" ? "active-link" : ""}>
             <a onClick={() => setTab("world")} href="#game-nav">
               <img
                 src={`${
@@ -86,6 +91,7 @@ export default function GameNav() {
                 }/images/assets/gameLogo/WorldS.png`}
                 alt=""
               />
+                <span className="underline"></span>
             </a>
           </li>
         </ul>
