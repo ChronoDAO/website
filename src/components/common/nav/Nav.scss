@@ -11,9 +11,8 @@ nav {
 
     a {
       font-size: clamp(.5rem, 2vw, 1.2rem);
-      text-decoration: none; // Pour supprimer le soulignement par défaut
-      color: inherit; // Utilisez la couleur par défaut du texte
-
+      text-decoration: none;
+      color: inherit;
     }
 
     img {
@@ -24,6 +23,10 @@ nav {
     ul {
       display: flex;
       gap: 2rem;
+
+      .active {
+        color: $color-orange; 
+      }
     }
   }
 }
