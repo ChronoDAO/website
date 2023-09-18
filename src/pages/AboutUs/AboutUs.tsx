@@ -33,10 +33,10 @@ export default function AboutUs() {
           <SwitchButton isChecked={afficherOui} onToggle={handleToggleChange} />
           <AboutSection00 />
           <AboutSection01 />
+          <OracleBanner />
           <AboutSection02 />
           <AboutSection03 />
-          <OracleBanner />
-          <div className="content__wrapper"></div>
+          {/* <div className="content__wrapper"></div> */}
           <AnimateClockie />
         </>
       ) : (
@@ -44,9 +44,10 @@ export default function AboutUs() {
           <SwitchButton isChecked={afficherOui} onToggle={handleToggleChange} />
           <ShortSection00/>
           <ShortSection01/>
+          <OracleBanner />
           <ShortSection02/>
           <ShortSection03/>
-          <OracleBanner />
+          <AnimateClockie />
         </>
       )}
     </main>

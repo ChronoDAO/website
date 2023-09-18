@@ -1,8 +1,7 @@
 @use '../../colors' as *;
 
-/* Styles par défaut pour les écrans de taille moyenne et supérieure */
 .Oracle-container {
-  position: absolute;
+  position:relative;
   width: 100%;
   left: 0;
   bottom: 80px;
@@ -11,6 +10,7 @@
 }
 
 .Oracle-container .text {
+  margin-top: 35px;
   color: $color-orange;
   white-space: nowrap;
   letter-spacing: 0.2rem;
