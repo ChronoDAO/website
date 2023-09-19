@@ -1,11 +1,14 @@
 @use '../../colors' as *;
 
+
 .game-nav__wrapper {
   height: 100px;
-  position: relative;
+  position: sticky; 
+  top: 37px; 
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 
   .wideUl {
     width: 100vw;

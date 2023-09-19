@@ -1,33 +1,28 @@
+import React from 'react';
 import './ToggleSwitch.scss';
 
-const SwitchButton: React.FC<{ isChecked: boolean; onToggle: () => void }> = ({
-  isChecked,
-  onToggle,
-}) => {
+interface SwitchButtonProps {
+  isChecked: boolean;
+  onToggle: () => void;
+}
+
+const SwitchButton: React.FC<SwitchButtonProps> = ({ isChecked, onToggle }) => {
   const handleToggle = () => {
-
-    if (isChecked) {
-      window.scrollTo(0, 0);
-    }
-
+    window.scrollTo(0, 0);
     onToggle();
   };
 
   return (
-    <div>
-      <p className='toggle__p'>{isChecked ? 'Version courte' : 'Version longue'}</p>
-      <label className={`switch-button ${isChecked ? 'checked' : ''}`}>
-        <div className="switch-outer">
-          <input id="switch" type="checkbox" checked={isChecked} onChange={handleToggle} />
-          <div className="button">
-            <span className="button-toggle"></span>
-            <span className="button-indicator"></span>
-          </div>
-        </div>
-      </label>
+    <div className="switch-container">
+      <div className="version-container">
+        <p className="version-text">{isChecked ? 'Version courte' : 'Version longue'}</p>
+        <label className="switch">
+          <input type="checkbox" checked={isChecked} onChange={handleToggle} />
+          <span className="slider"></span>
+        </label>
+      </div>
     </div>
   );
 };
 
 export default SwitchButton;
-

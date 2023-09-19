@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { FaPause, FaPlay, FaVolumeUp, FaVolumeMute, FaArrowDown } from 'react-icons/fa';
 import "./BannerGame.scss";
 
 interface BannerGameProps {
@@ -9,7 +10,6 @@ function BannerGame({ videoSource }: BannerGameProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
-
   const [isWideScreen, setIsWideScreen] = useState(false);
 
   useEffect(() => {
@@ -37,13 +37,36 @@ function BannerGame({ videoSource }: BannerGameProps) {
   const togglePlay = () => {
     const video = videoRef.current;
 
-    if (video && video.paused) {
-      video.play();
-    } else if (video) {
-      video.pause();
+    if (video) {
+      if (isPlaying) {
+        video.pause();
+      } else {
+        video.play();
+      }
     }
-    setIsPlaying(!video?.paused);
   };
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (video) {
+      const handlePlay = () => {
+        setIsPlaying(true);
+      };
+
+      const handlePause = () => {
+        setIsPlaying(false);
+      };
+
+      video.addEventListener("play", handlePlay);
+      video.addEventListener("pause", handlePause);
+
+      return () => {
+        video.removeEventListener("play", handlePlay);
+        video.removeEventListener("pause", handlePause);
+      };
+    }
+  }, []);
 
   const toggleMute = () => {
     const video = videoRef.current;
@@ -60,25 +83,31 @@ function BannerGame({ videoSource }: BannerGameProps) {
         <video ref={videoRef} src={videoSource} autoPlay muted loop />
         <div className="controls__wrapper">
           <button
-            className={`control-button pause-button ${
+            className={`control-button pause-button round-button ${
               isPlaying ? "playing" : "paused"
             }`}
             onClick={togglePlay}
-          ></button>
+          >
+            {isPlaying ? <FaPause className="custom-icon" /> : <FaPlay className="custom-icon" />}
+          </button>
+
           <button
-            className="control-button"
+            className={`control-button round-button`}
             onClick={() =>
               window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
             }
           >
-            Scroll Down &#10227;
+            <FaArrowDown className="custom-icon" />
           </button>
+
           <button
-            className={`control-button sound-button ${
+            className={`control-button sound-button round-button ${
               isMuted ? "muted" : "unmuted"
             }`}
             onClick={toggleMute}
-          ></button>
+          >
+            {isMuted ? <FaVolumeMute className="custom-icon" /> : <FaVolumeUp className="custom-icon" />}
+          </button>
         </div>
       </div>
     </header>
