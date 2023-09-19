@@ -16,9 +16,9 @@ export default function Nav() {
         </a>
         <ul className="nav__ul">
           <NavLink exact to="/" activeClassName="active">Accueil</NavLink>
-          <NavLink to="/about_dao" activeClassName="active">À propos</NavLink>
-          <NavLink to="/about_us" activeClassName="active">Guilde</NavLink>
-          <NavLink to="/games" activeClassName="active">Jeux</NavLink>
+          <NavLink to="/about_dao" activeClassName="active">La DAO</NavLink>
+          <NavLink to="/about_us" activeClassName="active">La guilde</NavLink>
+          <NavLink to="/games" activeClassName="active">Nos jeux</NavLink>
         </ul>
         <CTAButton text={"Rejoignez nous"} />
       </div>

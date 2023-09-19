@@ -1,48 +1,44 @@
 @use '../../colors' as *;
 
-.Oracle-container {
-  position:relative;
+.wrapp__container{
+  position: relative;
+  height: 100px;
   width: 100%;
-  left: 0;
-  bottom: 80px;
+  margin-bottom: 50px;
+
+}
+.Oracle__wrapper{
+  position: absolute;
   display: flex;
-  align-items: center;
-}
-
-.Oracle-container .text {
-  margin-top: 35px;
-  color: $color-orange;
-  white-space: nowrap;
-  letter-spacing: 0.2rem;
-  font-size: 70px;
-  font-weight: 700;
-  animation: Scroll 25s linear infinite;
-  text-transform: uppercase;
-}
-
-@keyframes Scroll {
-  0% {
-    transform: translateX(-100%);
+  justify-content: flex-start;
+  background: rgba(29, 29, 29, 0.548);
+  overflow: hidden;
+  width: 100vw;
+  left: -10vw;
+  h1{
+    font-size: clamp(20px, 5vw, 40px);
+    white-space: nowrap;
+    padding: 0.6em;
+    letter-spacing: 1px;
+    animation: move-rtl 6000ms linear infinite;
   }
-  100% {
-    transform: translateX(0%);
+  .blue-text{
+    color: $color-orange;
   }
-}
-
-
-@media screen and (max-width: 768px) {
-  .Oracle-container .text {
-    font-size: 50px;
+  img {
+    width: 35px; // Largeur de l'image
+    height: 35px; // Hauteur de l'image
+    animation: scrollImage 4s linear infinite;
+    margin-right: 30px;
   }
 }
-
-
-@media screen and (max-width: 576px) {
-  .Oracle-container {
-    bottom: 120px;
-  }
-
-  .Oracle-container .text {
-    font-size: 40px;
-  }
+@keyframes move-rtl {
+  0%{
+    transform: translateX(0);
 }
+100%{
+  transform: translateX(-100%);
+}
+}
+
+
