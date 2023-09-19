@@ -1,6 +1,8 @@
+import "../../Sections/Sections.scss";
+
 export default function World() {
   return (
-    <section className="game-section__wrapper" id="world">
+    <section className="game-section__wrapper game__container" id="world">
       <div className="content__wrapper">
         <div className="text__wrapper">
           <h3>World Shards</h3>
@@ -20,3 +22,5 @@ export default function World() {
     </section>
   );
 }
+
+// /!\ Supprimer la class game__container en cas d'ajout de contenue /!\

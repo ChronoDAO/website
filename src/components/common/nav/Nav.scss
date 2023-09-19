@@ -10,8 +10,10 @@ nav {
     align-items: center;
 
     a {
-
       font-size: clamp(.5rem, 2vw, 1.2rem);
+      text-decoration: none; // Pour supprimer le soulignement par défaut
+      color: inherit; // Utilisez la couleur par défaut du texte
+
     }
 
     img {

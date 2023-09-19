@@ -15,12 +15,12 @@ export default function Nav() {
           />
         </a>
         <ul className="nav__ul">
-          <Link to="/">Home</Link>
-          <Link to="/about_dao">About DAO</Link>
-          <Link to="/about_us">About us</Link>
-          <Link to="/games">Games</Link>
+          <Link to="/">Accueil</Link>
+          <Link to="/about_dao">À propos</Link>
+          <Link to="/about_us">Guilde</Link>
+          <Link to="/games">Jeux</Link>
         </ul>
-        <CTAButton text={"Join the team"} />
+        <CTAButton text={"Rejoignez nous"} />
       </div>
     </nav>
   );
