@@ -1,8 +1,14 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import CTAButton from "../Buttons/CTA-Button/CTAButton";
 import "./Nav.scss";
 
 export default function Nav() {
+  const [tab, setTab] = useState("Accueil");
+  
+  const handleTabClick = (newTab: string) => {
+    setTab(newTab);
+  };
   return (
     <nav>
       <div className="nav__wrapper">
@@ -15,10 +21,17 @@ export default function Nav() {
           />
         </a>
         <ul className="nav__ul">
-          <NavLink exact to="/" activeClassName="active">Accueil</NavLink>
-          <NavLink to="/about_dao" activeClassName="active">La DAO</NavLink>
-          <NavLink to="/about_us" activeClassName="active">La guilde</NavLink>
-          <NavLink to="/games" activeClassName="active">Nos jeux</NavLink>
+        <li className={tab === "Accueil" ? "active" : ""}>
+          <NavLink to="/"  onClick={() => handleTabClick("Accueil")}>Accueil</NavLink></li>
+          <li className={tab === "La DAO" ? "active" : ""}>
+          <NavLink to="/about_dao" onClick={() => handleTabClick("La DAO")}>La DAO</NavLink>
+          </li>
+          <li className={tab === "La guilde" ? "active" : ""}>
+          <NavLink to="/about_us" onClick={() => handleTabClick("La guilde")}>La guilde</NavLink>
+          </li>
+          <li className={tab === "Nos jeux" ? "active" : ""}>
+          <NavLink to="/games" onClick={() => handleTabClick("Nos jeux")}>Nos jeux</NavLink>
+          </li>
         </ul>
         <CTAButton text={"Rejoignez nous"} />
       </div>
