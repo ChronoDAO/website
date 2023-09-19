@@ -1,25 +1,25 @@
 @use '../../colors' as *;
 
 .wrapp__container{
-  position: relative;
-  height: 100px;
-  width: 100%;
-  margin-bottom: 50px;
-
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 130px;
 }
 .Oracle__wrapper{
   position: absolute;
   display: flex;
   justify-content: flex-start;
-  background: rgba(29, 29, 29, 0.548);
+  background: rgb(0, 0, 0);
   overflow: hidden;
   width: 100vw;
   left: -10vw;
-  h1{
+  h2{
     font-size: clamp(20px, 5vw, 40px);
     white-space: nowrap;
     padding: 0.6em;
-    letter-spacing: 1px;
+    letter-spacing: clamp(1px, 5vw, 2px);
     animation: move-rtl 6000ms linear infinite;
   }
   .blue-text{

@@ -2,23 +2,29 @@
 
 .container__social-media {
   display: flex;
+  flex-direction: column;
   position: fixed;
   right: 0;
   bottom: 0;
   padding: 32px 68px;
   gap: 1rem;
   z-index: 1;
+  align-items: flex-end; 
+  transition: transform 0.3s ease-in-out; 
+
 }
+
 
 .container__social-media a {
   position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .container__social-media a:hover {
   color: $color-orange;
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
 .container__social-media a[title]::after {
@@ -38,7 +44,6 @@
   margin-top: 6px;
   margin-bottom: 10px;
 }
-
 
 .container__social-media a:hover::after {
   opacity: 1;
