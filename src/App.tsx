@@ -9,6 +9,7 @@ import AboutDao from "./pages/AboutDao/AboutDao";
 import Footer from "./components/common/footer/Footer.tsx";
 import SocialMedia from "./components/common/SocialMedia/SocialMedia.tsx";
 import Game from "./pages/Game/Game.tsx";
+import Cluf from "./pages/Cluf/Cluf.tsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.tsx";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/cluf" element={<Cluf />} />
           <Route path="/games" element={<Game />} />
           <Route path="/about_dao" element={<AboutDao />} />
         </Routes>
