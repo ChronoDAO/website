@@ -1,0 +1,46 @@
+@use '../../colors' as *;
+
+
+#mainTwitch {
+    font-size: clamp(0.6rem, 2vw, 1.5rem);
+    text-align: center;
+    padding-bottom: 1rem;
+    gap: 1em;
+  
+    h2 {
+      padding-left: 2rem;
+      color: $color-orange;
+      font-size: clamp(1.5rem, 3vw, 3rem);
+    }
+  
+    h1 {
+      color: $color-orange;
+      margin-bottom: 5rem;
+  
+      h3 {
+        color: $color-orange;
+        padding-left: 3rem;
+      }
+    }
+  
+    p {
+      letter-spacing: 0.1rem;
+      font-size: clamp(0.8rem, 1vw, 1rem);
+    }
+  }
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; // Utilisez vh pour s'assurer que les boutons sont centrés verticalement sur toute la page.
+
+    .my-button {
+        padding: 15px 32px; // Espacement intérieur pour le texte du bouton.
+        text-align: center; // Centrer le texte.
+        display: inline-block; // Se comporte comme un bloc, mais reste en ligne avec le contenu adjacent.
+        font-size: 16px; // Taille de la police.
+        margin: 0 30px; // Espacement entre les boutons.
+    }
+}
