@@ -12,7 +12,7 @@ function NavHamburger() {
         <div className="navbar__logo">
           <a href="/">
             <img
-              src="./images/assets/icons/dao.png"
+              src={`${import.meta.env.CDN_URL}/images/assets/icons/dao.png`}
               alt="Logo de la guilde ChronoDAO, représente un dragon stylisé bleu dans un cercle rappelant de manière très simplifiée une pocketwatch du jeu Bigtime"
             />
           </a>
@@ -25,7 +25,7 @@ function NavHamburger() {
               className="navbar__link"
               onClick={() => setShowLinks(false)}
             >
-              Home
+              Accueil
             </Link>
           </li>
           <li className="navbar__item">
@@ -34,7 +34,7 @@ function NavHamburger() {
               className="navbar__link"
               onClick={() => setShowLinks(false)}
             >
-              About DAO
+              La DAO
             </Link>
           </li>
           <li className="navbar__item">
@@ -43,7 +43,7 @@ function NavHamburger() {
               className="navbar__link"
               onClick={() => setShowLinks(false)}
             >
-              About us
+              La Guilde
             </Link>
           </li>
           <li className="navbar__item">
@@ -52,11 +52,11 @@ function NavHamburger() {
               className="navbar__link"
               onClick={() => setShowLinks(false)}
             >
-              Games
+              Nos Jeux
             </Link>
           </li>
           <li className="navbar__cta-button">
-            <CTAButton text={"Join us"} />
+            <CTAButton text={"Rejoignez nous"} link={"https://discord.gg/chronodao"} />
           </li>
         </ul>
         <button

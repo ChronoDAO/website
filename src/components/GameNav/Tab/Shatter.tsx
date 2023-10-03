@@ -1,6 +1,8 @@
+import "../../Sections/Sections.scss";
+
 export default function Shatter() {
   return (
-    <section className="game-section__wrapper" id="shatter">
+    <section className="game-section__wrapper game__container" id="shatter">
       <div className="content__wrapper">
         <div className="text__wrapper">
           <h3>Shatter Point</h3>
@@ -12,8 +14,15 @@ export default function Shatter() {
         </div>
       </div>
       <div className="image__wrapper">
-        <img src="./images/assets/gameLogo/ShatterP.webp" alt="" />
+        <img
+          src={`${
+            import.meta.env.CDN_URL
+          }/images/assets/gameLogo/ShatterP.webp`}
+          alt=""
+        />
       </div>
     </section>
   );
 }
+
+// /!\ Supprimer la class game__container en cas d'ajout de contenue /!\

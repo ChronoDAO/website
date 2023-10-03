@@ -1,0 +1,27 @@
+@use '../../colors' as *;
+
+#mainPolitique {
+    padding-bottom: 1rem;
+  
+    h2 {
+      padding-left: 2rem;
+      color: $color-orange;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+  
+    h1 {
+      color: $color-orange;
+      margin-bottom: 5rem;
+      text-align: center;
+  
+      h3 {
+        color: $color-orange;
+        padding-left: 3rem;
+      }
+    }
+  
+    p {
+      letter-spacing: 0.1rem;
+      font-size: clamp(0.8rem, 1vw, 1rem);
+    }
+  }

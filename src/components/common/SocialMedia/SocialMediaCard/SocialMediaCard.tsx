@@ -20,7 +20,10 @@ export default function SocialMediaGuild({
         <TbBrandTwitch size={36} />
       </Link>
       <Link to={bigtime}>
-        <img src="/images/assets/icons/g-bigtime.svg" alt="Bigtime" />
+        <img
+          src={`${import.meta.env.CDN_URL}/images/assets/icons/g-bigtime.svg`}
+          alt="Bigtime"
+        />
       </Link>
     </div>
   );

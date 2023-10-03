@@ -22,11 +22,12 @@
     }
 
     .control-button {
-
       bottom: -50%;
       background-color: $color-very-very-very-light-black;
       border: none;
-      border-radius: 20px;
+      border-radius: 50%; 
+      width: 50px; 
+      height: 50px; 
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -41,8 +42,6 @@
         color: $color-orange;
       }
 
-
-
       &.pause-button {
         bottom: 20px;
         left: 50px;
@@ -54,20 +53,8 @@
       }
     }
 
-    .playing::after {
-      content: 'Pause ⏸️';
-    }
-
-    .paused::after {
-      content: 'Play ▶️';
-    }
-
-    .unmuted::after {
-      content: 'Mute 🔇';
-    }
-
-    .muted::after {
-      content: 'Unmute 🔊';
+    .custom-icon {
+      font-size: 24px; 
     }
   }
 }
@@ -83,5 +70,4 @@
       }
     }
   }
-
 }

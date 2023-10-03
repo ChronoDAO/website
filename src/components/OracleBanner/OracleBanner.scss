@@ -1,0 +1,44 @@
+@use '../../colors' as *;
+
+.wrapp__container{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 130px;
+}
+.Oracle__wrapper{
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+  width: 100vw;
+  left: -10vw;
+  h2{
+    font-size: clamp(20px, 5vw, 40px);
+    white-space: nowrap;
+    padding: 0.6em;
+    letter-spacing: clamp(1px, 5vw, 2px);
+    animation: move-rtl 6000ms linear infinite;
+  }
+  .blue-text{
+    color: $color-orange;
+  }
+  img {
+    width: 35px; // Largeur de l'image
+    height: 35px; // Hauteur de l'image
+    animation: scrollImage 4s linear infinite;
+    margin-right: 30px;
+  }
+}
+@keyframes move-rtl {
+  0%{
+    transform: translateX(0);
+}
+100%{
+  transform: translateX(-100%);
+}
+}
+
+

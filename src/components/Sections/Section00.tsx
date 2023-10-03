@@ -27,7 +27,7 @@ export default function Section00() {
           </p>
           <CTAButton
             text="Explore ce nouveau monde avec nous."
-            image="./assets/icons/logo_discord.svg"
+            image="/assets/icons/logo_discord.svg"
             image_class="logo-discord"
           />
         </div>

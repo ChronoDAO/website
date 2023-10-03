@@ -1,6 +1,8 @@
+import "../../Sections/Sections.scss";
+
 export default function Reign() {
   return (
-    <section className="game-section__wrapper" id="reign">
+    <section className="game-section__wrapper game__container" id="reign">
       <div className="content__wrapper">
         <div className="text__wrapper">
           <h3>Reign of Terror is an epic cyberpunk game</h3>
@@ -16,8 +18,13 @@ export default function Reign() {
         </div>
       </div>
       <div className="image__wrapper">
-        <img src="./images/assets/gameLogo/ReignO.png" alt="" />
+        <img
+          src={`${import.meta.env.CDN_URL}/images/assets/gameLogo/ReignO.png`}
+          alt=""
+        />
       </div>
     </section>
   );
 }
+
+// /!\ Supprimer la class game__container en cas d'ajout de contenue /!\

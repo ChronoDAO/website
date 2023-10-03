@@ -10,8 +10,9 @@ nav {
     align-items: center;
 
     a {
-
       font-size: clamp(.5rem, 2vw, 1.2rem);
+      text-decoration: none;
+      color: inherit;
     }
 
     img {
@@ -22,6 +23,11 @@ nav {
     ul {
       display: flex;
       gap: 2rem;
+
+      .active {
+        color: $color-orange; 
+        font-weight: 600;
+      }
     }
   }
 }

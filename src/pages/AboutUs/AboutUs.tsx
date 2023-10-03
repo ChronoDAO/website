@@ -1,54 +1,55 @@
-import { useRef } from "react";
-import { CSSProperties } from "react";
-import useParallaxAnimation from "../../customHooks/useParallaxAnimation";
-import "./AboutUs.scss";
+import{ useState } from "react";
+import BannerGame from "../../components/BannerGame/BannerGame.tsx";
+import AboutSection00 from "../../components/Sections/AboutSection00.tsx";
+import AboutSection01 from "../../components/Sections/AboutSection01.tsx";
+import AboutSection02 from "../../components/Sections/AboutSection02.tsx";
+import AboutSection03 from "../../components/Sections/AboutSection03.tsx";
+import OracleBanner from "../../components/OracleBanner/OracleBanner.tsx";
+import AnimateClockie from "../../components/animatedComponents/AnimatedClockie/AnimateClockie.tsx";
+import SwitchButton from "../../components/ToggleSwitch/ToggleSwitch.tsx";
 
+import "./AboutUs.scss";
+import ShortSection00 from "../../components/Sections/ShortSection 00.tsx";
+import ShortSection01 from "../../components/Sections/ShortSection01.tsx";
+import ShortSection02 from "../../components/Sections/ShortSection02.tsx";
+import ShortSection03 from "../../components/Sections/ShortSection03.tsx";
 
 export default function AboutUs() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  //@ts-ignore
-  const image1Style: CSSProperties = useParallaxAnimation(
-    10,
-    containerRef,
-    false,
-    true
-  );
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  //@ts-ignore
-  const image2Style: CSSProperties = useParallaxAnimation(
-    50,
-    containerRef,
-    false,
-    true
-  );
+  const aboutUsVideoSource = `${
+    import.meta.env.CDN_URL
+  }/videos/aboutBanner.mp4`;
+
+  const [afficherOui, setAfficherOui] = useState(true);
+
+  const handleToggleChange = () => {
+    setAfficherOui(!afficherOui);
+  };
+
   return (
-    
     <main>
-      <section className="about-section__wrapper" ref={containerRef}>
-        <div className="content__wrapper">
-          <div className="text__wrapper">
-            <h3>
-              An open and <br></br> composable <br></br>gaming protocol
-            </h3>
-            <p>
-              A collaborative credential infrastructure on which games, brands
-              and communities can build applications and engage with their
-              players and fans. Currently raising funds from our community.
-            </p>
-          </div>
-        </div>
-        <div className="image__wrapper" >
-          {/* <img
-            src="./images/assets/perso_dino.jpg"
-            style={{ ...image1Style }}
-          /> */}
-          {/* <img
-            src="./images/assets/logo_bigtime.svg"
-            style={{ ...image2Style }}
-          /> */}
-        </div>
-      </section>
+      {afficherOui ? (
+        <>
+          <BannerGame videoSource={aboutUsVideoSource} />
+          <SwitchButton isChecked={afficherOui} onToggle={handleToggleChange} />
+          <AboutSection00 />
+          <AboutSection01 />
+          <OracleBanner />
+          <AboutSection02 />
+          <AboutSection03 />
+          {/* <div className="content__wrapper"></div> */}
+          <AnimateClockie />
+        </>
+      ) : (
+        <>
+          <SwitchButton isChecked={afficherOui} onToggle={handleToggleChange} />
+          <ShortSection00/>
+          <ShortSection01/>
+          <OracleBanner />
+          <ShortSection02/>
+          <ShortSection03/>
+          <AnimateClockie />
+        </>
+      )}
     </main>
   );
 }

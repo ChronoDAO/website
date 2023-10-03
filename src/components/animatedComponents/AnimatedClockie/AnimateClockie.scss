@@ -1,0 +1,12 @@
+.animate-clockie-container {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 50px;
+  left: 0;
+  img{
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}

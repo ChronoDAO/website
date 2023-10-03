@@ -4,6 +4,7 @@ import Section01 from "../../components/Sections/Section01";
 import Banner from "../../components/common/Banner/Banner";
 import Section02 from "../../components/Sections/Section02";
 import Cards from "../../components/Sections/Cards";
+import AnimateClockie from "../../components/animatedComponents/AnimatedClockie/AnimateClockie.tsx";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Section01 />
         <Section02 />
         <Cards />
+        <AnimateClockie />
       </main>
     </>
   );

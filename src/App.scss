@@ -13,6 +13,7 @@ body {
   background-attachment: fixed;
   background-position-y: 10dvh, 0;
   backdrop-filter: brightness(.6);
+  overflow-x: hidden;
 }
 
 .container {

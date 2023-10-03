@@ -1,0 +1,30 @@
+@use '../../colors' as *;
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 100px;
+  left: 45px; 
+  width: 40px;
+  height: 40px;
+  background-color: $color-light-black;
+  color: $color-white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  .icon-style {
+    font-size: 24px;
+  }
+
+  &:hover {
+    background-color: $color-orange;
+  }
+}

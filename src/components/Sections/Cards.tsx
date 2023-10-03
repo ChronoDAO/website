@@ -90,8 +90,14 @@ export default function Cards() {
           </div>
         </div>
         <div className="image__wrapper" id="back-card__wrapper">
-          <img src="/images/assets/cards/back-card.png" alt="" />
-          <img src="/images/assets/cards/back-card.png" alt="" />
+          <img
+            src={`${import.meta.env.CDN_URL}/images/assets/cards/back-card.png`}
+            alt=""
+          />
+          <img
+            src={`${import.meta.env.CDN_URL}/images/assets/cards/back-card.png`}
+            alt=""
+          />
         </div>
       </section>
       <div className="cards">
