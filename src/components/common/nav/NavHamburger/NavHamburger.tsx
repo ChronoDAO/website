@@ -25,7 +25,7 @@ function NavHamburger() {
               className="navbar__link"
               onClick={() => setShowLinks(false)}
             >
-              Home
+              Accueil
             </Link>
           </li>
           <li className="navbar__item">
@@ -34,7 +34,7 @@ function NavHamburger() {
               className="navbar__link"
               onClick={() => setShowLinks(false)}
             >
-              About DAO
+              La DAO
             </Link>
           </li>
           <li className="navbar__item">
@@ -43,7 +43,7 @@ function NavHamburger() {
               className="navbar__link"
               onClick={() => setShowLinks(false)}
             >
-              About us
+              La Guilde
             </Link>
           </li>
           <li className="navbar__item">
@@ -52,7 +52,7 @@ function NavHamburger() {
               className="navbar__link"
               onClick={() => setShowLinks(false)}
             >
-              Games
+              Nos Jeux
             </Link>
           </li>
           <li className="navbar__cta-button">
