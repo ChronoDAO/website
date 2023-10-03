@@ -8,8 +8,11 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import AboutDao from "./pages/AboutDao/AboutDao";
 import Footer from "./components/common/footer/Footer.tsx";
 import SocialMedia from "./components/common/SocialMedia/SocialMedia.tsx";
+import Twitch from "./pages/Twitch/Twitch.tsx";
 import Game from "./pages/Game/Game.tsx";
+import Cluf from "./pages/Cluf/Cluf.tsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.tsx";
+import Politique from "./pages/Politique/Politique.tsx";
 
 function App() {
   const [isWideScreen, setIsWideScreen] = useState(false);
@@ -37,8 +40,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/extention_twitch/cluf" element={<Cluf />} />
+          <Route path="/extention_twitch/politique_de_confidentialite" element={<Politique />} />
           <Route path="/games" element={<Game />} />
           <Route path="/about_dao" element={<AboutDao />} />
+          <Route path="/extention_twitch" element={<Twitch />} />
         </Routes>
         <Footer />
       </div>
