@@ -1,8 +1,10 @@
+import "./Cluf.scss";
+
 export default function Cluf() {
   return (
-    <div>
+    <div id="mainCluf">
         <h1>Contrat de Licence Utilisateur Final</h1>
-        <p>
+        <p className="ext-one">
             Merci de choisir notre extension Twitch. Avant d'utiliser notre service,
             veuillez lire attentivement les termes et conditions suivants.
         </p>
