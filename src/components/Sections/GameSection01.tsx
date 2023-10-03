@@ -38,7 +38,7 @@ export default function GameSection01() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
             perferendis.
           </p>
-          <CTAButton text="Rejoindre la team" />
+          <CTAButton text="Rejoindre la team" link={"https://discord.gg/chronodao"}/>
         </div>
       </div>
     </section>

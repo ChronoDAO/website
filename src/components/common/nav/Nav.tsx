@@ -33,7 +33,7 @@ export default function Nav() {
           <NavLink to="/games" onClick={() => handleTabClick("Nos jeux")}>Nos jeux</NavLink>
           </li>
         </ul>
-        <CTAButton text={"Rejoignez nous"} />
+        <CTAButton text={"Rejoignez nous"} link={"https://discord.gg/chronodao"}/>
       </div>
     </nav>
   );

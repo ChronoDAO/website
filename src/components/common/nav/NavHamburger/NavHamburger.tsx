@@ -56,7 +56,7 @@ function NavHamburger() {
             </Link>
           </li>
           <li className="navbar__cta-button">
-            <CTAButton text={"Join us"} />
+            <CTAButton text={"Rejoignez nous"} link={"https://discord.gg/chronodao"} />
           </li>
         </ul>
         <button

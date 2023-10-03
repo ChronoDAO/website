@@ -66,6 +66,7 @@ export default function Section01() {
             text="Explore ce nouveau monde avec nous."
             image={`/assets/icons/logo_discord.svg`}
             image_class="logo-discord"
+            link={"https://discord.gg/chronodao"}
           />
         </div>
       </div>
