@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.6.5",
     "dotenv": "^16.3.1",
     "gsap": "^3.12.2",
     "react": "^18.2.0",
