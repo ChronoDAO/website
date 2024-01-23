@@ -1,11 +1,33 @@
+// Gamenav.tsx
+
 import { useEffect, useState } from "react";
 import "./GameNav.scss";
 import { fetchTabsFromAPI, fetchGameDetailsFromAPI } from "../../services/api";
+interface Tab {
+  attributes: any;
+  id: string;
+}
+
+interface GameDetails {
+  name: string;
+  type: string;
+  cost: string;
+  slogan: string;
+  other: string;
+  description: string;
+  logo: {
+    data: {
+      attributes: {
+        url: string;
+      };
+    };
+  };
+}
 
 export default function GameNav() {
-  const [tabs, setTabs] = useState([]);
-  const [selectedTab, setSelectedTab] = useState(null);
-  const [gameDetails, setGameDetails] = useState(null);
+  const [tabs, setTabs] = useState<Tab[]>([]);
+  const [selectedTab, setSelectedTab] = useState<string | null>(null);
+  const [gameDetails, setGameDetails] = useState<GameDetails | null>(null);
   const [isWideScreen, setIsWideScreen] = useState(false);
 
   useEffect(() => {
@@ -21,7 +43,7 @@ export default function GameNav() {
     };
   }, []);
 
-  const handleTabClick = async (selectedTabId) => {
+  const handleTabClick = async (selectedTabId: string) => {
     setSelectedTab(selectedTabId);
 
     try {
@@ -42,7 +64,7 @@ export default function GameNav() {
       try {
         const tabsData = await fetchTabsFromAPI();
         setTabs(tabsData);
-  
+
         if (tabsData.length > 0) {
           handleTabClick(tabsData[0].id);
         }
@@ -50,7 +72,7 @@ export default function GameNav() {
         console.error("Error fetching tabs:", error);
       }
     };
-  
+
     fetchData();
   }, []);
 
@@ -74,10 +96,10 @@ export default function GameNav() {
         </ul>
       </div>
       {gameDetails && (
-        <section className="game-section__wrapper" id={selectedTab}>
+        <section className="game-section__wrapper" id={selectedTab || ''}>
           <div className="content__wrapper">
             <div className="text__wrapper">
-              <h3>{gameDetails.name}</h3>
+              <h3>{gameDetails.name || 'No Name'}</h3>
               <ul>
                 <li>{gameDetails.type}</li>
                 <li>{gameDetails.cost}</li>

@@ -19,13 +19,14 @@ export const fetchTabsFromAPI = async () => {
       },
     });
 
-    const { data, meta } = response.data;
+    const { data } = response.data;
 
     if (data.length === 0) {
       console.warn('No tab data found.');
     }
 
-    const tabsWithLogoUrl = data.map((tab) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const tabsWithLogoUrl = data.map((tab: { logo: { url: any; }; image: { url: any; }; }) => {
       if (tab.logo && tab.logo.url) {
         tab.image = { url: tab.logo.url };
       }
@@ -40,7 +41,8 @@ export const fetchTabsFromAPI = async () => {
   }
 };
 
-export const fetchGameDetailsFromAPI = async (gameId) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const fetchGameDetailsFromAPI = async (gameId: any) => {
   try {
     const response = await axiosInstance.get(`/api/games/${gameId}`, {
       params: {

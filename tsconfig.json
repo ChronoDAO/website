@@ -20,6 +20,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src",
+    "src/services/api.d.ts"  // Ajoutez le chemin vers votre fichier de déclaration ici
+  ],
+  "references": [
+    { "path": "./tsconfig.node.json" }
+  ]
 }
