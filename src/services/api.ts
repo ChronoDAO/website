@@ -67,3 +67,25 @@ export const fetchGameDetailsFromAPI = async (gameId: any) => {
     return null;
   }
 };
+
+export const fetchGameSection01Data = async () => {
+  try {
+    const response = await axiosInstance.get('/api/game-sections', {
+      params: {
+        populate: 'logo1,logo2,logo3,logo4',
+      },
+    });
+
+    const sectionData = response.data && response.data.data && response.data.data[0];
+
+    if (!sectionData) {
+      console.warn('No data found for GameSection01.');
+      return null;
+    }
+
+    return sectionData.attributes;
+  } catch (error) {
+    console.error('Error fetching GameSection01 data:', error);
+    throw error;
+  }
+};
