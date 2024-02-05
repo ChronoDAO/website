@@ -1,7 +1,6 @@
 @use '../../../colors' as *;
 
 .banner_test {
-
   display: flex;
   color: $color-orange;
   margin-top: 5vw;
@@ -9,27 +8,34 @@
   h2 {
     font-size: clamp(1.5rem, 5vw, 5rem);
     font-weight: 800;
+    margin-right: 2rem;
   }
 
   .words__wrapper {
     position: relative;
     display: flex;
 
-    span {
+    .word {
       font-size: clamp(1.5rem, 5vw, 5rem);
       font-weight: 800;
-    }
-  }
+      display: block;
+      position: absolute;
+      color: $color-white;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: top 0.5s ease, opacity 0.5s ease;
 
-  .word {
-    display: block;
-    position: absolute;
-    color: $color-white;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: top 0.5s ease, opacity 0.5s ease;
+      &:not(:first-child) {
+        margin-left: 0rem; // Ajoutez une marge entre les mots si nécessaire
+      }
+
+      &.active {
+        top: 100%;
+        opacity: 1;
+      }
+    }
   }
 
   .caption {

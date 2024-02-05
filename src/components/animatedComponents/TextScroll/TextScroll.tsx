@@ -1,58 +1,65 @@
-import { useEffect } from "react";
-import "./TextScroll.scss";
+import { useEffect, useState } from 'react';
+import './TextScroll.scss';
+import { fetchHomeBannerData, fetchTextScrollWords } from '../../../services/api';
+
+interface HomeBannerData {
+  title: string;
+  description: string;
+}
+
+interface TextScrollWord {
+  id: number;
+  word: string;
+}
 
 export default function TextScroll() {
+  const [homeBannerData, setHomeBannerData] = useState<HomeBannerData | null>(null);
+  const [textScrollWords, setTextScrollWords] = useState<TextScrollWord[] | null>(null);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
   useEffect(() => {
-    const words = document.querySelectorAll(".word");
+    const fetchData = async () => {
+      try {
+        const homeBanner = await fetchHomeBannerData();
+        setHomeBannerData(homeBanner);
 
-    function animateWord(index: number) {
-      if (index >= words.length) {
-        index = 0;
+        const words = await fetchTextScrollWords();
+        setTextScrollWords(words);
+      } catch (error) {
+        console.error('Error fetching data:', error);
       }
+    };
 
-      const currentWord = words[index];
-
-      setTimeout(() => {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        //@ts-ignore
-        currentWord.style.top = "100%";
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        //@ts-ignore
-        currentWord.style.opacity = "1";
-
-        setTimeout(() => {
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          //@ts-ignore
-          currentWord.style.top = "0";
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          //@ts-ignore
-          currentWord.style.opacity = "0";
-          animateWord(index + 1);
-        }, 2000);
-      }, 800);
-    }
-
-    animateWord(0);
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % (textScrollWords?.length || 1));
+    }, 2000);
+  
+    return () => clearTimeout(timeout);
+  }, [currentWordIndex, textScrollWords]);
+
+  if (!homeBannerData || !textScrollWords) {
+    return null;
+  }
 
   return (
     <div className="banner_test">
-      <h2>PROOF OF &nbsp;</h2>
+      <h2>{homeBannerData.title}</h2>
       <div className="words__wrapper">
-        <span className="word">COMPLETION</span>
-        <span className="word">COLLECTION</span>
-        <span className="word">COLLABORATION</span>
-        <span className="word">CONTRIBUTION</span>
-        <span className="word">TIME</span>
-        <span className="word">SKILLS</span>
-        <span className="word">ADVENTURE</span>
-        <span className="word">EXPLORATION</span>
+        {textScrollWords.map((word, index) => (
+          <span
+            key={word.id || index}
+            className={`word ${index === currentWordIndex ? 'active' : ''}`}
+          >
+            {word.word}
+          </span>
+        ))}
       </div>
       <div className="caption">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio,
-          alias!
-        </p>
+        <p>{homeBannerData.description}</p>
       </div>
     </div>
   );

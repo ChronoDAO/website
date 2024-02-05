@@ -233,3 +233,40 @@ export const fetchShortSectionData = async () => {
     throw error;
   }
 };
+
+export const fetchHomeBannerData = async () => {
+  try {
+    const response = await axiosInstance.get('/api/home-banners');
+    const homeBannerData = response.data.data;
+
+    if (!homeBannerData || homeBannerData.length === 0) {
+      console.warn('No data found for HomeBanner.');
+      return null;
+    }
+
+    return homeBannerData[0].attributes;
+  } catch (error) {
+    console.error('Error fetching HomeBanner data:', error);
+    throw error;
+  }
+};
+
+export const fetchTextScrollWords = async () => {
+  try {
+    const response = await axiosInstance.get('/api/text-scrolls');
+    const textScrollWords = response.data.data;
+
+    if (!textScrollWords || textScrollWords.length === 0) {
+      console.warn('No data found for TextScroll words.');
+      return null;
+    }
+
+    return textScrollWords.map((wordData: { _id: any; attributes: { word: any; }; }) => ({
+      id: wordData._id,
+      word: wordData.attributes.word,
+    }));
+  } catch (error) {
+    console.error('Error fetching TextScroll words data:', error);
+    throw error;
+  }
+};
