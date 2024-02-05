@@ -221,4 +221,15 @@
   height: calc(100vh - 300px);
 }
 
+.even-section {
+  display: flex;
+  flex-direction: row;
+}
 
+.even-section .content__wrapper {
+  order: 2;
+}
+
+.even-section .image__wrapper {
+  order: 1;
+}

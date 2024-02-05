@@ -147,3 +147,11 @@
     height: 100%;
   }
 }
+
+.event.reverse-order {
+  flex-direction: row-reverse;
+
+  .event-content {
+    order: -1;
+  }
+}
