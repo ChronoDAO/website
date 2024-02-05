@@ -1,7 +1,38 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 const token = import.meta.env.VITE_API_TOKEN;
+
+export interface AboutSectionData {
+  _id: number;
+  title: string;
+  subtitle: string;
+  paragraphe1: string;
+  paragraphe2: string;
+  paragraphe3: string;
+  logo: {
+    data: {
+      attributes: {
+        url: string;
+      };
+    };
+  };
+}
+
+export interface ShortSectionData {
+  _id: number;
+  title: string;
+  subtitle: string;
+  paragraphe: string;
+  logo: {
+    data: {
+      attributes: {
+        url: string;
+      };
+    };
+  };
+}
 
 export const axiosInstance = axios.create({
   baseURL: apiUrl,
@@ -86,6 +117,119 @@ export const fetchGameSection01Data = async () => {
     return sectionData.attributes;
   } catch (error) {
     console.error('Error fetching GameSection01 data:', error);
+    throw error;
+  }
+};
+
+
+export const fetchAboutDaoData = async () => {
+  try {
+    const response = await axiosInstance.get('/api/about-daos', {
+      params: {
+        populate: 'logo',
+      },
+    });
+
+    const aboutDaoData = response.data && response.data.data && response.data.data[0];
+
+    if (!aboutDaoData) {
+      console.warn('No data found for AboutDao.');
+      return null;
+    }
+
+    return aboutDaoData.attributes;
+  } catch (error) {
+    console.error('Error fetching AboutDao data:', error);
+    throw error;
+  }
+};
+
+export const fetchTimelineData = async () => {
+  try {
+    const response = await axiosInstance.get('/api/timelines', {
+      params: {
+        populate: 'logo',
+      },
+    });
+
+    console.log(response.data); // Déplacez le console.log ici
+
+    const timelineData = response.data && response.data.data;
+
+    if (!timelineData || timelineData.length === 0) {
+      console.warn('No data found for Timeline.');
+      return null;
+    }
+
+    return timelineData.map((data: { attributes: { text: any; logo: any; }; }) => ({
+      text: data.attributes.text, // ou le nom du champ contenant le texte
+      logo: data.attributes.logo,
+    }));
+  } catch (error) {
+    console.error('Error fetching Timeline data:', error);
+    throw error;
+  }
+};
+
+
+export const fetchAboutSectionData = async () => {
+  try {
+    const response = await axiosInstance.get('/api/about-sections', {
+      params: {
+        populate: 'logo',
+      },
+    });
+
+    const aboutSectionData = response.data.data;
+
+    if (!aboutSectionData || aboutSectionData.length === 0) {
+      console.warn('No data found for AboutSection.');
+      return null;
+    }
+
+    return aboutSectionData.map((data: {
+      _id: any; attributes: AboutSectionData 
+}) => ({
+      id: data._id,
+      title: data.attributes.title,
+      subtitle: data.attributes.subtitle,
+      paragraphe1: data.attributes.paragraphe1,
+      paragraphe2: data.attributes.paragraphe2,
+      paragraphe3: data.attributes.paragraphe3,
+      logo: data.attributes.logo,
+    }));
+  } catch (error) {
+    console.error('Error fetching AboutSection data:', error);
+    throw error;
+  }
+};
+
+export const fetchShortSectionData = async () => {
+  try {
+    const response = await axiosInstance.get('/api/about-shortsections', {
+      params: {
+        populate: 'logo',
+      },
+    });
+
+    const shortSectionData = response.data.data;
+
+    if (!shortSectionData || shortSectionData.length === 0) {
+      console.warn('No data found for ShortSection.');
+      return null;
+    }
+
+    return shortSectionData.map((data: {
+      _id: any; attributes: ShortSectionData 
+}) => ({
+      id: data._id,
+      title: data.attributes.title,
+      subtitle: data.attributes.subtitle,
+      paragraphe: data.attributes.paragraphe,
+      logo: data.attributes.logo,
+    }));
+  } catch (error) {
+    console.error('Error fetching ShortSection data:', error);
     throw error;
   }
 };
