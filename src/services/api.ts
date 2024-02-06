@@ -56,7 +56,6 @@ export const fetchTabsFromAPI = async () => {
       console.warn('No tab data found.');
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const tabsWithLogoUrl = data.map((tab: { logo: { url: any; }; image: { url: any; }; }) => {
       if (tab.logo && tab.logo.url) {
         tab.image = { url: tab.logo.url };
@@ -72,7 +71,6 @@ export const fetchTabsFromAPI = async () => {
   }
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const fetchGameDetailsFromAPI = async (gameId: any) => {
   try {
     const response = await axiosInstance.get(`/api/games/${gameId}`, {
@@ -152,8 +150,6 @@ export const fetchTimelineData = async () => {
       },
     });
 
-    console.log(response.data); // Déplacez le console.log ici
-
     const timelineData = response.data && response.data.data;
 
     if (!timelineData || timelineData.length === 0) {
@@ -162,7 +158,7 @@ export const fetchTimelineData = async () => {
     }
 
     return timelineData.map((data: { attributes: { text: any; logo: any; }; }) => ({
-      text: data.attributes.text, // ou le nom du champ contenant le texte
+      text: data.attributes.text,
       logo: data.attributes.logo,
     }));
   } catch (error) {
@@ -267,6 +263,45 @@ export const fetchTextScrollWords = async () => {
     }));
   } catch (error) {
     console.error('Error fetching TextScroll words data:', error);
+    throw error;
+  }
+};
+
+
+export const fetchHomeCardData = async () => {
+  try {
+    const response = await axiosInstance.get(`/api/home-cards`, {
+      params: {
+        populate: 'logo',
+      }
+    });
+    const homeCardData = response.data;
+
+    if (!homeCardData || homeCardData.length === 0) {
+      console.warn('No data found for HomeCard.');
+      return null;
+    }
+
+    return homeCardData;
+  } catch (error) {
+    console.error('Error fetching HomeCard data:', error);
+    throw error;
+  }
+};
+
+export const fetchTeamData = async () => {
+  try {
+    const response = await axiosInstance.get('/api/home-teams');
+    const teamData = response.data;
+
+    if (!teamData || teamData.length === 0) {
+      console.warn('No data found for Team.');
+      return null;
+    }
+
+    return teamData;
+  } catch (error) {
+    console.error('Error fetching team data:', error);
     throw error;
   }
 };
